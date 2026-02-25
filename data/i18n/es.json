@@ -120,11 +120,11 @@
     },
     "stone_barrow": {
       "name": "Túmulo de Piedra",
-      "description": "You are standing in front of a massive barrow of stone. In the east face\nis a huge stone door which is open. You cannot see into the dark of the tomb."
+      "description": "Estas de pie frente a un enorme tumulo de piedra. En la cara este\nhay una gran puerta de piedra abierta. No puedes ver dentro de\nla oscuridad de la tumba."
     },
     "forest_1": {
       "name": "Bosque",
-      "description": "Este es un bosque, con árboles en todas direcciones. To the east,\nthere appears to be sunlight."
+      "description": "Este es un bosque, con arboles en todas direcciones. Hacia el este,\nparece haber luz solar."
     },
     "forest_2": {
       "name": "Bosque",
@@ -132,7 +132,7 @@
     },
     "mountains": {
       "name": "Bosque",
-      "description": "The forest thins out, revealing impassable mountains."
+      "description": "El bosque se vuelve mas ralo, dejando ver montanas intransitables."
     },
     "forest_3": {
       "name": "Bosque",
@@ -140,7 +140,7 @@
     },
     "path": {
       "name": "Sendero del Bosque",
-      "description": "This is a path winding through a dimly lit forest. The path heads\nnorth-south here. One particularly large tree with some low branches\nstands at the edge of the path."
+      "description": "Este es un sendero que serpentea por un bosque tenuemente iluminado.\nAqui el camino va de norte a sur. Un arbol especialmente grande,\ncon algunas ramas bajas, se alza junto al borde del sendero."
     },
     "up_a_tree": {
       "name": "En el Árbol",
@@ -152,23 +152,23 @@
     },
     "clearing": {
       "name": "Claro",
-      "description": "You are in a small clearing in a well marked forest path that\nextends to the east and west."
+      "description": "Estas en un pequeno claro en un sendero del bosque bien marcado\nque se extiende hacia el este y el oeste."
     },
     "troll_room": {
       "name": "La Sala del Troll",
-      "description": "This is a small room with passages to the east and south and a\nforbidding hole leading west. Bloodstains and deep scratches\n(perhaps made by an axe) mar the walls."
+      "description": "Esta es una pequena sala con pasajes al este y al sur y un\ninquietante agujero hacia el oeste. Manchas de sangre y arañazos\nprofundos (quizas hechos por un hacha) marcan las paredes."
     },
     "east_of_chasm": {
       "name": "Este del Abismo",
-      "description": "You are on the east edge of a chasm, the bottom of which cannot be\nseen. A narrow passage goes north, and the path you are on continues\nto the east."
+      "description": "Estas en el borde oriental de un abismo, cuyo fondo no puede verse.\nUn pasaje estrecho va hacia el norte, y el camino en el que estas\ncontinua hacia el este."
     },
     "gallery": {
       "name": "Galería",
-      "description": "This is an art gallery. Most of the paintings have been stolen by\nvandals with exceptional taste. The vandals left through either the\nnorth or west exits."
+      "description": "Esta es una galeria de arte. La mayoria de las pinturas han sido\nrobadas por vandalos con un gusto excepcional. Los vandalos salieron\npor la salida norte o por la oeste."
     },
     "studio": {
       "name": "Estudio",
-      "description": "This appears to have been an artist's studio. The walls and floors are\nsplattered with paints of 69 different colors. Strangely enough, nothing\nof value is hanging here. At the south end of the room is an open door\n(also covered with paint). A dark and narrow chimney leads up from a\nfireplace; although you might be able to get up it, it seems unlikely\nyou could get back down."
+      "description": "Parece que este fue el estudio de un artista. Las paredes y el suelo\nestan salpicados con pintura de 69 colores distintos. Curiosamente,\nno hay nada de valor colgado aqui. En el extremo sur de la sala hay\nuna puerta abierta (tambien cubierta de pintura). Desde una chimenea\noscura y estrecha sobre una chimenea de hogar se puede subir; aunque\nquizas puedas trepar, parece poco probable que logres bajar de nuevo."
     },
     "maze_1": {
       "name": "Laberinto",

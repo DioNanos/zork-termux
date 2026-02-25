@@ -120,11 +120,11 @@
     },
     "stone_barrow": {
       "name": "Tumulo di Pietra",
-      "description": "You are standing in front of a massive barrow of stone. In the east face\nis a huge stone door which is open. You cannot see into the dark of the tomb."
+      "description": "Ti trovi davanti a un enorme tumulo di pietra. Sul lato est\nc'e una gigantesca porta di pietra aperta. Non riesci a vedere\nnell'oscurita della tomba."
     },
     "forest_1": {
       "name": "Foresta",
-      "description": "Questa è una foresta, con alberi in tutte le direzioni. To the east,\nthere appears to be sunlight."
+      "description": "Questa e una foresta, con alberi in tutte le direzioni. A est\nsembra esserci la luce del sole."
     },
     "forest_2": {
       "name": "Foresta",
@@ -132,7 +132,7 @@
     },
     "mountains": {
       "name": "Foresta",
-      "description": "The forest thins out, revealing impassable mountains."
+      "description": "La foresta si dirada, rivelando montagne invalicabili."
     },
     "forest_3": {
       "name": "Foresta",
@@ -140,7 +140,7 @@
     },
     "path": {
       "name": "Sentiero nella Foresta",
-      "description": "This is a path winding through a dimly lit forest. The path heads\nnorth-south here. One particularly large tree with some low branches\nstands at the edge of the path."
+      "description": "Questo e un sentiero che serpeggia in una foresta poco illuminata.\nQui il sentiero va da nord a sud. Un albero particolarmente grande,\ncon alcuni rami bassi, si trova al bordo del sentiero."
     },
     "up_a_tree": {
       "name": "Sull'Albero",
@@ -152,23 +152,23 @@
     },
     "clearing": {
       "name": "Spiazzo",
-      "description": "You are in a small clearing in a well marked forest path that\nextends to the east and west."
+      "description": "Sei in un piccolo spiazzo su un sentiero ben segnato che\nprosegue a est e a ovest."
     },
     "troll_room": {
       "name": "La Stanza del Troll",
-      "description": "This is a small room with passages to the east and south and a\nforbidding hole leading west. Bloodstains and deep scratches\n(perhaps made by an axe) mar the walls."
+      "description": "Questa e una piccola stanza con passaggi a est e a sud e un\nminaccioso buco verso ovest. Macchie di sangue e graffi profondi\n(forse fatti da un'ascia) segnano le pareti."
     },
     "east_of_chasm": {
-      "name": "Est del Baratro",
-      "description": "You are on the east edge of a chasm, the bottom of which cannot be\nseen. A narrow passage goes north, and the path you are on continues\nto the east."
+      "name": "A Est del Baratro",
+      "description": "Sei sul bordo orientale di un baratro, il cui fondo non e visibile.\nUn passaggio stretto va a nord, e il sentiero su cui ti trovi\ncontinua verso est."
     },
     "gallery": {
       "name": "Galleria",
-      "description": "This is an art gallery. Most of the paintings have been stolen by\nvandals with exceptional taste. The vandals left through either the\nnorth or west exits."
+      "description": "Questa e una galleria d'arte. La maggior parte dei quadri e stata\nrubata da vandali di gusto eccezionale. I vandali se ne sono andati\nattraverso l'uscita a nord o quella a ovest."
     },
     "studio": {
       "name": "Studio",
-      "description": "This appears to have been an artist's studio. The walls and floors are\nsplattered with paints of 69 different colors. Strangely enough, nothing\nof value is hanging here. At the south end of the room is an open door\n(also covered with paint). A dark and narrow chimney leads up from a\nfireplace; although you might be able to get up it, it seems unlikely\nyou could get back down."
+      "description": "Questo sembra essere stato lo studio di un artista. Pareti e pavimento\nsono schizzati di vernice in 69 colori diversi. Stranamente, qui non e\nappeso nulla di valore. All'estremita sud della stanza c'e una porta\naperta (anch'essa coperta di vernice). Un camino stretto e buio sale da\nun focolare; anche se forse potresti salirci, sembra improbabile che\ntu riesca poi a ridiscendere."
     },
     "maze_1": {
       "name": "Labirinto",
