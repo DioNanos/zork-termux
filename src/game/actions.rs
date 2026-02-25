@@ -1,12 +1,19 @@
 use crate::game::state::GameState;
 use crate::game::world::{CreatureState, World};
 use crate::i18n::{I18n, Language};
+use crate::logging;
 use crate::parser::Command;
 use crate::parser::Verb;
 
 pub fn execute(state: &mut GameState, world: &mut World, cmd: Command, i18n: &I18n) {
     state.moves += 1;
     let ui = i18n.ui();
+    let verb_dbg = format!("{:?}", cmd.verb);
+    let object_dbg = cmd.object.clone().unwrap_or_default();
+    logging::info(format!(
+        "command.exec room={} moves={} verb={} object={}",
+        state.current_room, state.moves, verb_dbg, object_dbg
+    ));
 
     match cmd.verb {
         Verb::Look => cmd_look(state, world, i18n),
@@ -24,13 +31,20 @@ pub fn execute(state: &mut GameState, world: &mut World, cmd: Command, i18n: &I1
         Verb::Help => println!("\n{}", i18n.help_text()),
         Verb::Score => println!("\n{}", i18n.score_text(state.score, state.moves)),
         Verb::Save => match state.save(1) {
-            Ok(()) => println!("\n{}", ui.game_saved),
-            Err(e) => println!("\n{}: {}", ui.save_failed, e),
+            Ok(()) => {
+                logging::info("save.ok slot=1");
+                println!("\n{}", ui.game_saved);
+            }
+            Err(e) => {
+                logging::error(format!("save.failed slot=1 error={}", e));
+                println!("\n{}: {}", ui.save_failed, e);
+            }
         },
         Verb::Restore => cmd_restore(state, world, i18n),
         Verb::Attack => cmd_attack(state, world, cmd.object.as_deref(), i18n),
         Verb::Put => cmd_put(state, world, cmd.object.as_deref(), i18n),
         Verb::Unknown(v) => {
+            logging::warn(format!("command.unknown raw={}", v));
             println!("\n{}", i18n.format(&ui.unknown_command, &[("cmd", &v)]));
         }
     }
@@ -100,6 +114,10 @@ fn cmd_move(state: &mut GameState, world: &mut World, verb: &Verb, i18n: &I18n) 
 
     if let Some(new_room) = room.exits.get(direction) {
         if let Some(blocker) = world.blocking_creature(&current_room, new_room) {
+            logging::warn(format!(
+                "move.blocked from={} to={} by={}",
+                current_room, new_room, blocker.id
+            ));
             if let Some(creature_trans) = i18n.creature(&blocker.id) {
                 println!("\n{}", creature_trans.description);
             } else {
@@ -118,7 +136,12 @@ fn cmd_move(state: &mut GameState, world: &mut World, verb: &Verb, i18n: &I18n) 
             let new_room_obj = world.get_room(room_id);
             println!("\n{}\n", new_room_obj.name);
         }
+        logging::info(format!("move.ok from={} to={}", current_room, new_room));
     } else {
+        logging::warn(format!(
+            "move.invalid from={} direction={}",
+            current_room, direction
+        ));
         println!("\n{}", i18n.ui().cant_go);
     }
 }
@@ -312,7 +335,8 @@ fn cmd_attack(state: &mut GameState, world: &mut World, object: Option<&str>, i1
         return;
     };
 
-    let Some(target_id) = find_creature_by_name(world, &state.current_room, i18n, target_input) else {
+    let Some(target_id) = find_creature_by_name(world, &state.current_room, i18n, target_input)
+    else {
         println!("\n{}", ui.dont_see);
         return;
     };
@@ -324,7 +348,10 @@ fn cmd_attack(state: &mut GameState, world: &mut World, object: Option<&str>, i1
             "\n{}",
             i18n.format(
                 &ui.attack_with,
-                &[("target", &target_name), ("weapon", fists_name(i18n.language()))],
+                &[
+                    ("target", &target_name),
+                    ("weapon", fists_name(i18n.language()))
+                ],
             )
         );
         return;
@@ -441,13 +468,16 @@ fn cmd_restore(state: &mut GameState, world: &World, i18n: &I18n) {
     match GameState::load(1) {
         Ok(loaded) => {
             *state = loaded;
+            logging::info("restore.ok slot=1");
             println!("\n{}", ui.game_restored);
             cmd_look(state, world, i18n);
         }
         Err(e) if e == "No saved game found" => {
+            logging::warn("restore.missing slot=1");
             println!("\n{}", ui.no_saved_game);
         }
         Err(e) => {
+            logging::error(format!("restore.failed slot=1 error={}", e));
             println!("\n{}: {}", ui.restore_failed, e);
         }
     }
@@ -473,14 +503,7 @@ fn parse_put_spec(spec: &str, lang: Language) -> Option<(String, String)> {
     let separators = match lang {
         Language::English => vec![" into ", " in ", " inside "],
         Language::Italian => vec![
-            " dentro ",
-            " nella ",
-            " nello ",
-            " negli ",
-            " nelle ",
-            " nel ",
-            " nei ",
-            " in ",
+            " dentro ", " nella ", " nello ", " negli ", " nelle ", " nel ", " nei ", " in ",
         ],
         Language::Spanish => vec![" dentro ", " en "],
     };
@@ -501,12 +524,7 @@ fn parse_put_spec(spec: &str, lang: Language) -> Option<(String, String)> {
     None
 }
 
-fn find_creature_by_name(
-    world: &World,
-    room_id: &str,
-    i18n: &I18n,
-    name: &str,
-) -> Option<String> {
+fn find_creature_by_name(world: &World, room_id: &str, i18n: &I18n, name: &str) -> Option<String> {
     world
         .creatures_in_room(room_id)
         .into_iter()
@@ -514,12 +532,7 @@ fn find_creature_by_name(
         .map(|creature| creature.id.clone())
 }
 
-fn creature_matches_input(
-    i18n: &I18n,
-    creature_id: &str,
-    world_name: &str,
-    input: &str,
-) -> bool {
+fn creature_matches_input(i18n: &I18n, creature_id: &str, world_name: &str, input: &str) -> bool {
     let mut aliases: Vec<String> = vec![creature_id.to_string(), world_name.to_string()];
 
     if let Some(trans) = i18n.creature(creature_id) {
@@ -691,7 +704,8 @@ fn object_display_line(world: &World, i18n: &I18n, object_id: &str) -> Option<St
 
     if let Some(obj_trans) = i18n.object(object_id) {
         if should_fallback_from_description(i18n.language(), &obj_trans.description) {
-            if lang != Language::English && looks_untranslated_name(world, object_id, &obj_trans.name)
+            if lang != Language::English
+                && looks_untranslated_name(world, object_id, &obj_trans.name)
             {
                 return None;
             }

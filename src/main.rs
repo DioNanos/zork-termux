@@ -1,17 +1,26 @@
 use std::io::{self, Write};
 use zork_termux::game::{Game, GameChoice};
 use zork_termux::i18n::{I18n, Language};
+use zork_termux::logging;
 
 const MOBILE_DEFAULT_WIDTH: usize = 36;
 const MIN_BOX_WIDTH: usize = 30;
 const MAX_BOX_WIDTH: usize = 48;
 
 fn main() {
+    let session_log = logging::init();
+
     let width = detect_box_width();
     print_banner(width);
+    print_log_hint(session_log.as_deref());
 
     let language = select_language(width);
     let game = select_game(&language, width);
+    logging::info(format!(
+        "menu.selection language={} game={:?}",
+        language.code(),
+        game
+    ));
 
     match I18n::load(language) {
         Ok(i18n) => {
@@ -19,6 +28,7 @@ fn main() {
             game.run();
         }
         Err(e) => {
+            logging::error(format!("i18n.load.failed error={}", e));
             eprintln!("Error loading translations: {}", e);
             std::process::exit(1);
         }
@@ -47,6 +57,13 @@ fn print_banner(width: usize) {
         ],
     );
     println!();
+}
+
+fn print_log_hint(log_path: Option<&std::path::Path>) {
+    if let Some(path) = log_path {
+        println!("Log file: {}", path.display());
+        println!();
+    }
 }
 
 fn select_language(width: usize) -> Language {
@@ -145,12 +162,7 @@ fn print_centered(text: &str, inner: usize) {
     let len = fit.chars().count();
     let left_pad = inner.saturating_sub(len) / 2;
     let right_pad = inner.saturating_sub(len + left_pad);
-    println!(
-        "║{}{}{}║",
-        " ".repeat(left_pad),
-        fit,
-        " ".repeat(right_pad)
-    );
+    println!("║{}{}{}║", " ".repeat(left_pad), fit, " ".repeat(right_pad));
 }
 
 fn print_left(text: &str, inner: usize) {

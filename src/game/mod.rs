@@ -4,6 +4,7 @@ pub mod world;
 
 use crate::i18n::I18n;
 use crate::i18n::Language;
+use crate::logging;
 use crate::parser::Parser;
 use state::GameState;
 use world::World;
@@ -32,6 +33,16 @@ impl Game {
             GameChoice::Zork3 => (World::load_zork3(), "cp_ante"),
         };
 
+        logging::info(format!(
+            "game.new choice={:?} lang={} rooms={} objects={} creatures={} start_room={}",
+            choice,
+            lang.code(),
+            world.rooms.len(),
+            world.objects.len(),
+            world.creatures.len(),
+            start_room
+        ));
+
         Game {
             state: GameState::new(lang, start_room),
             world,
@@ -49,16 +60,29 @@ impl Game {
             let input = self.read_input();
 
             if input.is_empty() {
+                logging::warn("command.empty");
                 continue;
             }
 
+            logging::info(format!(
+                "command.raw room={} input={}",
+                self.state.current_room, input
+            ));
+
             if self.is_quit(&input) {
+                logging::info("command.quit");
                 self.show_goodbye();
                 break;
             }
 
             if let Some(cmd) = self.parser.parse(&input) {
+                logging::info(format!(
+                    "command.parsed verb={:?} object={:?}",
+                    cmd.verb, cmd.object
+                ));
                 self.execute(cmd);
+            } else {
+                logging::warn(format!("command.parse.none input={}", input));
             }
         }
     }
