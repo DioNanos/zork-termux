@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -112,7 +113,6 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - build-termux
-    if: ${{ secrets.NPM_TOKEN != '' }}
 
     steps:
       - name: Checkout
