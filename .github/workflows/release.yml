@@ -143,6 +143,7 @@ jobs:
           fi
 
       - name: Publish npm package
-        run: npm publish --access public --prefix npm/zork-termux
+        working-directory: npm/zork-termux
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
