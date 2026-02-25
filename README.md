@@ -1,11 +1,6 @@
 <div align="center">
-
-```text
-╔════════════════════════════════════╗
-║      ZORK-TERMUX: DUNGEON RPG     ║
-║     ENTER THE GREAT UNDERGROUND   ║
-╚════════════════════════════════════╝
-```
+<h1>ZORK-TERMUX</h1>
+<p><strong>DUNGEON RPG</strong><br/>ENTER THE GREAT UNDERGROUND</p>
 
 [![Status](https://img.shields.io/badge/Status-0.4.0-blue.svg)](https://github.com/DioNanos/zork-termux/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
