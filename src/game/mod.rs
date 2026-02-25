@@ -88,11 +88,7 @@ impl Game {
     }
 
     fn show_intro(&self) {
-        let title = match self.choice {
-            GameChoice::Zork1 => "ZORK I: THE GREAT UNDERGROUND EMPIRE",
-            GameChoice::Zork2 => "ZORK II: THE WIZARD OF FROBOZZ",
-            GameChoice::Zork3 => "ZORK III: THE DUNGEON MASTER",
-        };
+        let title = localized_game_title(self.choice, self.i18n.language());
         println!("{}", self.i18n.ui().welcome);
         println!("\n{}\n", title);
     }
@@ -133,5 +129,19 @@ impl Game {
 
     fn execute(&mut self, cmd: crate::parser::Command) {
         actions::execute(&mut self.state, &mut self.world, cmd, &self.i18n);
+    }
+}
+
+fn localized_game_title(choice: GameChoice, lang: Language) -> &'static str {
+    match (choice, lang) {
+        (GameChoice::Zork1, Language::English) => "ZORK I: THE GREAT UNDERGROUND EMPIRE",
+        (GameChoice::Zork2, Language::English) => "ZORK II: THE WIZARD OF FROBOZZ",
+        (GameChoice::Zork3, Language::English) => "ZORK III: THE DUNGEON MASTER",
+        (GameChoice::Zork1, Language::Italian) => "ZORK I: IL GRANDE IMPERO SOTTERRANEO",
+        (GameChoice::Zork2, Language::Italian) => "ZORK II: IL MAGO DI FROBOZZ",
+        (GameChoice::Zork3, Language::Italian) => "ZORK III: IL DUNGEON MASTER",
+        (GameChoice::Zork1, Language::Spanish) => "ZORK I: EL GRAN IMPERIO SUBTERRANEO",
+        (GameChoice::Zork2, Language::Spanish) => "ZORK II: EL MAGO DE FROBOZZ",
+        (GameChoice::Zork3, Language::Spanish) => "ZORK III: EL DUNGEON MASTER",
     }
 }
