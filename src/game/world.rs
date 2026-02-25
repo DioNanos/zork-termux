@@ -697,6 +697,13 @@ impl World {
 
         world.add_object(Object::new("bell", "brass bell"), "north_temple");
 
+        world.add_creature(
+            Creature::new("troll", "troll", 3).blocks("ew_passage", "troll_room"),
+            "troll_room",
+        );
+        world.add_creature(Creature::new("thief", "thief", 2), "round_room");
+        world.add_creature(Creature::new("cyclops", "cyclops", 4).friendly(), "cyclops_room");
+
         world.add_object(Object::new("axe", "bloody axe"), "troll");
 
         world.add_object(Object::new("bolt", "bolt").takeable(false), "dam_room");
@@ -776,11 +783,6 @@ impl World {
         world.add_object(Object::new("garlic", "clove of garlic"), "sandwich_bag");
 
         world.add_object(Object::new("trident", "crystal trident"), "atlantis_room");
-
-        world.add_object(
-            Object::new("cyclops", "cyclops").takeable(false),
-            "cyclops_room",
-        );
 
         world.add_object(Object::new("dam", "dam").takeable(false), "dam_room");
 
@@ -926,14 +928,6 @@ impl World {
         world.add_object(Object::new("boat_label", "tan label"), "inflated_boat");
 
         world.add_object(
-            Object::new("thief", "thief")
-                .takeable(false)
-                .openable()
-                .with_content("stiletto"),
-            "round_room",
-        );
-
-        world.add_object(
             Object::new("pedestal", "pedestal")
                 .takeable(false)
                 .openable(),
@@ -943,11 +937,6 @@ impl World {
         world.add_object(Object::new("torch", "torch"), "pedestal");
 
         world.add_object(Object::new("guide", "tour guidebook"), "dam_lobby");
-
-        world.add_object(
-            Object::new("troll", "troll").takeable(false).openable(),
-            "troll_room",
-        );
 
         world.add_object(Object::new("trunk", "trunk of jewels"), "reservoir");
 

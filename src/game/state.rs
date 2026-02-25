@@ -49,7 +49,6 @@ impl GameState {
         if !self.visited_rooms.contains(&self.current_room) {
             self.visited_rooms.push(self.current_room.clone());
         }
-        self.moves += 1;
     }
 
     pub fn add_to_inventory(&mut self, item: String) {
