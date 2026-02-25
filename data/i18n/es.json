@@ -1284,7 +1284,8 @@
     },
     "advertisement": {
       "name": "folleto",
-      "description": "There is a leaflet here."
+      "description": "Hay un pequeño folleto aquí.",
+      "read": "\"¡BIENVENIDO A ZORK!\n\nZORK es un juego de aventura, peligro y astucia. Explorarás algunos de los territorios más increíbles jamás vistos por los mortales. ¡Ningún ordenador debería estar sin uno!\""
     },
     "leak": {
       "name": "leak",

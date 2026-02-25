@@ -267,3 +267,23 @@ impl I18n {
         )
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::{I18n, Language};
+
+    #[test]
+    fn advertisement_is_readable_in_all_languages() {
+        for lang in [Language::English, Language::Italian, Language::Spanish] {
+            let i18n = I18n::load(lang).expect("translation should load");
+            let obj = i18n
+                .object("advertisement")
+                .expect("advertisement translation should exist");
+            assert!(
+                obj.read.is_some(),
+                "advertisement should define read text for {}",
+                lang.code()
+            );
+        }
+    }
+}

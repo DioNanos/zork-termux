@@ -1284,7 +1284,8 @@
     },
     "advertisement": {
       "name": "volantino",
-      "description": "There is a leaflet here."
+      "description": "C'è un piccolo volantino qui.",
+      "read": "\"BENVENUTO IN ZORK!\n\nZORK è un gioco di avventura, pericolo e astuzia. Esplorerai alcuni dei territori più incredibili mai visti dai mortali. Nessun computer dovrebbe farne a meno!\""
     },
     "leak": {
       "name": "leak",

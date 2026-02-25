@@ -3,9 +3,9 @@ use zork_termux::game::{Game, GameChoice};
 use zork_termux::i18n::{I18n, Language};
 use zork_termux::logging;
 
-const MOBILE_DEFAULT_WIDTH: usize = 36;
+const MOBILE_DEFAULT_WIDTH: usize = 40;
 const MIN_BOX_WIDTH: usize = 30;
-const MAX_BOX_WIDTH: usize = 48;
+const MAX_BOX_WIDTH: usize = 56;
 
 fn main() {
     let session_log = logging::init();
@@ -41,9 +41,9 @@ fn detect_box_width() -> usize {
         .and_then(|v| v.parse::<usize>().ok())
         .unwrap_or(MOBILE_DEFAULT_WIDTH);
 
-    columns
-        .saturating_sub(2)
-        .clamp(MIN_BOX_WIDTH, MAX_BOX_WIDTH)
+    let usable = columns.max(24);
+    let lower = MIN_BOX_WIDTH.min(usable);
+    usable.clamp(lower, MAX_BOX_WIDTH)
 }
 
 fn print_banner(width: usize) {
@@ -148,7 +148,9 @@ fn print_box(width: usize, title: &str, lines: &[String]) {
     print_centered(title, inner);
     print_border('╠', '═', '╣', inner);
     for line in lines {
-        print_left(line, inner);
+        for wrapped in wrap_text(line, inner) {
+            print_left(&wrapped, inner);
+        }
     }
     print_border('╚', '═', '╝', inner);
 }
@@ -166,9 +168,72 @@ fn print_centered(text: &str, inner: usize) {
 }
 
 fn print_left(text: &str, inner: usize) {
-    let fit = fit_text(text, inner);
+    let fit = text.chars().take(inner).collect::<String>();
     let pad = inner.saturating_sub(fit.chars().count());
     println!("║{}{}║", fit, " ".repeat(pad));
+}
+
+fn wrap_text(text: &str, width: usize) -> Vec<String> {
+    if width == 0 {
+        return vec![String::new()];
+    }
+
+    if text.trim().is_empty() {
+        return vec![String::new()];
+    }
+
+    let mut lines = Vec::new();
+    let mut current = String::new();
+
+    for word in text.split_whitespace() {
+        let word_len = word.chars().count();
+
+        if word_len > width {
+            if !current.is_empty() {
+                lines.push(current);
+                current = String::new();
+            }
+
+            let mut chunk = String::new();
+            for ch in word.chars() {
+                chunk.push(ch);
+                if chunk.chars().count() == width {
+                    lines.push(chunk);
+                    chunk = String::new();
+                }
+            }
+
+            if !chunk.is_empty() {
+                current = chunk;
+            }
+
+            continue;
+        }
+
+        if current.is_empty() {
+            current.push_str(word);
+            continue;
+        }
+
+        let candidate_len = current.chars().count() + 1 + word_len;
+        if candidate_len <= width {
+            current.push(' ');
+            current.push_str(word);
+        } else {
+            lines.push(current);
+            current = word.to_string();
+        }
+    }
+
+    if !current.is_empty() {
+        lines.push(current);
+    }
+
+    if lines.is_empty() {
+        lines.push(String::new());
+    }
+
+    lines
 }
 
 fn fit_text(text: &str, width: usize) -> String {
