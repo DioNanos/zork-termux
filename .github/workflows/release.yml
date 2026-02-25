@@ -135,7 +135,12 @@ jobs:
           cp dist/zork-termux-termux-arm64 npm/zork-termux/prebuilt/zork-termux
           chmod +x npm/zork-termux/prebuilt/zork-termux
           VERSION="${GITHUB_REF_NAME#v}"
-          npm --prefix npm/zork-termux version "${VERSION}" --no-git-tag-version
+          CURRENT_VERSION="$(node -p "require('./npm/zork-termux/package.json').version")"
+          if [ "${CURRENT_VERSION}" != "${VERSION}" ]; then
+            npm --prefix npm/zork-termux version "${VERSION}" --no-git-tag-version
+          else
+            echo "npm package version already ${VERSION}, skipping npm version bump"
+          fi
 
       - name: Publish npm package
         run: npm publish --access public --prefix npm/zork-termux
