@@ -1,5 +1,59 @@
 use std::collections::HashMap;
 
+#[derive(Debug, Clone, PartialEq)]
+pub enum CreatureState {
+    Alive,
+    Dead,
+    Fled,
+    Unconscious,
+}
+
+#[derive(Debug, Clone)]
+pub struct Creature {
+    pub id: String,
+    pub name: String,
+    pub hp: i32,
+    pub max_hp: i32,
+    pub state: CreatureState,
+    pub blocks_exit: Option<(String, String)>,
+    pub hostile: bool,
+}
+
+impl Creature {
+    pub fn new(id: &str, name: &str, hp: i32) -> Self {
+        Creature {
+            id: id.to_string(),
+            name: name.to_string(),
+            hp,
+            max_hp: hp,
+            state: CreatureState::Alive,
+            blocks_exit: None,
+            hostile: true,
+        }
+    }
+
+    pub fn blocks(mut self, from: &str, to: &str) -> Self {
+        self.blocks_exit = Some((from.to_string(), to.to_string()));
+        self
+    }
+
+    pub fn friendly(mut self) -> Self {
+        self.hostile = false;
+        self
+    }
+
+    pub fn is_alive(&self) -> bool {
+        self.state == CreatureState::Alive && self.hp > 0
+    }
+
+    pub fn take_damage(&mut self, damage: i32) {
+        self.hp -= damage;
+        if self.hp <= 0 {
+            self.state = CreatureState::Dead;
+        }
+    }
+}
+
 #[derive(Debug, Clone)]
 pub struct Room {
     pub id: String,
@@ -91,6 +145,7 @@ pub struct World {
     pub rooms: HashMap<String, Room>,
     pub objects: HashMap<String, Object>,
     pub object_locations: HashMap<String, String>,
+    pub creatures: HashMap<String, Creature>,
 }
 
 impl World {
@@ -99,7 +154,47 @@ impl World {
             rooms: HashMap::new(),
             objects: HashMap::new(),
             object_locations: HashMap::new(),
+            creatures: HashMap::new(),
         }
+    }
+
+    pub fn add_creature(&mut self, creature: Creature, location: &str) {
+        let id = creature.id.clone();
+        self.creatures.insert(id.clone(), creature);
+        self.object_locations.insert(id, location.to_string());
+    }
+
+    pub fn get_creature(&self, id: &str) -> Option<&Creature> {
+        self.creatures.get(id)
+    }
+
+    pub fn get_creature_mut(&mut self, id: &str) -> Option<&mut Creature> {
+        self.creatures.get_mut(id)
+    }
+
+    pub fn creatures_in_room(&self, room_id: &str) -> Vec<&Creature> {
+        self.object_locations
+            .iter()
+            .filter(|(_, loc)| *loc == room_id)
+            .filter_map(|(id, _)| self.creatures.get(id))
+            .collect()
+    }
+
+    pub fn move_creature(&mut self, creature_id: &str, new_location: &str) {
+        if self.creatures.contains_key(creature_id) {
+            self.object_locations
+                .insert(creature_id.to_string(), new_location.to_string());
+        }
+    }
+
+    pub fn blocking_creature(&self, from: &str, to: &str) -> Option<&Creature> {
+        self.creatures.values().find(|c| {
+            c.is_alive()
+                && c.blocks_exit
+                    .as_ref()
+                    .map(|(f, t)| f == from && t == to)
+                    .unwrap_or(false)
+        })
     }
 
     pub fn add_room(&mut self, room: Room) {
