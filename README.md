@@ -23,7 +23,7 @@ cargo run --release
 - NPM Termux package (arm64): `npm i -g @mmmbuto/zork-termux`
 - Homebrew tap (Linux/macOS build-from-source):
   - `brew tap Dionanos/zork-termux https://github.com/DioNanos/homebrew-zork-termux`
-  - `brew install Dionanos/zork-termux/zork-termux --HEAD`
+  - `brew install Dionanos/zork-termux/zork-termux`
 
 ## What You Get (Current Build)
 
