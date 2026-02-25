@@ -1,29 +1,64 @@
-# ZORK-TERMUX
+<div align="center">
 
 ```text
-╔════════════════════════════════════════════════════╗
-║                   ZORK-TERMUX                     ║
-║        Mobile-First Terminal Adventure (Rust)     ║
-╚════════════════════════════════════════════════════╝
+╔════════════════════════════════════╗
+║   ZORK-TERMUX: DUNGEON EDITION    ║
+║   GREAT UNDERGROUND TERMINAL RPG  ║
+╚════════════════════════════════════╝
 ```
+
+[![Status](https://img.shields.io/badge/Status-0.4.0-blue.svg)](#what-you-get-current-build)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Rust](https://img.shields.io/badge/Rust-1.75%2B-orange.svg)](https://www.rust-lang.org/)
+[![Target](https://img.shields.io/badge/Target-Termux%20%2F%20Linux%20%2F%20macOS-green.svg)](https://termux.dev/)
+[![npm](https://img.shields.io/npm/v/@mmmbuto/zork-termux?style=flat-square&logo=npm)](https://www.npmjs.com/package/@mmmbuto/zork-termux)
+[![Homebrew Tap](https://img.shields.io/badge/Homebrew-DioNanos%2Fzork--termux-black?style=flat-square&logo=homebrew)](https://github.com/DioNanos/homebrew-zork-termux)
+</div>
 
 Termux-first recreation of **Zork I, II, III** for terminal play, built in Rust and designed to feel good on narrow mobile terminals while staying fully compatible with Linux and macOS.
 
-## Quick Start
+## Prerequisites
 
 ```bash
-git clone https://github.com/DioNanos/zork-termux.git
-cd zork-termux
-cargo run --release
+pkg update
+pkg install -y nodejs-lts
 ```
 
-## Install Channels
+## Install (Copy/Paste)
 
-- Cargo (source): `cargo run --release`
-- NPM Termux package (arm64): `npm i -g @mmmbuto/zork-termux`
-- Homebrew tap (Linux/macOS build-from-source):
-  - `brew tap Dionanos/zork-termux https://github.com/DioNanos/homebrew-zork-termux`
-  - `brew install Dionanos/zork-termux/zork-termux`
+### NPM (Termux)
+
+```bash
+npm i -g @mmmbuto/zork-termux
+```
+
+### Homebrew (Linux/macOS)
+
+```bash
+brew tap Dionanos/zork-termux
+brew install zork-termux
+```
+
+## Quick Smoke Test (60s)
+
+```text
+1) apri cassetta postale
+2) prendi volantino
+3) inventario
+4) salva
+5) nord
+6) ripristina
+```
+
+## Session Log (for fast bug reports)
+
+- Path: `~/.zork-termux/logs/session-<timestamp>.log`
+- The path is shown at game startup.
+- To send diagnostics quickly:
+
+```bash
+tail -n 120 ~/.zork-termux/logs/session-*.log
+```
 
 ## What You Get (Current Build)
 
@@ -70,7 +105,7 @@ The startup menu now auto-adapts to terminal width using `COLUMNS` when availabl
 - No dependency on advanced terminal libraries
 - Fallback-safe rendering for Linux/macOS shells
 
-## Build
+## Developer Build (Optional)
 
 ```bash
 cargo build --release
@@ -111,5 +146,8 @@ zork-termux/
 ## License
 
 MIT License (see `LICENSE`).
+Copyright (c) 2026 Davide A. Guglielmi
+
+Made in Italy.
 
 ZORK is a registered trademark of Activision. This is an unofficial educational recreation.
