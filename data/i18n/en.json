@@ -1,0 +1,1048 @@
+{
+  "meta": {
+    "language": "en",
+    "version": "1.0.0",
+    "author": "ZORK-TERMUX Team"
+  },
+  "ui": {
+    "welcome": "Welcome to ZORK!\nA great underground empire awaits.\nType HELP for commands.",
+    "goodbye": "Thanks for playing!\nYour adventure has ended.",
+    "empty_handed": "You are empty-handed.",
+    "carrying": "You are carrying",
+    "cant_go": "You can't go that way.",
+    "unknown_command": "I don't understand \"{cmd}\".",
+    "taken": "Taken.",
+    "dropped": "Dropped.",
+    "cant_take": "You can't take that.",
+    "cant_open": "You can't open that.",
+    "cant_close": "You can't close that.",
+    "already_open": "It's already open.",
+    "already_closed": "It's already closed.",
+    "opened": "Opened.",
+    "closed": "Closed.",
+    "locked": "It's locked.",
+    "unlocked": "Unlocked.",
+    "dont_see": "You don't see that here.",
+    "not_holding": "You're not holding that.",
+    "take_what": "Take what?",
+    "drop_what": "Drop what?",
+    "examine_what": "Examine what?",
+    "open_what": "Open what?",
+    "close_what": "Close what?",
+    "unlock_what": "Unlock what?",
+    "lock_what": "Lock what?",
+    "contains": "It contains",
+    "is_empty": "It's empty.",
+    "score": "Score",
+    "moves": "Moves",
+    "game_saved": "Game saved.",
+    "game_restored": "Game restored.",
+    "save_failed": "Failed to save game.",
+    "restore_failed": "Failed to restore game.",
+    "no_saved_game": "No saved game found.",
+    "darkness": "It is pitch dark. You are likely to be eaten by a grue.",
+    "lamp_off": "Your lamp is off.",
+    "lamp_on": "Your lamp is on.",
+    "lamp_dim": "Your lamp is getting dim.",
+    "lamp_out": "Your lamp has run out of power.",
+    "attack_what": "Attack what?",
+    "attack_with": "Attack {target} with {weapon}?",
+    "killed": "You killed the {target}!",
+    "dodged": "The {target} dodges your attack.",
+    "you_died": "You have died.",
+    "restart": "Would you like to restart?",
+    "inventory_full": "You're carrying too much already.",
+    "cant_put_in": "You can't put that in there.",
+    "put_in": "You put the {obj} in the {container}.",
+    "cant_read": "There's nothing to read.",
+    "cant_drink": "You can't drink that.",
+    "drank": "You drank it. Delicious!",
+    "cant_eat": "You can't eat that.",
+    "ate": "You ate it. Yum!",
+    "already_have": "You already have that.",
+    "cant_climb": "You can't climb that.",
+    "cant_tie": "You can't tie that.",
+    "tied": "Tied.",
+    "cant_untie": "You can't untie that.",
+    "untied": "Untied."
+  },
+  "help": {
+    "title": "COMMANDS",
+    "movement": "Movement: n/north, s/south, e/east, w/west, u/up, d/down",
+    "look": "look/l - Look around",
+    "inventory": "inventory/i - Check inventory",
+    "take": "take/get X - Take item",
+    "drop": "drop X - Drop item",
+    "examine": "examine/x X - Examine item",
+    "open": "open X - Open item",
+    "close": "close X - Close item",
+    "put": "put X in Y - Put item in container",
+    "read": "read X - Read item",
+    "use_": "use X - Use item",
+    "attack": "attack/kill X - Attack target",
+    "score": "score - Your score",
+    "save": "save - Save game",
+    "restore": "restore - Restore game",
+    "quit": "quit/q - End game"
+  },
+  "rooms": {
+    "west_of_house": {
+      "name": "West of House",
+      "description": "You are standing in an open field west of a white house, with a boarded front door.\nThere is a small mailbox here."
+    },
+    "north_of_house": {
+      "name": "North of House",
+      "description": "You are facing the north side of a white house. There is no door here, and all the windows are barred."
+    },
+    "south_of_house": {
+      "name": "South of House",
+      "description": "You are facing the south side of a white house. There is no door here, and all the windows are barred."
+    },
+    "east_of_house": {
+      "name": "Behind House",
+      "description": "You are behind the white house. A path leads into the forest to the east. In one corner of the house there is a small window which is slightly ajar."
+    },
+    "kitchen": {
+      "name": "Kitchen",
+      "description": "You are in the kitchen of the white house. A table seems to have been used recently for the preparation of food. A passage leads to the west and a dark staircase can be seen leading upward."
+    },
+    "living_room": {
+      "name": "Living Room",
+      "description": "You are in the living room. There is a doorway to the east, a wooden door with strange gothic lettering to the north, and a large oriental rug in the center of the room."
+    },
+    "attic": {
+      "name": "Attic",
+      "description": "This is the attic. The only exit is a stairway leading down. A large coil of rope is lying in the corner. On a table is a nasty-looking knife."
+    },
+    "cellar": {
+      "name": "Cellar",
+      "description": "You are in a dark and damp cellar with a narrow passageway leading north, and a crawlway to the south."
+    },
+    "stone_barrow": {
+      "name": "Stone Barrow",
+      "description": "You are standing in front of a massive barrow of stone. In the east face\nis a huge stone door which is open. You cannot see into the dark of the tomb."
+    },
+    "forest_1": {
+      "name": "Forest",
+      "description": "This is a forest, with trees in all directions. To the east,\nthere appears to be sunlight."
+    },
+    "forest_2": {
+      "name": "Forest",
+      "description": "This is a dimly lit forest, with large trees all around."
+    },
+    "mountains": {
+      "name": "Forest",
+      "description": "The forest thins out, revealing impassable mountains."
+    },
+    "forest_3": {
+      "name": "Forest",
+      "description": "This is a dimly lit forest, with large trees all around."
+    },
+    "path": {
+      "name": "Forest Path",
+      "description": "This is a path winding through a dimly lit forest. The path heads\nnorth-south here. One particularly large tree with some low branches\nstands at the edge of the path."
+    },
+    "up_a_tree": {
+      "name": "Up a Tree",
+      "description": ""
+    },
+    "grating_clearing": {
+      "name": "Clearing",
+      "description": ""
+    },
+    "clearing": {
+      "name": "Clearing",
+      "description": "You are in a small clearing in a well marked forest path that\nextends to the east and west."
+    },
+    "troll_room": {
+      "name": "The Troll Room",
+      "description": "This is a small room with passages to the east and south and a\nforbidding hole leading west. Bloodstains and deep scratches\n(perhaps made by an axe) mar the walls."
+    },
+    "east_of_chasm": {
+      "name": "East of Chasm",
+      "description": "You are on the east edge of a chasm, the bottom of which cannot be\nseen. A narrow passage goes north, and the path you are on continues\nto the east."
+    },
+    "gallery": {
+      "name": "Gallery",
+      "description": "This is an art gallery. Most of the paintings have been stolen by\nvandals with exceptional taste. The vandals left through either the\nnorth or west exits."
+    },
+    "studio": {
+      "name": "Studio",
+      "description": "This appears to have been an artist's studio. The walls and floors are\nsplattered with paints of 69 different colors. Strangely enough, nothing\nof value is hanging here. At the south end of the room is an open door\n(also covered with paint). A dark and narrow chimney leads up from a\nfireplace; although you might be able to get up it, it seems unlikely\nyou could get back down."
+    },
+    "maze_1": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_2": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_3": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_4": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "dead_end_1": {
+      "name": "Dead End",
+      "description": "You have come to a dead end in the maze."
+    },
+    "maze_5": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike.\nA skeleton, probably the remains of a luckless adventurer, lies here."
+    },
+    "dead_end_2": {
+      "name": "Dead End",
+      "description": "You have come to a dead end in the maze."
+    },
+    "maze_6": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_7": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_8": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "dead_end_3": {
+      "name": "Dead End",
+      "description": "You have come to a dead end in the maze."
+    },
+    "maze_9": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_10": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_11": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "grating_room": {
+      "name": "Grating Room",
+      "description": ""
+    },
+    "maze_12": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "dead_end_4": {
+      "name": "Dead End",
+      "description": "You have come to a dead end in the maze."
+    },
+    "maze_13": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_14": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_15": {
+      "name": "Maze",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "cyclops_room": {
+      "name": "Cyclops Room",
+      "description": ""
+    },
+    "strange_passage": {
+      "name": "Strange Passage",
+      "description": "This is a long passage. To the west is one entrance. On the\neast there is an old wooden door, with a large opening in it (about\ncyclops sized)."
+    },
+    "treasure_room": {
+      "name": "Treasure Room",
+      "description": "This is a large room, whose east wall is solid granite. A number\nof discarded bags, which crumble at your touch, are scattered about\non the floor. There is an exit down a staircase."
+    },
+    "reservoir_south": {
+      "name": "Reservoir South",
+      "description": ""
+    },
+    "reservoir": {
+      "name": "Reservoir",
+      "description": ""
+    },
+    "reservoir_north": {
+      "name": "Reservoir North",
+      "description": ""
+    },
+    "stream_view": {
+      "name": "Stream View",
+      "description": "You are standing on a path beside a gently flowing stream. The path\nfollows the stream, which flows from west to east."
+    },
+    "in_stream": {
+      "name": "Stream",
+      "description": "You are on the gently flowing stream. The upstream route is too narrow\nto navigate, and the downstream route is invisible due to twisting\nwalls. There is a narrow beach to land on."
+    },
+    "mirror_room_1": {
+      "name": "Mirror Room",
+      "description": ""
+    },
+    "mirror_room_2": {
+      "name": "Mirror Room",
+      "description": ""
+    },
+    "small_cave": {
+      "name": "Cave",
+      "description": "This is a tiny cave with entrances west and north, and a staircase\nleading down."
+    },
+    "tiny_cave": {
+      "name": "Cave",
+      "description": "This is a tiny cave with entrances west and north, and a dark,\nforbidding staircase leading down."
+    },
+    "cold_passage": {
+      "name": "Cold Passage",
+      "description": "This is a cold and damp corridor where a long east-west passageway\nturns into a southward path."
+    },
+    "narrow_passage": {
+      "name": "Narrow Passage",
+      "description": "This is a long and narrow corridor where a long north-south passageway\nbriefly narrows even further."
+    },
+    "winding_passage": {
+      "name": "Winding Passage",
+      "description": "This is a winding passage. It seems that there are only exits\non the east and north."
+    },
+    "twisting_passage": {
+      "name": "Twisting Passage",
+      "description": "This is a winding passage. It seems that there are only exits\non the east and north."
+    },
+    "atlantis_room": {
+      "name": "Atlantis Room",
+      "description": "This is an ancient room, long under water. There is an exit to\nthe south and a staircase leading up."
+    },
+    "ew_passage": {
+      "name": "East-West Passage",
+      "description": "This is a narrow east-west passageway. There is a narrow stairway\nleading down at the north end of the room."
+    },
+    "round_room": {
+      "name": "Round Room",
+      "description": "This is a circular stone room with passages in all directions. Several\nof them have unfortunately been blocked by cave-ins."
+    },
+    "deep_canyon": {
+      "name": "Deep Canyon",
+      "description": ""
+    },
+    "damp_cave": {
+      "name": "Damp Cave",
+      "description": "This cave has exits to the west and east, and narrows to a crack toward\nthe south. The earth is particularly damp here."
+    },
+    "loud_room": {
+      "name": "Loud Room",
+      "description": ""
+    },
+    "ns_passage": {
+      "name": "North-South Passage",
+      "description": "This is a high north-south passage, which forks to the northeast."
+    },
+    "chasm_room": {
+      "name": "Chasm",
+      "description": "A chasm runs southwest to northeast and the path follows it. You are\non the south side of the chasm, where a crack opens into a passage."
+    },
+    "entrance_to_hades": {
+      "name": "Entrance to Hades",
+      "description": ""
+    },
+    "land_of_living_dead": {
+      "name": "Land of the Dead",
+      "description": "You have entered the Land of the Living Dead. Thousands of lost souls\ncan be heard weeping and moaning. In the corner are stacked the remains\nof dozens of previous adventurers less fortunate than yourself.\nA passage exits to the north."
+    },
+    "engravings_cave": {
+      "name": "Engravings Cave",
+      "description": "You have entered a low cave with passages leading northwest and east."
+    },
+    "egypt_room": {
+      "name": "Egyptian Room",
+      "description": "This is a room which looks like an Egyptian tomb. There is an\nascending staircase to the west."
+    },
+    "dome_room": {
+      "name": "Dome Room",
+      "description": ""
+    },
+    "torch_room": {
+      "name": "Torch Room",
+      "description": ""
+    },
+    "north_temple": {
+      "name": "Temple",
+      "description": "This is the north end of a large temple. On the east wall is an\nancient inscription, probably a prayer in a long-forgotten language.\nBelow the prayer is a staircase leading down. The west wall is solid\ngranite. The exit to the north end of the room is through huge\nmarble pillars."
+    },
+    "south_temple": {
+      "name": "Altar",
+      "description": "This is the south end of a large temple. In front of you is what\nappears to be an altar. In one corner is a small hole in the floor\nwhich leads into darkness. You probably could not get back up it."
+    },
+    "dam_room": {
+      "name": "Dam",
+      "description": ""
+    },
+    "dam_lobby": {
+      "name": "Dam Lobby",
+      "description": ""
+    },
+    "maintenance_room": {
+      "name": "Maintenance Room",
+      "description": "This is what appears to have been the maintenance room for Flood\nControl Dam #3. Apparently, this room has been ransacked recently, for\nmost of the valuable equipment is gone. On the wall in front of you is a\ngroup of buttons colored blue, yellow, brown, and red. There are doorways to\nthe west and south."
+    },
+    "dam_base": {
+      "name": "Dam Base",
+      "description": "You are at the base of Flood Control Dam #3, which looms above you\nand to the north. The river Frigid is flowing by here. Along the\nriver are the White Cliffs which seem to form giant walls stretching\nfrom north to south along the shores of the river as it winds its\nway downstream."
+    },
+    "river_1": {
+      "name": "Frigid River",
+      "description": "You are on the Frigid River in the vicinity of the Dam. The river\nflows quietly here. There is a landing on the west shore."
+    },
+    "river_2": {
+      "name": "Frigid River",
+      "description": "The river turns a corner here making it impossible to see the\nDam. The White Cliffs loom on the east bank and large rocks prevent\nlanding on the west."
+    },
+    "river_3": {
+      "name": "Frigid River",
+      "description": "The river descends here into a valley. There is a narrow beach on the\nwest shore below the cliffs. In the distance a faint rumbling can be\nheard."
+    },
+    "white_cliffs_north": {
+      "name": "White Cliffs Beach",
+      "description": "You are on a narrow strip of beach which runs along the base of the\nWhite Cliffs. There is a narrow path heading south along the Cliffs\nand a tight passage leading west into the cliffs themselves."
+    },
+    "white_cliffs_south": {
+      "name": "White Cliffs Beach",
+      "description": "You are on a rocky, narrow strip of beach beside the Cliffs. A\nnarrow path leads north along the shore."
+    },
+    "river_4": {
+      "name": "Frigid River",
+      "description": "The river is running faster here and the sound ahead appears to be\nthat of rushing water. On the east shore is a sandy beach. A small\narea of beach can also be seen below the cliffs on the west shore."
+    },
+    "river_5": {
+      "name": "Frigid River",
+      "description": "The sound of rushing water is nearly unbearable here. On the east\nshore is a large landing area."
+    },
+    "shore": {
+      "name": "Shore",
+      "description": "You are on the east shore of the river. The water here seems somewhat\ntreacherous. A path travels from north to south here, the south end\nquickly turning around a sharp corner."
+    },
+    "sandy_beach": {
+      "name": "Sandy Beach",
+      "description": "You are on a large sandy beach on the east shore of the river, which is\nflowing quickly by. A path runs beside the river to the south here, and\na passage is partially buried in sand to the northeast."
+    },
+    "sandy_cave": {
+      "name": "Sandy Cave",
+      "description": "This is a sand-filled cave whose exit is to the southwest."
+    },
+    "aragain_falls": {
+      "name": "Aragain Falls",
+      "description": ""
+    },
+    "on_rainbow": {
+      "name": "On the Rainbow",
+      "description": "You are on top of a rainbow (I bet you never thought you would walk\non a rainbow), with a magnificent view of the Falls. The rainbow\ntravels east-west here."
+    },
+    "end_of_rainbow": {
+      "name": "End of Rainbow",
+      "description": "You are on a small, rocky beach on the continuation of the Frigid\nRiver past the Falls. The beach is narrow due to the presence of the\nWhite Cliffs. The river canyon opens here and sunlight shines in\nfrom above. A rainbow crosses over the falls to the east and a narrow\npath continues to the southwest."
+    },
+    "canyon_bottom": {
+      "name": "Canyon Bottom",
+      "description": "You are beneath the walls of the river canyon which may be climbable\nhere. The lesser part of the runoff of Aragain Falls flows by below.\nTo the north is a narrow path."
+    },
+    "cliff_middle": {
+      "name": "Rocky Ledge",
+      "description": "You are on a ledge about halfway up the wall of the river canyon.\nYou can see from here that the main flow from Aragain Falls twists\nalong a passage which it is impossible for you to enter. Below you is the\ncanyon bottom. Above you is more cliff, which appears\nclimbable."
+    },
+    "canyon_view": {
+      "name": "Canyon View",
+      "description": "You are at the top of the Great Canyon on its west wall. From here\nthere is a marvelous view of the canyon and parts of the Frigid River\nupstream. Across the canyon, the walls of the White Cliffs join the\nmighty ramparts of the Flathead Mountains to the east. Following the\nCanyon upstream to the north, Aragain Falls may be seen, complete with\nrainbow. The mighty Frigid River flows out from a great dark cavern. To\nthe west and south can be seen an immense forest, stretching for miles\naround. A path leads northwest. It is possible to climb down into\nthe canyon from here."
+    },
+    "mine_entrance": {
+      "name": "Mine Entrance",
+      "description": "You are standing at the entrance of what might have been a coal mine.\nThe shaft enters the west wall, and there is another exit on the south\nend of the room."
+    },
+    "squeeky_room": {
+      "name": "Squeaky Room",
+      "description": "You are in a small room. Strange squeaky sounds may be heard coming\nfrom the passage at the north end. You may also escape to the east."
+    },
+    "bat_room": {
+      "name": "Bat Room",
+      "description": ""
+    },
+    "shaft_room": {
+      "name": "Shaft Room",
+      "description": "This is a large room, in the middle of which is a small shaft\ndescending through the floor into darkness below. To the west and\nthe north are exits from this room. Constructed over the top of the\nshaft is a metal framework to which a heavy iron chain is attached."
+    },
+    "smelly_room": {
+      "name": "Smelly Room",
+      "description": "This is a small nondescript room. However, from the direction\nof a small descending staircase a foul odor can be detected. To the\nsouth is a narrow tunnel."
+    },
+    "gas_room": {
+      "name": "Gas Room",
+      "description": "This is a small room which smells strongly of coal gas. There is a\nshort climb up some stairs and a narrow tunnel leading east."
+    },
+    "ladder_top": {
+      "name": "Ladder Top",
+      "description": "This is a very small room. In the corner is a rickety wooden\nladder, leading downward. It might be safe to descend. There is\nalso a staircase leading upward."
+    },
+    "ladder_bottom": {
+      "name": "Ladder Bottom",
+      "description": "This is a rather wide room. On one side is the bottom of a\nnarrow wooden ladder. To the west and the south are passages\nleaving the room."
+    },
+    "dead_end_5": {
+      "name": "Dead End",
+      "description": "You have come to a dead end in the mine."
+    },
+    "timber_room": {
+      "name": "Timber Room",
+      "description": "This is a long and narrow passage, which is cluttered with broken\ntimbers. A wide passage comes from the east and turns at the\nwest end of the room into a very narrow passageway. From the west\ncomes a strong draft."
+    },
+    "lower_shaft": {
+      "name": "Drafty Room",
+      "description": "This is a small drafty room in which is the bottom of a long\nshaft. To the south is a passageway and to the east a very narrow\npassage. In the shaft can be seen a heavy iron chain."
+    },
+    "machine_room": {
+      "name": "Machine Room",
+      "description": ""
+    },
+    "mine_1": {
+      "name": "Coal Mine",
+      "description": "This is a nondescript part of a coal mine."
+    },
+    "mine_2": {
+      "name": "Coal Mine",
+      "description": "This is a nondescript part of a coal mine."
+    },
+    "mine_3": {
+      "name": "Coal Mine",
+      "description": "This is a nondescript part of a coal mine."
+    },
+    "mine_4": {
+      "name": "Coal Mine",
+      "description": "This is a nondescript part of a coal mine."
+    },
+    "slide_room": {
+      "name": "Slide Room",
+      "description": ""
+    }
+  },
+  "objects": {
+    "mailbox": {
+      "name": "mailbox",
+      "description": "There is a small mailbox here."
+    },
+    "leaflet": {
+      "name": "leaflet",
+      "description": "A small leaflet is here.",
+      "read": "\"WELCOME TO ZORK!\n\nZORK is a game of adventure, danger, and low cunning. In it you will explore some of the most amazing territory ever seen by mortals. No computer should be without one!\""
+    },
+    "lamp": {
+      "name": "brass lantern",
+      "description": "There is a brass lantern here.",
+      "on_desc": "The brass lantern is on."
+    },
+    "sword": {
+      "name": "elvish sword",
+      "description": "There is a sword here."
+    },
+    "rope": {
+      "name": "rope",
+      "description": "A large coil of rope is here."
+    },
+    "knife": {
+      "name": "nasty knife",
+      "description": "On a table is a nasty-looking knife."
+    },
+    "window": {
+      "name": "small window",
+      "description": "A small window is slightly ajar."
+    },
+    "trophy_case": {
+      "name": "trophy case",
+      "description": "A large trophy case stands against the wall."
+    },
+    "rug": {
+      "name": "oriental rug",
+      "description": "A large oriental rug lies in the center of the room."
+    },
+    "trap_door": {
+      "name": "trap door",
+      "description": "A trap door is open."
+    },
+    "board": {
+      "name": "board",
+      "description": "There is a board here."
+    },
+    "teeth": {
+      "name": "set of teeth",
+      "description": "There is a set of teeth here."
+    },
+    "wall": {
+      "name": "surrounding wall",
+      "description": "There is a surrounding wall here."
+    },
+    "granite_wall": {
+      "name": "granite wall",
+      "description": "There is a granite wall here."
+    },
+    "songbird": {
+      "name": "songbird",
+      "description": "There is a songbird here."
+    },
+    "white_house": {
+      "name": "white house",
+      "description": "There is a white house here."
+    },
+    "forest": {
+      "name": "forest",
+      "description": "There is a forest here."
+    },
+    "tree": {
+      "name": "tree",
+      "description": "There is a tree here."
+    },
+    "mountain_range": {
+      "name": "mountain range",
+      "description": "There is a mountain range here."
+    },
+    "global_water": {
+      "name": "water",
+      "description": "There is a water here."
+    },
+    "water": {
+      "name": "quantity of water",
+      "description": "There is a quantity of water here."
+    },
+    "kitchen_window": {
+      "name": "kitchen window",
+      "description": "There is a kitchen window here."
+    },
+    "chimney": {
+      "name": "chimney",
+      "description": "There is a chimney here."
+    },
+    "ghosts": {
+      "name": "number of ghosts",
+      "description": "There is a number of ghosts here."
+    },
+    "skull": {
+      "name": "crystal skull",
+      "description": "There is a crystal skull here."
+    },
+    "lowered_basket": {
+      "name": "basket",
+      "description": "There is a basket here."
+    },
+    "raised_basket": {
+      "name": "basket",
+      "description": "There is a basket here."
+    },
+    "lunch": {
+      "name": "lunch",
+      "description": "There is a lunch here."
+    },
+    "bat": {
+      "name": "bat",
+      "description": "There is a bat here."
+    },
+    "bell": {
+      "name": "brass bell",
+      "description": "There is a brass bell here."
+    },
+    "hot_bell": {
+      "name": "red hot brass bell",
+      "description": "There is a red hot brass bell here."
+    },
+    "axe": {
+      "name": "bloody axe",
+      "description": "There is a bloody axe here."
+    },
+    "bolt": {
+      "name": "bolt",
+      "description": "There is a bolt here."
+    },
+    "bubble": {
+      "name": "green bubble",
+      "description": "There is a green bubble here."
+    },
+    "altar": {
+      "name": "altar",
+      "description": "There is a altar here."
+    },
+    "book": {
+      "name": "black book",
+      "description": "There is a black book here."
+    },
+    "broken_lamp": {
+      "name": "broken lantern",
+      "description": "There is a broken lantern here."
+    },
+    "sceptre": {
+      "name": "sceptre",
+      "description": "There is a sceptre here."
+    },
+    "timbers": {
+      "name": "broken timber",
+      "description": "There is a broken timber here."
+    },
+    "slide": {
+      "name": "chute",
+      "description": "There is a chute here."
+    },
+    "kitchen_table": {
+      "name": "kitchen table",
+      "description": "There is a kitchen table here."
+    },
+    "attic_table": {
+      "name": "table",
+      "description": "There is a table here."
+    },
+    "sandwich_bag": {
+      "name": "brown sack",
+      "description": "There is a brown sack here."
+    },
+    "tool_chest": {
+      "name": "group of tool chests",
+      "description": "There is a group of tool chests here."
+    },
+    "yellow_button": {
+      "name": "yellow button",
+      "description": "There is a yellow button here."
+    },
+    "brown_button": {
+      "name": "brown button",
+      "description": "There is a brown button here."
+    },
+    "red_button": {
+      "name": "red button",
+      "description": "There is a red button here."
+    },
+    "blue_button": {
+      "name": "blue button",
+      "description": "There is a blue button here."
+    },
+    "chalice": {
+      "name": "chalice",
+      "description": "There is a chalice here."
+    },
+    "garlic": {
+      "name": "clove of garlic",
+      "description": "There is a clove of garlic here."
+    },
+    "trident": {
+      "name": "crystal trident",
+      "description": "There is a crystal trident here."
+    },
+    "cyclops": {
+      "name": "cyclops",
+      "description": "There is a cyclops here."
+    },
+    "dam": {
+      "name": "dam",
+      "description": "There is a dam here."
+    },
+    "boarded_window": {
+      "name": "boarded window",
+      "description": "There is a boarded window here."
+    },
+    "front_door": {
+      "name": "door",
+      "description": "There is a door here."
+    },
+    "barrow_door": {
+      "name": "stone door",
+      "description": "There is a stone door here."
+    },
+    "barrow": {
+      "name": "stone barrow",
+      "description": "There is a stone barrow here."
+    },
+    "bottle": {
+      "name": "glass bottle",
+      "description": "There is a glass bottle here."
+    },
+    "crack": {
+      "name": "crack",
+      "description": "There is a crack here."
+    },
+    "coffin": {
+      "name": "gold coffin",
+      "description": "There is a gold coffin here."
+    },
+    "grate": {
+      "name": "grating",
+      "description": "There is a grating here."
+    },
+    "pump": {
+      "name": "hand-held air pump",
+      "description": "There is a hand-held air pump here."
+    },
+    "diamond": {
+      "name": "huge diamond",
+      "description": "There is a huge diamond here."
+    },
+    "jade": {
+      "name": "jade figurine",
+      "description": "There is a jade figurine here."
+    },
+    "bones": {
+      "name": "skeleton",
+      "description": "There is a skeleton here."
+    },
+    "burned_out_lantern": {
+      "name": "burned-out lantern",
+      "description": "There is a burned-out lantern here."
+    },
+    "bag_of_coins": {
+      "name": "leather bag of coins",
+      "description": "There is a leather bag of coins here."
+    },
+    "emerald": {
+      "name": "large emerald",
+      "description": "There is a large emerald here."
+    },
+    "advertisement": {
+      "name": "leaflet",
+      "description": "There is a leaflet here."
+    },
+    "leak": {
+      "name": "leak",
+      "description": "There is a leak here."
+    },
+    "machine": {
+      "name": "machine",
+      "description": "There is a machine here."
+    },
+    "inflated_boat": {
+      "name": "magic boat",
+      "description": "There is a magic boat here."
+    },
+    "match": {
+      "name": "matchbook",
+      "description": "There is a matchbook here."
+    },
+    "mirror_2": {
+      "name": "mirror",
+      "description": "There is a mirror here."
+    },
+    "mirror_1": {
+      "name": "mirror",
+      "description": "There is a mirror here."
+    },
+    "painting": {
+      "name": "painting",
+      "description": "There is a painting here."
+    },
+    "candles": {
+      "name": "pair of candles",
+      "description": "There is a pair of candles here."
+    },
+    "gunk": {
+      "name": "small piece of vitreous slag",
+      "description": "There is a small piece of vitreous slag here."
+    },
+    "bodies": {
+      "name": "pile of bodies",
+      "description": "There is a pile of bodies here."
+    },
+    "leaves": {
+      "name": "pile of leaves",
+      "description": "There is a pile of leaves here."
+    },
+    "punctured_boat": {
+      "name": "punctured boat",
+      "description": "There is a punctured boat here."
+    },
+    "inflatable_boat": {
+      "name": "pile of plastic",
+      "description": "There is a pile of plastic here."
+    },
+    "bar": {
+      "name": "platinum bar",
+      "description": "There is a platinum bar here."
+    },
+    "pot_of_gold": {
+      "name": "pot of gold",
+      "description": "There is a pot of gold here."
+    },
+    "prayer": {
+      "name": "prayer",
+      "description": "There is a prayer here."
+    },
+    "railing": {
+      "name": "wooden railing",
+      "description": "There is a wooden railing here."
+    },
+    "rainbow": {
+      "name": "rainbow",
+      "description": "There is a rainbow here."
+    },
+    "river": {
+      "name": "river",
+      "description": "There is a river here."
+    },
+    "buoy": {
+      "name": "red buoy",
+      "description": "There is a red buoy here."
+    },
+    "rusty_knife": {
+      "name": "rusty knife",
+      "description": "There is a rusty knife here."
+    },
+    "sand": {
+      "name": "sand",
+      "description": "There is a sand here."
+    },
+    "bracelet": {
+      "name": "sapphire-encrusted bracelet",
+      "description": "There is a sapphire-encrusted bracelet here."
+    },
+    "screwdriver": {
+      "name": "screwdriver",
+      "description": "There is a screwdriver here."
+    },
+    "keys": {
+      "name": "skeleton key",
+      "description": "There is a skeleton key here."
+    },
+    "shovel": {
+      "name": "shovel",
+      "description": "There is a shovel here."
+    },
+    "coal": {
+      "name": "small pile of coal",
+      "description": "There is a small pile of coal here."
+    },
+    "ladder": {
+      "name": "wooden ladder",
+      "description": "There is a wooden ladder here."
+    },
+    "scarab": {
+      "name": "beautiful jeweled scarab",
+      "description": "There is a beautiful jeweled scarab here."
+    },
+    "large_bag": {
+      "name": "large bag",
+      "description": "There is a large bag here."
+    },
+    "stiletto": {
+      "name": "stiletto",
+      "description": "There is a stiletto here."
+    },
+    "machine_switch": {
+      "name": "switch",
+      "description": "There is a switch here."
+    },
+    "wooden_door": {
+      "name": "wooden door",
+      "description": "There is a wooden door here."
+    },
+    "map": {
+      "name": "ancient map",
+      "description": "There is a ancient map here."
+    },
+    "boat_label": {
+      "name": "tan label",
+      "description": "There is a tan label here."
+    },
+    "thief": {
+      "name": "thief",
+      "description": "There is a thief here."
+    },
+    "pedestal": {
+      "name": "pedestal",
+      "description": "There is a pedestal here."
+    },
+    "torch": {
+      "name": "torch",
+      "description": "There is a torch here."
+    },
+    "guide": {
+      "name": "tour guidebook",
+      "description": "There is a tour guidebook here."
+    },
+    "troll": {
+      "name": "troll",
+      "description": "There is a troll here."
+    },
+    "trunk": {
+      "name": "trunk of jewels",
+      "description": "There is a trunk of jewels here."
+    },
+    "tube": {
+      "name": "tube",
+      "description": "There is a tube here."
+    },
+    "putty": {
+      "name": "viscous material",
+      "description": "There is a viscous material here."
+    },
+    "engravings": {
+      "name": "wall with engravings",
+      "description": "There is a wall with engravings here."
+    },
+    "owners_manual": {
+      "name": "ZORK owner's manual",
+      "description": "There is a ZORK owner's manual here."
+    },
+    "climbable_cliff": {
+      "name": "cliff",
+      "description": "There is a cliff here."
+    },
+    "white_cliff": {
+      "name": "white cliffs",
+      "description": "There is a white cliffs here."
+    },
+    "wrench": {
+      "name": "wrench",
+      "description": "There is a wrench here."
+    },
+    "control_panel": {
+      "name": "control panel",
+      "description": "There is a control panel here."
+    },
+    "nest": {
+      "name": "bird's nest",
+      "description": "There is a bird's nest here."
+    },
+    "egg": {
+      "name": "jewel-encrusted egg",
+      "description": "There is a jewel-encrusted egg here."
+    },
+    "broken_egg": {
+      "name": "broken jewel-encrusted egg",
+      "description": "There is a broken jewel-encrusted egg here."
+    },
+    "bauble": {
+      "name": "beautiful brass bauble",
+      "description": "There is a beautiful brass bauble here."
+    },
+    "canary": {
+      "name": "golden clockwork canary",
+      "description": "There is a golden clockwork canary here."
+    },
+    "broken_canary": {
+      "name": "broken clockwork canary",
+      "description": "There is a broken clockwork canary here."
+    }
+  },
+  "creatures": {
+    "troll": {
+      "name": "troll",
+      "description": "A nasty-looking troll is blocking the way.",
+      "dead_desc": "The dead body of a troll lies here.",
+      "attacks": "The troll swings his axe at you!"
+    },
+    "thief": {
+      "name": "thief",
+      "description": "A seedy-looking individual is lurking in the shadows.",
+      "steals": "The thief steals your {item}!"
+    },
+    "cyclops": {
+      "name": "cyclops",
+      "description": "A huge cyclops is standing here!",
+      "sleeping": "The cyclops is sleeping."
+    }
+  }
+}

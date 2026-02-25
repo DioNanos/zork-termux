@@ -1,0 +1,2418 @@
+{
+  "meta": {
+    "language": "es",
+    "version": "1.0.0",
+    "author": "ZORK-TERMUX Team"
+  },
+  "ui": {
+    "welcome": "¡Bienvenido a ZORK!\nUn gran imperio subterráneo te espera.\nEscribe AYUDA para los comandos.",
+    "goodbye": "¡Gracias por jugar!\nTu aventura ha terminado.",
+    "empty_handed": "No llevas nada.",
+    "carrying": "Llevas",
+    "cant_go": "No puedes ir por ahí.",
+    "unknown_command": "No entiendo \"{cmd}\".",
+    "taken": "Tomado.",
+    "dropped": "Soltado.",
+    "cant_take": "No puedes tomar eso.",
+    "cant_open": "No puedes abrir eso.",
+    "cant_close": "No puedes cerrar eso.",
+    "already_open": "Ya está abierto.",
+    "already_closed": "Ya está cerrado.",
+    "opened": "Abierto.",
+    "closed": "Cerrado.",
+    "locked": "Está cerrado con llave.",
+    "unlocked": "Abierto.",
+    "dont_see": "No ves eso aquí.",
+    "not_holding": "No lo estás llevando.",
+    "take_what": "¿Tomar qué?",
+    "drop_what": "¿Soltar qué?",
+    "examine_what": "¿Examinar qué?",
+    "open_what": "¿Abrir qué?",
+    "close_what": "¿Cerrar qué?",
+    "unlock_what": "¿Abrir qué?",
+    "lock_what": "¿Cerrar con llave qué?",
+    "contains": "Contiene",
+    "is_empty": "Está vacío.",
+    "score": "Puntuación",
+    "moves": "Movimientos",
+    "game_saved": "Juego guardado.",
+    "game_restored": "Juego restaurado.",
+    "save_failed": "No se pudo guardar.",
+    "restore_failed": "No se pudo restaurar.",
+    "no_saved_game": "No hay juego guardado.",
+    "darkness": "Está completamente oscuro. Es probable que te comas un grue.",
+    "lamp_off": "Tu linterna está apagada.",
+    "lamp_on": "Tu linterna está encendida.",
+    "lamp_dim": "Tu linterna se está atenuando.",
+    "lamp_out": "Tu linterna se ha quedado sin energía.",
+    "attack_what": "¿Atacar qué?",
+    "attack_with": "¿Atacar a {target} con {weapon}?",
+    "killed": "¡Has matado a {target}!",
+    "dodged": "{target} esquiva tu ataque.",
+    "you_died": "Has muerto.",
+    "restart": "¿Quieres reiniciar?",
+    "inventory_full": "Ya llevas demasiado.",
+    "cant_put_in": "No puedes poner eso ahí.",
+    "put_in": "Has puesto {obj} en {container}.",
+    "cant_read": "No hay nada que leer.",
+    "cant_drink": "No puedes beber eso.",
+    "drank": "Lo bebiste. ¡Delicioso!",
+    "cant_eat": "No puedes comer eso.",
+    "ate": "Lo comiste. ¡Qué rico!",
+    "already_have": "Ya tienes eso.",
+    "cant_climb": "No puedes trepar ahí.",
+    "cant_tie": "No puedes atar eso.",
+    "tied": "Atado.",
+    "cant_untie": "No puedes desatar eso.",
+    "untied": "Desatado."
+  },
+  "help": {
+    "title": "COMANDOS",
+    "movement": "Movimiento: n/norte, s/sur, e/este, o/oeste, u/arriba, d/abajo",
+    "look": "mirar/l - Mirar alrededor",
+    "inventory": "inventario/i - Revisar inventario",
+    "take": "tomar/coger X - Tomar objeto",
+    "drop": "soltar X - Soltar objeto",
+    "examine": "examinar/x X - Examinar objeto",
+    "open": "abrir X - Abrir objeto",
+    "close": "cerrar X - Cerrar objeto",
+    "put": "poner X en Y - Poner objeto en contenedor",
+    "read": "leer X - Leer objeto",
+    "use_": "usar X - Usar objeto",
+    "attack": "atacar/matar X - Atacar objetivo",
+    "score": "puntos - Tu puntuación",
+    "save": "guardar - Guardar juego",
+    "restore": "restaurar - Restaurar juego",
+    "quit": "salir/q - Terminar juego"
+  },
+  "rooms": {
+    "west_of_house": {
+      "name": "Al Oeste de la Casa",
+      "description": "Estás en un campo abierto al oeste de una casa blanca, con la puerta principal tablada.\nHay un pequeño buzón aquí."
+    },
+    "north_of_house": {
+      "name": "Al Norte de la Casa",
+      "description": "Estás frente al lado norte de una casa blanca. No hay puerta aquí, y todas las ventanas están enrejadas."
+    },
+    "south_of_house": {
+      "name": "Al Sur de la Casa",
+      "description": "Estás frente al lado sur de una casa blanca. No hay puerta aquí, y todas las ventanas están enrejadas."
+    },
+    "east_of_house": {
+      "name": "Detrás de la Casa",
+      "description": "Estás detrás de la casa blanca. Un sendero lleva al bosque al este. En una esquina de la casa hay una pequeña ventana ligeramente abierta."
+    },
+    "kitchen": {
+      "name": "Cocina",
+      "description": "Estás en la cocina de la casa blanca. Una mesa parece haber sido usada recientemente para preparar comida. Un pasillo lleva al oeste y una escalera oscura sube hacia arriba."
+    },
+    "living_room": {
+      "name": "Sala de Estar",
+      "description": "Estás en la sala de estar. Hay una puerta al este, una puerta de madera con extrañas letras góticas al norte, y una gran alfombra oriental en el centro."
+    },
+    "attic": {
+      "name": "Ático",
+      "description": "Este es el ático. La única salida es una escalera que baja. Una gran cuerda está en la esquina. En una mesa hay un cuchillo de aspecto desagradable."
+    },
+    "cellar": {
+      "name": "Sótano",
+      "description": "Estás en un sótano oscuro y húmedo con un pasillo estrecho al norte y un túnel al sur."
+    },
+    "stone_barrow": {
+      "name": "Túmulo de Piedra",
+      "description": "You are standing in front of a massive barrow of stone. In the east face\nis a huge stone door which is open. You cannot see into the dark of the tomb."
+    },
+    "forest_1": {
+      "name": "Bosque",
+      "description": "Este es un bosque, con árboles en todas direcciones. To the east,\nthere appears to be sunlight."
+    },
+    "forest_2": {
+      "name": "Bosque",
+      "description": "Este es un bosque poco iluminado, con grandes árboles alrededor."
+    },
+    "mountains": {
+      "name": "Bosque",
+      "description": "The forest thins out, revealing impassable mountains."
+    },
+    "forest_3": {
+      "name": "Bosque",
+      "description": "Este es un bosque poco iluminado, con grandes árboles alrededor."
+    },
+    "path": {
+      "name": "Sendero del Bosque",
+      "description": "This is a path winding through a dimly lit forest. The path heads\nnorth-south here. One particularly large tree with some low branches\nstands at the edge of the path."
+    },
+    "up_a_tree": {
+      "name": "En el Árbol",
+      "description": ""
+    },
+    "grating_clearing": {
+      "name": "Claro",
+      "description": ""
+    },
+    "clearing": {
+      "name": "Claro",
+      "description": "You are in a small clearing in a well marked forest path that\nextends to the east and west."
+    },
+    "troll_room": {
+      "name": "La Sala del Troll",
+      "description": "This is a small room with passages to the east and south and a\nforbidding hole leading west. Bloodstains and deep scratches\n(perhaps made by an axe) mar the walls."
+    },
+    "east_of_chasm": {
+      "name": "Este del Abismo",
+      "description": "You are on the east edge of a chasm, the bottom of which cannot be\nseen. A narrow passage goes north, and the path you are on continues\nto the east."
+    },
+    "gallery": {
+      "name": "Galería",
+      "description": "This is an art gallery. Most of the paintings have been stolen by\nvandals with exceptional taste. The vandals left through either the\nnorth or west exits."
+    },
+    "studio": {
+      "name": "Estudio",
+      "description": "This appears to have been an artist's studio. The walls and floors are\nsplattered with paints of 69 different colors. Strangely enough, nothing\nof value is hanging here. At the south end of the room is an open door\n(also covered with paint). A dark and narrow chimney leads up from a\nfireplace; although you might be able to get up it, it seems unlikely\nyou could get back down."
+    },
+    "maze_1": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_2": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_3": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_4": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "dead_end_1": {
+      "name": "Callejón Sin Salida",
+      "description": "You have come to a dead end in the maze."
+    },
+    "maze_5": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike.\nA skeleton, probably the remains of a luckless adventurer, lies here."
+    },
+    "dead_end_2": {
+      "name": "Callejón Sin Salida",
+      "description": "You have come to a dead end in the maze."
+    },
+    "maze_6": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_7": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_8": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "dead_end_3": {
+      "name": "Callejón Sin Salida",
+      "description": "You have come to a dead end in the maze."
+    },
+    "maze_9": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_10": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_11": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "grating_room": {
+      "name": "Grating Room",
+      "description": ""
+    },
+    "maze_12": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "dead_end_4": {
+      "name": "Callejón Sin Salida",
+      "description": "You have come to a dead end in the maze."
+    },
+    "maze_13": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_14": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "maze_15": {
+      "name": "Laberinto",
+      "description": "This is part of a maze of twisty little passages, all alike."
+    },
+    "cyclops_room": {
+      "name": "Sala del Cíclope",
+      "description": ""
+    },
+    "strange_passage": {
+      "name": "Strange Passage",
+      "description": "This is a long passage. To the west is one entrance. On the\neast there is an old wooden door, with a large opening in it (about\ncyclops sized)."
+    },
+    "treasure_room": {
+      "name": "Sala del Tesoro",
+      "description": "This is a large room, whose east wall is solid granite. A number\nof discarded bags, which crumble at your touch, are scattered about\non the floor. There is an exit down a staircase."
+    },
+    "reservoir_south": {
+      "name": "Embalse Sur",
+      "description": ""
+    },
+    "reservoir": {
+      "name": "Embalse",
+      "description": ""
+    },
+    "reservoir_north": {
+      "name": "Embalse Norte",
+      "description": ""
+    },
+    "stream_view": {
+      "name": "Stream View",
+      "description": "You are standing on a path beside a gently flowing stream. The path\nfollows the stream, which flows from west to east."
+    },
+    "in_stream": {
+      "name": "Stream",
+      "description": "You are on the gently flowing stream. The upstream route is too narrow\nto navigate, and the downstream route is invisible due to twisting\nwalls. There is a narrow beach to land on."
+    },
+    "mirror_room_1": {
+      "name": "Mirror Room",
+      "description": ""
+    },
+    "mirror_room_2": {
+      "name": "Mirror Room",
+      "description": ""
+    },
+    "small_cave": {
+      "name": "Cave",
+      "description": "This is a tiny cave with entrances west and north, and a staircase\nleading down."
+    },
+    "tiny_cave": {
+      "name": "Cave",
+      "description": "This is a tiny cave with entrances west and north, and a dark,\nforbidding staircase leading down."
+    },
+    "cold_passage": {
+      "name": "Cold Passage",
+      "description": "This is a cold and damp corridor where a long east-west passageway\nturns into a southward path."
+    },
+    "narrow_passage": {
+      "name": "Pasaje Estrecho",
+      "description": "This is a long and narrow corridor where a long north-south passageway\nbriefly narrows even further."
+    },
+    "winding_passage": {
+      "name": "Winding Passage",
+      "description": "This is a winding passage. It seems that there are only exits\non the east and north."
+    },
+    "twisting_passage": {
+      "name": "Twisting Passage",
+      "description": "This is a winding passage. It seems that there are only exits\non the east and north."
+    },
+    "atlantis_room": {
+      "name": "Atlantis Room",
+      "description": "This is an ancient room, long under agua. There is an exit to\nthe south and a staircase leading up."
+    },
+    "ew_passage": {
+      "name": "Pasaje Este-Oeste",
+      "description": "This is a narrow east-west passageway. There is a narrow stairway\nleading down at the north end of the room."
+    },
+    "round_room": {
+      "name": "Sala Redonda",
+      "description": "This is a circular stone room with passages in all directions. Several\nof them have unfortunately been blocked by cave-ins."
+    },
+    "deep_canyon": {
+      "name": "Cañón Profundo",
+      "description": ""
+    },
+    "damp_cave": {
+      "name": "Presap Cave",
+      "description": "This cave has exits to the west and east, and narrows to a crack toward\nthe south. The earth is particularly damp here."
+    },
+    "loud_room": {
+      "name": "Loud Room",
+      "description": ""
+    },
+    "ns_passage": {
+      "name": "Pasaje Norte-Sur",
+      "description": "This is a high north-south passage, which forks to the northeast."
+    },
+    "chasm_room": {
+      "name": "Chasm",
+      "description": "A chasm runs southwest to northeast and the path follows it. You are\non the south side of the chasm, where a crack opens into a passage."
+    },
+    "entrance_to_hades": {
+      "name": "Entrada al Hades",
+      "description": ""
+    },
+    "land_of_living_dead": {
+      "name": "Land of the Dead",
+      "description": "You have entered the Tierra de los Muertos Vivientes. Thousands of lost souls\ncan be heard weeping and moaning. In the corner are stacked the remains\nof dozens of previous adventurers less fortunate than yourself.\nA passage exits to the north."
+    },
+    "engravings_cave": {
+      "name": "Engravings Cave",
+      "description": "You have entered a low cave with passages leading northwest and east."
+    },
+    "egypt_room": {
+      "name": "Egyptian Room",
+      "description": "This is a room which looks like an Egyptian tomb. There is an\nascending staircase to the west."
+    },
+    "dome_room": {
+      "name": "Dome Room",
+      "description": ""
+    },
+    "torch_room": {
+      "name": "Torch Room",
+      "description": ""
+    },
+    "north_temple": {
+      "name": "Templo",
+      "description": "This is the north end of a large temple. On the east wall is an\nancient inscription, probably a prayer in a long-forgotten language.\nBelow the prayer is a staircase leading down. The west wall is solid\ngranite. The exit to the north end of the room is through huge\nmarble pillars."
+    },
+    "south_temple": {
+      "name": "Altar",
+      "description": "This is the south end of a large temple. In front of you is what\nappears to be an altar. In one corner is a small hole in the floor\nwhich leads into darkness. You probably could not get back up it."
+    },
+    "dam_room": {
+      "name": "Presa",
+      "description": ""
+    },
+    "dam_lobby": {
+      "name": "Vestíbulo de la Presa",
+      "description": ""
+    },
+    "maintenance_room": {
+      "name": "Sala de Mantenimiento",
+      "description": "This is what appears to have been the maintenance room for Flood\nControl Presa #3. Apparently, this room has been ransacoed recently, for\nmost of the valuable equipment is gone. On the wall in front of you is a\ngroup of buttons colored blue, yellow, brown, and red. There are doorways to\nthe west and south."
+    },
+    "dam_base": {
+      "name": "Presa Base",
+      "description": "You are at the base of Flood Control Presa #3, which looms above you\nand to the north. The river Frigid is flowing by here. Along the\nriver are the White Cliffs which seem to form giant walls stretching\nfrom north to south along the shores of the river as it winds its\nway downstream."
+    },
+    "river_1": {
+      "name": "Frigid River",
+      "description": "You are on the Frigid River in the vicinity of the Presa. The river\nflows quietly here. There is a landing on the west shore."
+    },
+    "river_2": {
+      "name": "Frigid River",
+      "description": "The river turns a corner here making it impossible to see the\nPresa. The White Cliffs loom on the east bank and large rocks prevent\nlanding on the west."
+    },
+    "river_3": {
+      "name": "Frigid River",
+      "description": "The river descends here into a valley. There is a narrow beach on the\nwest shore below the cliffs. In the distance a faint rumbling can be\nheard."
+    },
+    "white_cliffs_north": {
+      "name": "White Cliffs Beach",
+      "description": "You are on a narrow strip of beach which runs along the base of the\nWhite Cliffs. There is a narrow path heading south along the Cliffs\nand a tight passage leading west into the cliffs themselves."
+    },
+    "white_cliffs_south": {
+      "name": "White Cliffs Beach",
+      "description": "You are on a rocky, narrow strip of beach beside the Cliffs. A\nnarrow path leads north along the shore."
+    },
+    "river_4": {
+      "name": "Frigid River",
+      "description": "The river is running faster here and the sound ahead appears to be\nthat of rushing agua. On the east shore is a sandy beach. A small\narea of beach can also be seen below the cliffs on the west shore."
+    },
+    "river_5": {
+      "name": "Frigid River",
+      "description": "The sound of rushing agua is nearly unbearable here. On the east\nshore is a large landing area."
+    },
+    "shore": {
+      "name": "Shore",
+      "description": "You are on the east shore of the river. The agua here seems somewhat\ntreacherous. A path travels from north to south here, the south end\nquickly turning around a sharp corner."
+    },
+    "sandy_beach": {
+      "name": "Sandy Beach",
+      "description": "You are on a large sandy beach on the east shore of the river, which is\nflowing quickly by. A path runs beside the river to the south here, and\na passage is partially buried in sand to the northeast."
+    },
+    "sandy_cave": {
+      "name": "Sandy Cave",
+      "description": "This is a sand-filled cave whose exit is to the southwest."
+    },
+    "aragain_falls": {
+      "name": "Aragain Falls",
+      "description": ""
+    },
+    "on_rainbow": {
+      "name": "On the Rainbow",
+      "description": "You are on top of a rainbow (I bet you never thought you would walk\non a rainbow), with a magnificent view of the Falls. The rainbow\ntravels east-west here."
+    },
+    "end_of_rainbow": {
+      "name": "End of Rainbow",
+      "description": "You are on a small, rocky beach on the continuation of the Frigid\nRiver past the Falls. The beach is narrow due to the presence of the\nWhite Cliffs. The river canyon opens here and sunlight shines in\nfrom above. A rainbow crosses over the falls to the east and a narrow\npath continues to the southwest."
+    },
+    "canyon_bottom": {
+      "name": "Canyon Bottom",
+      "description": "You are beneath the walls of the river canyon which may be climbable\nhere. The lesser part of the runoff of Aragain Falls flows by below.\nTo the north is a narrow path."
+    },
+    "cliff_middle": {
+      "name": "Rocky Ledge",
+      "description": "You are on a ledge about halfway up the wall of the river canyon.\nYou can see from here that the main flow from Aragain Falls twists\nalong a passage which it is impossible for you to enter. Below you is the\ncanyon bottom. Above you is more cliff, which appears\nclimbable."
+    },
+    "canyon_view": {
+      "name": "Canyon View",
+      "description": "You are at the top of the Great Canyon on its west wall. From here\nthere is a marvelous view of the canyon and parts of the Frigid River\nupstream. Across the canyon, the walls of the White Cliffs join the\nmighty ramparts of the Flathead Montañas to the east. Following the\nCanyon upstream to the north, Aragain Falls may be seen, complete with\nrainbow. The mighty Frigid River flows out from a great dark cavern. To\nthe west and south can be seen an immense forest, stretching for miles\naround. A path leads northwest. It is possible to climb down into\nthe canyon from here."
+    },
+    "mine_entrance": {
+      "name": "Mina Entrance",
+      "description": "You are standing at the entrance of what might have been a coal mine.\nThe shaft enters the west wall, and there is another exit on the south\nend of the room."
+    },
+    "squeeky_room": {
+      "name": "Squeaky Room",
+      "description": "You are in a small room. Strange squeaky sounds may be heard coming\nfrom the passage at the north end. You may also escape to the east."
+    },
+    "bat_room": {
+      "name": "Sala del Murciélago",
+      "description": ""
+    },
+    "shaft_room": {
+      "name": "Sala del Pozzo",
+      "description": "This is a large room, in the middle of which is a small shaft\ndescending through the floor into darkness below. To the west and\nthe north are exits from this room. Constructed over the top of the\nshaft is a metal framework to which a heavy iron chain is attached."
+    },
+    "smelly_room": {
+      "name": "Smelly Room",
+      "description": "This is a small nondescript room. However, from the direction\nof a small descending staircase a foul odor can be detected. To the\nsouth is a narrow tunnel."
+    },
+    "gas_room": {
+      "name": "Sala de Gas",
+      "description": "This is a small room which smells strongly of coal gas. There is a\nshort climb up some stairs and a narrow tunnel leading east."
+    },
+    "ladder_top": {
+      "name": "Ladder Top",
+      "description": "This is a very small room. In the corner is a rickety wooden\nladder, leading downward. It might be safe to descend. There is\nalso a staircase leading upward."
+    },
+    "ladder_bottom": {
+      "name": "Ladder Bottom",
+      "description": "This is a rather wide room. On one side is the bottom of a\nnarrow wooden ladder. To the west and the south are passages\nleaving the room."
+    },
+    "dead_end_5": {
+      "name": "Callejón Sin Salida",
+      "description": "You have come to a dead end in the mine."
+    },
+    "timber_room": {
+      "name": "Sala de Maderas",
+      "description": "This is a long and narrow passage, which is cluttered with broken\ntimbers. A wide passage comes from the east and turns at the\nwest end of the room into a very narrow passageway. From the west\ncomes a strong draft."
+    },
+    "lower_shaft": {
+      "name": "Drafty Room",
+      "description": "This is a small drafty room in which is the bottom of a long\nshaft. To the south is a passageway and to the east a very narrow\npassage. In the shaft can be seen a heavy iron chain."
+    },
+    "machine_room": {
+      "name": "Machine Room",
+      "description": ""
+    },
+    "mine_1": {
+      "name": "Coal Mina",
+      "description": "This is a nondescript part of a coal mine."
+    },
+    "mine_2": {
+      "name": "Coal Mina",
+      "description": "This is a nondescript part of a coal mine."
+    },
+    "mine_3": {
+      "name": "Coal Mina",
+      "description": "This is a nondescript part of a coal mine."
+    },
+    "mine_4": {
+      "name": "Coal Mina",
+      "description": "This is a nondescript part of a coal mine."
+    },
+    "slide_room": {
+      "name": "Tobogán",
+      "description": ""
+    },
+    "inside_barrow": {
+      "name": "Inside the Túmulo",
+      "description": "Estás enside an ancient Túmulo hidden deep within a dark Bosque. The Túmulo opens into a narrow Túnel at its Surern end. You can see a faint glow at the far end."
+    },
+    "narrow_tunnel": {
+      "name": "Narrow Túnel",
+      "description": "Estás de pie at the Surern end of a narrow Túnel where it opens into a wide Cuevarn. The Cuevarn is dimly illuminated by phosphorescent mosses clinging to its high ceiling. A deep ravine winds through the Cuevarn, with a small stream at the bottom. The walls of the ravine are steep and crumbly. A foot bridge crosses the ravine to the Sur."
+    },
+    "foot_bridge": {
+      "name": "Foot Bridge",
+      "description": "Estás de pie on a crude but sturdy wooden foot bridge crossing a deep ravine. The Sendero runs Norte and Sur from here."
+    },
+    "great_cavern": {
+      "name": "Great Cuevarn",
+      "description": "This is the center of the great Cuevarn, carved out of the limestone. Stalactites and stalagmites of many sizes are everywhere. The Sala glows with dim light provided by phosphorescent moss, and weird shadows move alrededor you. A narrow Sendero winds SurOeste among the stalagmites, and another leads NorteEste."
+    },
+    "shallow_ford": {
+      "name": "SSalónow Ford",
+      "description": "You are at the Surern edge of a great Cuevarn. To the Sur across a sSalónow ford is a dark Túnel which looks like it was once enlarged and smoothed. To the Norte a narrow Sendero winds among stalagmites. Dim light illuminates the Cuevarn."
+    },
+    "dark_tunnel": {
+      "name": "Dark Túnel",
+      "description": "This is a dark Túnel with dim light to the NorteEste. The Túnel is smooth but dusty and filled with twigs and leaves, debris which becomes deeper as the Túnel branches into a wide corridor leading SurOeste and a narrower one leading SurEste."
+    },
+    "garden_north": {
+      "name": "Norte End of Garden",
+      "description": "This is the Norteern end of a formal garden. Hedges hide the Cuevarn walls, and if you don't look Arriba, the illusion is of a cloudy day outside. The light comes from a large growth of glowing mosses on the roof of the Cueva. A break in the hedge is almost overgrown to the Norte. A carefully manicured sendero lleva Sur. In the center of a rosebed is a small open structure, painted white. It appears to be a gazebo."
+    },
+    "gazebo_room": {
+      "name": "Gazebo",
+      "description": "This is a gazebo in the midst of a formal garden. It is cool and restful here. A tea table adorns the center of the gazebo."
+    },
+    "formal_garden": {
+      "name": "Formal Garden",
+      "description": "This is the middle part of a formal garden. Hedges hide the Cuevarn walls and a dim illumination comes from mosses far above. The Sendero is of small crushed white stones. It winds among bushes and flower beds from Sur to Norte. To the Norte a small structure can be seen. To the Sur are peculiarly shaped bushes. Hay un small gap in the hedges to the Oeste."
+    },
+    "topiary_room": {
+      "name": "Topiary",
+      "description": "This is the Surern end of a formal garden. Hedges hide the Cuevarn walls and mosses provide dim illumination. Fantastically shaped hedges and bushes are arrayed with geometric precision. They have not recently been clipped, but you can discern creatures in the shapes of the bushes: Hay un dragon, a unicorn, a great serpent, a huge misshapen dog, and several human figures. On the Oeste side of the garden the sendero lleva through a rose arbor into a Túnel."
+    },
+    "stream_path": {
+      "name": "Sendero Near Stream",
+      "description": "The Sendero follows the Sur edge of a deep ravine and heads NorteEste. A Túnel heads SurOeste, narrowing to a rather tight crawl. A faint whirring sound can be heard in that direction. On the Este is a ruined archway choked with vegetation."
+    },
+    "marble_hall": {
+      "name": "Marble Salón",
+      "description": "This is an arched Salón of fine marble. The Salón stops abrArribatly to the Norte at a ford across a stream, where the marble is cracked and broken. Perhaps a flood or collapse of the Cueva was responsible. To the Sur the Salón opens into a large Sala. There is rather annoying whirring sound coming from that Sala."
+    },
+    "deep_ford": {
+      "name": "Deep Ford",
+      "description": "You are fording the stream at a deep but not impossible spot. The agua is very cold. The walls of the ravine rise to Este and Oeste. Hay un small ledge along the Norte wall of the ravine. To the Sur is the entrance to a well-constructed but somewhat ruined Salón."
+    },
+    "ravine_ledge": {
+      "name": "Ledge in Ravine",
+      "description": "You are on a narrow ledge near the bottom of a deep ravine. The ledge continues to the Oeste. A precarious climb Arriba to another tiny ledge is possible. A short scramble Abajo the rock face leads to a stream."
+    },
+    "ledge_tunnel": {
+      "name": "End of Ledge",
+      "description": "A ledge from the Este ends here, and a Túnel leads Norte into the wall. Hay un rather odd smokey odor in the warm air of the Túnel."
+    },
+    "dragon_room": {
+      "name": "Dragon Sala",
+      "description": "The Sala is a large Cuevarn full of broken stone. The walls are scorched and there are deep scratches on the floor. A sooty dry smell is very strong here. A paved Sendero winds from a large Pasaje to the Oeste, through the Sala, and across a huge stone bridge to the Sur. To the Este a small crack is visible. A dark and smokey Túnel leads Norte."
+    },
+    "dragon_lair": {
+      "name": "Dragon's Lair",
+      "description": "Estás en the dragon's lair, where the rock walls are scarred by flame. A blackened doorway leads to the Sur."
+    },
+    "fresco_room": {
+      "name": "Fresco Sala",
+      "description": "A sendero lleva Este-Oeste through a Sala decorated with beautiful frescoes of someone battling dragons and rescuing fair maidens. It is hard to tell who is doing this as those parts of the frescoes have been blackened and cracked by intense heat."
+    },
+    "stone_bridge": {
+      "name": "Stone Bridge",
+      "description": "This is the middle of a ruined but still impressive stone bridge spanning a deep chasm. agua flows far beneath. A paved sendero lleva Norte into a large open space. To the Sur, the sendero lleva into a misty Túnel."
+    },
+    "cool_room": {
+      "name": "Cool Sala",
+      "description": "The Sala is cool and Presap. The air is misty. A twisty Sendero from the SurEste splits here toward a wide Norteerly stone bridge, and a narrow Oesteerly Túnel. It is from the latter that the mist and chill seem to originate."
+    },
+    "glacier_room": {
+      "name": "Ice Sala",
+      "description": ""
+    },
+    "lava_tube": {
+      "name": "Lava Tube",
+      "description": "Estás en a tight chimney of solidified lava. It extends Arriba at lEste another hundred feet and Abajo to a large Sala far below. A large crack opens to the Sur, probably the result of a shift in the rock strata."
+    },
+    "cobwebby_corridor": {
+      "name": "Cobwebby Corridor",
+      "description": "A winding corridor is filled with cobwebs. Some are broken and the dust on the floor is disturbed. The trend of the twists and turns is NorteEste to SurOeste. On the Norte side of one twist, high Arriba, is a narrow crack."
+    },
+    "room_8": {
+      "name": "Sala 8",
+      "description": ""
+    },
+    "menhir_room": {
+      "name": "Menhir Sala",
+      "description": ""
+    },
+    "kennel": {
+      "name": "Kennel",
+      "description": "This Sala looks like it was once a kennel for a very large dog (some of the bones would fit a dinosaur). It apparently hasn't been used for a long time, as the dust is fairly thick all over. The only exit is NorteEste."
+    },
+    "stairway_top": {
+      "name": "Stairway",
+      "description": "A marble stairway leads Abajo into the gloom and a Pasaje leads Norte."
+    },
+    "diamond_1": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "diamond_2": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "diamond_3": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "diamond_4": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "diamond_5": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "diamond_6": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "diamond_7": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "diamond_8": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "diamond_9": {
+      "name": "Oddly-angled Sala",
+      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+    },
+    "cerberus_room": {
+      "name": "Cerberus Sala",
+      "description": "This is the entrance to a huge crypt or tomb. A marble stairway leads Arriba from a gateway arch."
+    },
+    "crypt_anteroom": {
+      "name": "Crypt AnteSala",
+      "description": ""
+    },
+    "crypt_room": {
+      "name": "Crypt",
+      "description": ""
+    },
+    "zork3": {
+      "name": "Landing",
+      "description": ""
+    },
+    "guardian_room": {
+      "name": "Guarded Sala",
+      "description": ""
+    },
+    "wizards_workshop": {
+      "name": "Wizard's Workshop",
+      "description": "This is the workshop of the Wizard of Frobozz."
+    },
+    "workbench_room": {
+      "name": "Wizard's WorkSala",
+      "description": "This Sala is the Wizard's workSala. A Salón continues Este and Oeste, and a larger Sala lies to the Sur. There are many shelves and racks on the walls, but the Wizard's workbench dominates the Sala. It is made of dark, heavy wood bound with iron. The workbench is stained from many years of use, and is deeply gouged as though some huge clawed animal was imprisoned on it. There are burn marks and even notes written in a crabbed hand. Many arcane items are scattered about the bench; alembics, mortar and pestle, small knives of various sizes, odd scraps of vellum, wax candles, and much more. In the center of a relatively clear area of the bench are affixed three stands - rubí, sapphire, and diamante - which form a triangle."
+    },
+    "trophy_room": {
+      "name": "Trophy Sala",
+      "description": "This is the Wizard's trophy Sala, filled with memorabilia of various sorts. On one wall is the Wizard's D. T. (Doctor of Thaumaturgy) degree from GUE Tech. Several old magic wands are mounted on a wand rack. A collection of dull and nicked espadas testify to the fate of many foolhardy adventurers. Small botellas contain discarded homunculi (a few preserved in alcohol). Hay un stuffed owl on a perch."
+    },
+    "pentagram_room": {
+      "name": "Pentagram Sala",
+      "description": "In this Sala, inscribed on the floor, is a great pentagram drawn with black chalk. In its center is a black circle."
+    },
+    "aquarium_room": {
+      "name": "Aquarium Sala",
+      "description": "Here a dark Salónway turns a corner. To the Sur is a dark Sala, to the Este is fitful light."
+    },
+    "in_aquarium": {
+      "name": "Murky Sala",
+      "description": "The floor here seems to be made of sand, but it is hard to see anything else."
+    },
+    "wizards_quarters": {
+      "name": "Wizard's Quarters",
+      "description": ""
+    },
+    "carousel_room": {
+      "name": "Carousel Sala",
+      "description": ""
+    },
+    "riddle_room": {
+      "name": "Riddle Sala",
+      "description": ""
+    },
+    "pearl_room": {
+      "name": "Pearl Sala",
+      "description": "This is a former bSala closet. The exits are to the Este and Oeste."
+    },
+    "volcano_bottom": {
+      "name": "Volcano Bottom",
+      "description": "You are at the bottom of a large dormant volcano. High above you light enters from the cone of the volcano. The only exit is to the Norte."
+    },
+    "vair_1": {
+      "name": "Volcano Core",
+      "description": "You are about one hundred feet above the bottom of the volcano. The top of the volcano is clearly visible here."
+    },
+    "vair_2": {
+      "name": "Volcano Near Small Ledge",
+      "description": "You are about two hundred feet above the volcano floor. Looming above is the rim of the volcano. Hay un small ledge on the Oeste side."
+    },
+    "vair_3": {
+      "name": "Volcano by Viewing Ledge",
+      "description": "You are high above the floor of the volcano. The rim of the volcano looks very narrow and you are very near it. To the Este is what appears to be a viewing ledge, too thin to land on."
+    },
+    "vair_4": {
+      "name": "Volcano Near Wide Ledge",
+      "description": "You are near the rim of the volcano. Above you it is open to the sky. To the Oeste, Hay un place to land on a wide ledge."
+    },
+    "ledge_1": {
+      "name": "Narrow Ledge",
+      "description": "You are on a narrow ledge within an old dormant volcano. This ledge is about halfway between the floor below and the rim above. Hay unn exit to the Sur."
+    },
+    "library": {
+      "name": "Library",
+      "description": "This must have been a large library, probably for the royal family. All of the shelves have been gnawed to pieces by unfriendly gnomes. To the Norte is an exit."
+    },
+    "volcano_view": {
+      "name": "Volcano View",
+      "description": "You are on a ledge in the middle of a large volcano. Below you the volcano bottom can be seen and above is the rim of the volcano. A coArribale of ledges can be seen on the other side of the volcano; it appears that this ledge is intermediate in elevation between those on the other side. The exit from this Sala is to the Este."
+    },
+    "ledge_2": {
+      "name": "Wide Ledge",
+      "description": ""
+    },
+    "safe_room": {
+      "name": "Dusty Sala",
+      "description": ""
+    },
+    "lava_room": {
+      "name": "Lava Sala",
+      "description": "This is a small Sala, whose walls are formed by an old lava flow. There are exits here to the Este and the Sur."
+    },
+    "magnet_room": {
+      "name": "Low Sala",
+      "description": ""
+    },
+    "cage_room": {
+      "name": "Dingy Closet",
+      "description": "This is a dingy closet adjacent to a larger Sala to the Norte. Chiselled into a wall are these words:| |      Protected by|        FROBOZZ|  Magic Alarm Company|   (Hello, footpad!)|| There doesn't seem to be any footpad here, however."
+    },
+    "in_cage": {
+      "name": "Cage",
+      "description": "You are trapped inside a solid steel cage."
+    },
+    "well_top": {
+      "name": "Top of Well",
+      "description": "You are at the top of the well. Well done. There are etchings on the side of the well. Hay un small crack across the floor at the entrance to a Sala on the Este, but it can be crossed easily."
+    },
+    "well_bottom": {
+      "name": "Circular Sala",
+      "description": "This is a Presap circular Sala, whose walls are made of brick and mortar. The roof of this Sala is not visible, but there appear to be some etchings on the walls. Hay un Pasajeway to the Oeste."
+    },
+    "tea_room": {
+      "name": "Tea Sala",
+      "description": "This is a small Sala containing a large oblong table, no doubt set for afternoon tea. It is clear from the objects on the table that the users were indeed mad. In the Esteern corner of the Sala is a small hole (no more than four inches high). There are Pasajeways leading away to the Oeste and the NorteOeste."
+    },
+    "posts_room": {
+      "name": "Posts Sala",
+      "description": "This is an enormous Sala, in the center of which are four wooden posts delineating a rectangular area, above which is what appears to be a wooden roof. In fact, all objects in this Sala appear to be abnormally large. To the Este is a Pasajeway. There are large gaping chasms to the Oeste and NorteOeste."
+    },
+    "pool_room": {
+      "name": "Pool Sala",
+      "description": "This is a large Sala, one half of which is depressed. Salty agua flows from a large leak in the ceiling. The only exit is to the Oeste."
+    },
+    "bank_entrance": {
+      "name": "Bank Entrance",
+      "description": ""
+    },
+    "teller_west": {
+      "name": "Oeste Teller's Sala",
+      "description": ""
+    },
+    "teller_east": {
+      "name": "Este Teller's Sala",
+      "description": ""
+    },
+    "viewing_west": {
+      "name": "Oeste Viewing Sala",
+      "description": ""
+    },
+    "viewing_east": {
+      "name": "Este Viewing Sala",
+      "description": ""
+    },
+    "small_room": {
+      "name": "Small Sala",
+      "description": "This is a small, bare Sala with no distinguishing features. There are no exits from this Sala."
+    },
+    "vault": {
+      "name": "Vault",
+      "description": "This is the Vault of the Bank of Zork, in which there are no doors."
+    },
+    "depository": {
+      "name": "Safety Depository",
+      "description": ""
+    },
+    "office": {
+      "name": "Chairman's Office",
+      "description": "This Sala was the office of the Chairman of the Bank of Zork. Like the other Salas here, it has been extensively vandalized. The lone exit is to the Norte."
+    },
+    "dreary_room": {
+      "name": "Dreary Sala",
+      "description": ""
+    },
+    "tiny_room": {
+      "name": "Tiny Sala",
+      "description": ""
+    },
+    "dead_palantir_1": {
+      "name": "Sala of Red Mist",
+      "description": ""
+    },
+    "dead_palantir_2": {
+      "name": "Sala of Blue Mist",
+      "description": ""
+    },
+    "dead_palantir_3": {
+      "name": "Sala of White Mist",
+      "description": ""
+    },
+    "dead_palantir_4": {
+      "name": "Sala of Black Mist",
+      "description": ""
+    },
+    "cp_ante": {
+      "name": "Royal Puzzle Entrance",
+      "description": ""
+    },
+    "cp_out": {
+      "name": "Side Sala",
+      "description": ""
+    },
+    "cp": {
+      "name": "Sala in a Puzzle",
+      "description": ""
+    },
+    "mrd": {
+      "name": "Salónway",
+      "description": ""
+    },
+    "mrg": {
+      "name": "Salónway",
+      "description": ""
+    },
+    "mrc": {
+      "name": "Salónway",
+      "description": ""
+    },
+    "mrb": {
+      "name": "Salónway",
+      "description": ""
+    },
+    "mra": {
+      "name": "Salónway",
+      "description": ""
+    },
+    "mrde": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mrdw": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mrge": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mrgw": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mrce": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mrcw": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mrbe": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mrbw": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mrae": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "mraw": {
+      "name": "Narrow Sala",
+      "description": ""
+    },
+    "in_mirror": {
+      "name": "Inside Mirror",
+      "description": ""
+    },
+    "mr_ante": {
+      "name": "Button Sala",
+      "description": "You are at the Surern end of a long Salón. To the Sur, stairs ascend into darkness. To the Norte the corridor is illuminated by antorchaes set high in the walls, out of reach. On one wall is a red button."
+    },
+    "mreye": {
+      "name": "Beam Sala",
+      "description": ""
+    },
+    "mstairs": {
+      "name": "Engravings Sala",
+      "description": ""
+    },
+    "dead_end": {
+      "name": "Dead End",
+      "description": "You have come to the end of two adjoining Pasajes to the Oeste and the NorteOeste."
+    },
+    "damp_passage": {
+      "name": "Presap Pasaje",
+      "description": "This is a particularly Presap spot even by dungeon standards. You can see the junction to the Oeste, and two similar Pasajes to the Este and NorteEste. A wide stone channel steeply descends into the Sala from the Sur. It is covered with slippery moss and lichen. The channel crosses the Sala, but the opening where it once continued Norte is now blocked by rubble."
+    },
+    "east_corridor": {
+      "name": "Este Corridor",
+      "description": "This is a Salón with polished marble walls. It widens slightly as it turns Oeste at its Norteern and Surern ends."
+    },
+    "west_corridor": {
+      "name": "Oeste Corridor",
+      "description": "This is a Salón with polished marble walls. It widens slightly as it turns Este at its Norteern and Surern ends."
+    },
+    "south_corridor": {
+      "name": "Sur Corridor",
+      "description": ""
+    },
+    "behind_door": {
+      "name": "Narrow Corridor",
+      "description": ""
+    },
+    "front_door": {
+      "name": "Dungeon Entrance",
+      "description": ""
+    },
+    "north_corridor": {
+      "name": "Norte Corridor",
+      "description": ""
+    },
+    "parapet": {
+      "name": "Parapet",
+      "description": ""
+    },
+    "cell": {
+      "name": "Prison Cell",
+      "description": ""
+    },
+    "prison_cell": {
+      "name": "Prison Cell",
+      "description": "Estás en a bare prison cell. Its wooden door is securely fastened, and you can see only flames and smoke through its small ventana."
+    },
+    "good_cell": {
+      "name": "Prison Cell",
+      "description": ""
+    },
+    "nirvana": {
+      "name": "Treasury of Zork",
+      "description": "This is a large Sala, richly appointed in a style that bespeaks exquisite taste. To judge from its contents, it is the ultimate storeCasa of the wealth of the Great Underground Empire.| | There are chests containing precious joyas, mountains of zorkmids, rare pinturas, ancient statuary, and beguiling curios.| | On one wall is an annotated map of the Empire, showing the locations of various troves of treasure, and of many sArribaerior scenic views.| | On a desk at the far end of the Sala are stock certificates representing a controlling interest in FrobozzCo International, the multinational conglomerate and parent company of the Frobozz Magic Boat Co., etc.|"
+    }
+  },
+  "objects": {
+    "mailbox": {
+      "name": "buzón",
+      "description": "Hay un pequeño buzón aquí."
+    },
+    "leaflet": {
+      "name": "folleto",
+      "description": "Hay un pequeño folleto aquí.",
+      "read": "\"¡BIENVENIDO A ZORK!\n\nZORK es un juego de aventura, peligro y astucia. Explorarás algunos de los territorios más increíbles jamás vistos por los mortales. ¡Ningún ordenador debería estar sin uno!\""
+    },
+    "lamp": {
+      "name": "linterna de latón",
+      "description": "Hay una linterna de latón aquí.",
+      "on_desc": "La linterna de latón está encendida."
+    },
+    "sword": {
+      "name": "espada élfica",
+      "description": "Hay una espada aquí."
+    },
+    "rope": {
+      "name": "cuerda",
+      "description": "Una gran cuerda está aquí."
+    },
+    "knife": {
+      "name": "cuchillo",
+      "description": "En una mesa hay un cuchillo de aspecto desagradable."
+    },
+    "window": {
+      "name": "pequeña ventana",
+      "description": "Una pequeña ventana está ligeramente abierta."
+    },
+    "trophy_case": {
+      "name": "vitrina de trofeos",
+      "description": "Una gran vitrina de trofeos está contra la pared."
+    },
+    "rug": {
+      "name": "alfombra oriental",
+      "description": "Una gran alfombra oriental está en el centro de la habitación."
+    },
+    "trap_door": {
+      "name": "trampilla",
+      "description": "Una trampilla está abierta."
+    },
+    "board": {
+      "name": "board",
+      "description": "There is a board here."
+    },
+    "teeth": {
+      "name": "set of teeth",
+      "description": "There is a set of teeth here."
+    },
+    "wall": {
+      "name": "surrounding wall",
+      "description": "There is a surrounding wall here."
+    },
+    "granite_wall": {
+      "name": "granite wall",
+      "description": "There is a granite wall here."
+    },
+    "songbird": {
+      "name": "songbird",
+      "description": "There is a songbird here."
+    },
+    "white_house": {
+      "name": "white house",
+      "description": "There is a white house here."
+    },
+    "forest": {
+      "name": "forest",
+      "description": "There is a forest here."
+    },
+    "tree": {
+      "name": "tree",
+      "description": "There is a tree here."
+    },
+    "mountain_range": {
+      "name": "mountain range",
+      "description": "There is a mountain range here."
+    },
+    "global_water": {
+      "name": "agua",
+      "description": "There is a water here."
+    },
+    "water": {
+      "name": "quantity of agua",
+      "description": "There is a quantity of water here."
+    },
+    "kitchen_window": {
+      "name": "kitchen window",
+      "description": "There is a kitchen window here."
+    },
+    "chimney": {
+      "name": "chimney",
+      "description": "There is a chimney here."
+    },
+    "ghosts": {
+      "name": "number of ghosts",
+      "description": "There is a number of ghosts here."
+    },
+    "skull": {
+      "name": "crystal calavera",
+      "description": "There is a crystal skull here."
+    },
+    "lowered_basket": {
+      "name": "basket",
+      "description": "There is a basket here."
+    },
+    "raised_basket": {
+      "name": "basket",
+      "description": "There is a basket here."
+    },
+    "lunch": {
+      "name": "almuerzo",
+      "description": "There is a lunch here."
+    },
+    "bat": {
+      "name": "bat",
+      "description": "There is a bat here."
+    },
+    "bell": {
+      "name": "brass campana",
+      "description": "There is a brass bell here."
+    },
+    "hot_bell": {
+      "name": "red hot brass campana",
+      "description": "There is a red hot brass bell here."
+    },
+    "axe": {
+      "name": "bloody axe",
+      "description": "There is a bloody axe here."
+    },
+    "bolt": {
+      "name": "bolt",
+      "description": "There is a bolt here."
+    },
+    "bubble": {
+      "name": "green bubble",
+      "description": "There is a green bubble here."
+    },
+    "altar": {
+      "name": "altar",
+      "description": "There is a altar here."
+    },
+    "book": {
+      "name": "black libro",
+      "description": "There is a black book here."
+    },
+    "broken_lamp": {
+      "name": "broken linterna",
+      "description": "There is a broken lantern here."
+    },
+    "sceptre": {
+      "name": "sceptre",
+      "description": "There is a sceptre here."
+    },
+    "timbers": {
+      "name": "broken timber",
+      "description": "There is a broken timber here."
+    },
+    "slide": {
+      "name": "chute",
+      "description": "There is a chute here."
+    },
+    "kitchen_table": {
+      "name": "kitchen table",
+      "description": "There is a kitchen table here."
+    },
+    "attic_table": {
+      "name": "table",
+      "description": "There is a table here."
+    },
+    "sandwich_bag": {
+      "name": "brown saco",
+      "description": "There is a brown sack here."
+    },
+    "tool_chest": {
+      "name": "group of tool chests",
+      "description": "There is a group of tool chests here."
+    },
+    "yellow_button": {
+      "name": "yellow button",
+      "description": "There is a yellow button here."
+    },
+    "brown_button": {
+      "name": "brown button",
+      "description": "There is a brown button here."
+    },
+    "red_button": {
+      "name": "red button",
+      "description": "There is a red button here."
+    },
+    "blue_button": {
+      "name": "blue button",
+      "description": "There is a blue button here."
+    },
+    "chalice": {
+      "name": "chalice",
+      "description": "There is a chalice here."
+    },
+    "garlic": {
+      "name": "clove of ajo",
+      "description": "There is a clove of garlic here."
+    },
+    "trident": {
+      "name": "crystal trident",
+      "description": "There is a crystal trident here."
+    },
+    "cyclops": {
+      "name": "cyclops",
+      "description": "There is a cyclops here."
+    },
+    "dam": {
+      "name": "dam",
+      "description": "There is a dam here."
+    },
+    "boarded_window": {
+      "name": "boarded window",
+      "description": "There is a boarded window here."
+    },
+    "front_door": {
+      "name": "door",
+      "description": "There is a door here."
+    },
+    "barrow_door": {
+      "name": "stone door",
+      "description": "There is a stone door here."
+    },
+    "barrow": {
+      "name": "stone barrow",
+      "description": "There is a stone barrow here."
+    },
+    "bottle": {
+      "name": "glass botella",
+      "description": "There is a glass bottle here."
+    },
+    "crack": {
+      "name": "crack",
+      "description": "There is a crack here."
+    },
+    "coffin": {
+      "name": "gold coffin",
+      "description": "There is a gold coffin here."
+    },
+    "grate": {
+      "name": "grating",
+      "description": "There is a grating here."
+    },
+    "pump": {
+      "name": "hand-held air pump",
+      "description": "There is a hand-held air pump here."
+    },
+    "diamond": {
+      "name": "huge diamond",
+      "description": "There is a huge diamond here."
+    },
+    "jade": {
+      "name": "jade figurine",
+      "description": "There is a jade figurine here."
+    },
+    "bones": {
+      "name": "skeleton",
+      "description": "There is a skeleton here."
+    },
+    "burned_out_lantern": {
+      "name": "burned-out linterna",
+      "description": "There is a burned-out lantern here."
+    },
+    "bag_of_coins": {
+      "name": "leather bag of coins",
+      "description": "There is a leather bag of coins here."
+    },
+    "emerald": {
+      "name": "large emerald",
+      "description": "There is a large emerald here."
+    },
+    "advertisement": {
+      "name": "folleto",
+      "description": "There is a leaflet here."
+    },
+    "leak": {
+      "name": "leak",
+      "description": "There is a leak here."
+    },
+    "machine": {
+      "name": "machine",
+      "description": "There is a machine here."
+    },
+    "inflated_boat": {
+      "name": "magic boat",
+      "description": "There is a magic boat here."
+    },
+    "match": {
+      "name": "matchlibro",
+      "description": "There is a matchbook here."
+    },
+    "mirror_2": {
+      "name": "mirror",
+      "description": "There is a mirror here."
+    },
+    "mirror_1": {
+      "name": "mirror",
+      "description": "There is a mirror here."
+    },
+    "painting": {
+      "name": "painting",
+      "description": "There is a painting here."
+    },
+    "candles": {
+      "name": "pair of candles",
+      "description": "There is a pair of candles here."
+    },
+    "gunk": {
+      "name": "small piece of vitreous slag",
+      "description": "There is a small piece of vitreous slag here."
+    },
+    "bodies": {
+      "name": "pile of bodies",
+      "description": "There is a pile of bodies here."
+    },
+    "leaves": {
+      "name": "pile of leaves",
+      "description": "There is a pile of leaves here."
+    },
+    "punctured_boat": {
+      "name": "punctured boat",
+      "description": "There is a punctured boat here."
+    },
+    "inflatable_boat": {
+      "name": "pile of plastic",
+      "description": "There is a pile of plastic here."
+    },
+    "bar": {
+      "name": "platinum bar",
+      "description": "There is a platinum bar here."
+    },
+    "pot_of_gold": {
+      "name": "pot of gold",
+      "description": "There is a pot of gold here."
+    },
+    "prayer": {
+      "name": "prayer",
+      "description": "There is a prayer here."
+    },
+    "railing": {
+      "name": "wooden railing",
+      "description": "There is a wooden railing here."
+    },
+    "rainbow": {
+      "name": "rainbow",
+      "description": "There is a rainbow here."
+    },
+    "river": {
+      "name": "river",
+      "description": "There is a river here."
+    },
+    "buoy": {
+      "name": "red buoy",
+      "description": "There is a red buoy here."
+    },
+    "rusty_knife": {
+      "name": "rusty cuchillo",
+      "description": "There is a rusty knife here."
+    },
+    "sand": {
+      "name": "sand",
+      "description": "There is a sand here."
+    },
+    "bracelet": {
+      "name": "sapphire-encrusted bracelet",
+      "description": "There is a sapphire-encrusted bracelet here."
+    },
+    "screwdriver": {
+      "name": "screwdriver",
+      "description": "There is a screwdriver here."
+    },
+    "keys": {
+      "name": "skeleton key",
+      "description": "There is a skeleton key here."
+    },
+    "shovel": {
+      "name": "shovel",
+      "description": "There is a shovel here."
+    },
+    "coal": {
+      "name": "small pile of coal",
+      "description": "There is a small pile of coal here."
+    },
+    "ladder": {
+      "name": "wooden ladder",
+      "description": "There is a wooden ladder here."
+    },
+    "scarab": {
+      "name": "beautiful jeweled scarab",
+      "description": "There is a beautiful jeweled scarab here."
+    },
+    "large_bag": {
+      "name": "large bag",
+      "description": "There is a large bag here."
+    },
+    "stiletto": {
+      "name": "stiletto",
+      "description": "There is a stiletto here."
+    },
+    "machine_switch": {
+      "name": "switch",
+      "description": "There is a switch here."
+    },
+    "wooden_door": {
+      "name": "wooden door",
+      "description": "There is a wooden door here."
+    },
+    "map": {
+      "name": "ancient map",
+      "description": "There is a ancient map here."
+    },
+    "boat_label": {
+      "name": "tan label",
+      "description": "There is a tan label here."
+    },
+    "thief": {
+      "name": "thief",
+      "description": "There is a thief here."
+    },
+    "pedestal": {
+      "name": "pedestal",
+      "description": "There is a pedestal here."
+    },
+    "torch": {
+      "name": "antorcha",
+      "description": "There is a torch here."
+    },
+    "guide": {
+      "name": "tour guidelibro",
+      "description": "There is a tour guidebook here."
+    },
+    "troll": {
+      "name": "troll",
+      "description": "There is a troll here."
+    },
+    "trunk": {
+      "name": "trunk of jewels",
+      "description": "There is a trunk of jewels here."
+    },
+    "tube": {
+      "name": "tube",
+      "description": "There is a tube here."
+    },
+    "putty": {
+      "name": "viscous material",
+      "description": "There is a viscous material here."
+    },
+    "engravings": {
+      "name": "wall with engravings",
+      "description": "There is a wall with engravings here."
+    },
+    "owners_manual": {
+      "name": "ZORK owner's manual",
+      "description": "There is a ZORK owner's manual here."
+    },
+    "climbable_cliff": {
+      "name": "cliff",
+      "description": "There is a cliff here."
+    },
+    "white_cliff": {
+      "name": "white cliffs",
+      "description": "There is a white cliffs here."
+    },
+    "wrench": {
+      "name": "wrench",
+      "description": "There is a wrench here."
+    },
+    "control_panel": {
+      "name": "control panel",
+      "description": "There is a control panel here."
+    },
+    "nest": {
+      "name": "bird's nest",
+      "description": "There is a bird's nest here."
+    },
+    "egg": {
+      "name": "jewel-encrusted egg",
+      "description": "There is a jewel-encrusted egg here."
+    },
+    "broken_egg": {
+      "name": "broken jewel-encrusted egg",
+      "description": "There is a broken jewel-encrusted egg here."
+    },
+    "bauble": {
+      "name": "beautiful brass bauble",
+      "description": "There is a beautiful brass bauble here."
+    },
+    "canary": {
+      "name": "golden clockwork canary",
+      "description": "There is a golden clockwork canary here."
+    },
+    "broken_canary": {
+      "name": "broken clockwork canary",
+      "description": "There is a broken clockwork canary here."
+    },
+    "stream": {
+      "name": "stream",
+      "description": "",
+      "initial_desc": ""
+    },
+    "chasm": {
+      "name": "chasm",
+      "description": "",
+      "initial_desc": ""
+    },
+    "moss": {
+      "name": "mosses",
+      "description": "",
+      "initial_desc": ""
+    },
+    "rose_bush": {
+      "name": "roses",
+      "description": "",
+      "initial_desc": ""
+    },
+    "bridge": {
+      "name": "bridge",
+      "description": "",
+      "initial_desc": ""
+    },
+    "tunnel": {
+      "name": "Túnel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "east_wall": {
+      "name": "Este wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "south_wall": {
+      "name": "Sur wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "west_wall": {
+      "name": "Oeste wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "north_wall": {
+      "name": "Norte wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "wish": {
+      "name": "wish",
+      "description": "",
+      "initial_desc": ""
+    },
+    "well": {
+      "name": "well",
+      "description": "",
+      "initial_desc": ""
+    },
+    "sewl": {
+      "name": "Este wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "swwl": {
+      "name": "Oeste wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "sswl": {
+      "name": "Sur wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "snwl": {
+      "name": "Norte wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "global_unicorn": {
+      "name": "unicorn",
+      "description": "",
+      "initial_desc": ""
+    },
+    "unicorn": {
+      "name": "unicorn",
+      "description": "Hay un beautiful unicorn here cropping grass.",
+      "initial_desc": ""
+    },
+    "hedges": {
+      "name": "hedge",
+      "description": "",
+      "initial_desc": ""
+    },
+    "chest": {
+      "name": "rotten wooden chest",
+      "description": "",
+      "initial_desc": "A rotten old wooden chest is in one corner among the debris."
+    },
+    "statuette": {
+      "name": "oroen dragon statuette",
+      "description": "",
+      "initial_desc": "Nestled in the chest is a wrought oro statuette of a dragon."
+    },
+    "dragon": {
+      "name": "huge red dragon",
+      "description": "A huge red dragon is lying on the rocks here, watching.",
+      "initial_desc": "A huge red dragon is lying here, blocking the entrance to a Túnel hacia el norte. Smoke curls from his nostrils and out between his teeth."
+    },
+    "dead_dragon": {
+      "name": "huge dead dragon",
+      "description": "A huge dead dragon is lying half blocking the stream.",
+      "initial_desc": ""
+    },
+    "global_princess": {
+      "name": "beautiful princess",
+      "description": "",
+      "initial_desc": ""
+    },
+    "princess": {
+      "name": "beautiful princess",
+      "description": "A beautiful young woman, wearing a dirty and bedraggled gown, sits on a rock in the corner. Her hair is unkempt and she is oblivious to your presence, almost in a trance.",
+      "initial_desc": ""
+    },
+    "wiz_door": {
+      "name": "door partly covered in cobwebs",
+      "description": "",
+      "initial_desc": ""
+    },
+    "global_menhir": {
+      "name": "enormous menhir",
+      "description": "",
+      "initial_desc": ""
+    },
+    "menhir": {
+      "name": "enormous menhir",
+      "description": "",
+      "initial_desc": ""
+    },
+    "collar": {
+      "name": "gigantic dog collar",
+      "description": "",
+      "initial_desc": "A gigantic dog collar, large enough for three rhinoceros-sized dogs, is lying amidst the debris."
+    },
+    "dwindow": {
+      "name": "diamante shaped ventana",
+      "description": "",
+      "initial_desc": ""
+    },
+    "global_cerberus": {
+      "name": "three-headed dog",
+      "description": "",
+      "initial_desc": ""
+    },
+    "cerberus": {
+      "name": "three-headed dog",
+      "description": "Hay un vicious-looking dog guarding the entrance. It is more or less your usual dog, except that it has three heads and is the size of an elephant.",
+      "initial_desc": ""
+    },
+    "heads": {
+      "name": "set of poled heads",
+      "description": "",
+      "initial_desc": ""
+    },
+    "crypt": {
+      "name": "marble crypt",
+      "description": "",
+      "initial_desc": ""
+    },
+    "crypt_door": {
+      "name": "crypt door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "dim_door": {
+      "name": "secret door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "door_keeper": {
+      "name": "lizard",
+      "description": "",
+      "initial_desc": ""
+    },
+    "arcana": {
+      "name": "arcane item",
+      "description": "",
+      "initial_desc": ""
+    },
+    "workbench": {
+      "name": "Wizard's workbench",
+      "description": "",
+      "initial_desc": ""
+    },
+    "stand_1": {
+      "name": "rubí stand",
+      "description": "",
+      "initial_desc": ""
+    },
+    "stand_2": {
+      "name": "sapphire stand",
+      "description": "",
+      "initial_desc": ""
+    },
+    "stand_3": {
+      "name": "diamante stand",
+      "description": "",
+      "initial_desc": ""
+    },
+    "stand_4": {
+      "name": "black obsidian stand",
+      "description": "",
+      "initial_desc": ""
+    },
+    "palantir_4": {
+      "name": "black crystal sphere",
+      "description": "Hay un strange black sphere here.",
+      "initial_desc": ""
+    },
+    "degree": {
+      "name": "degree",
+      "description": "",
+      "initial_desc": ""
+    },
+    "wands": {
+      "name": "set of used wands",
+      "description": "",
+      "initial_desc": ""
+    },
+    "trophy_sword": {
+      "name": "nicked espadas",
+      "description": "",
+      "initial_desc": ""
+    },
+    "trophy_bottles": {
+      "name": "small botellas",
+      "description": "",
+      "initial_desc": ""
+    },
+    "warning_label": {
+      "name": "warning label",
+      "description": "A hand-lettered label is affixed to the wall.",
+      "initial_desc": ""
+    },
+    "global_wizard_case": {
+      "name": "Wizard's trophy cabinet",
+      "description": "",
+      "initial_desc": ""
+    },
+    "wizard_case": {
+      "name": "Wizard's trophy cabinet",
+      "description": "Imbedded in the wall is an ornate trophy cabinet.",
+      "initial_desc": ""
+    },
+    "broken_case": {
+      "name": "smashed trophy cabinet",
+      "description": "Shards of a smashed vitrina de trofeos litter the Sala.",
+      "initial_desc": ""
+    },
+    "pentagram": {
+      "name": "pentagram",
+      "description": "",
+      "initial_desc": ""
+    },
+    "aquarium": {
+      "name": "aquarium",
+      "description": "Filling the Norteern half of the Sala is a huge aquarium.",
+      "initial_desc": ""
+    },
+    "palantir_3": {
+      "name": "clear crystal sphere",
+      "description": "Hay un clear crystal sphere lying in the sand.",
+      "initial_desc": ""
+    },
+    "serpent": {
+      "name": "baby sea serpent",
+      "description": "Hay un baby sea serpent swimming in the aquarium.",
+      "initial_desc": ""
+    },
+    "dead_serpent": {
+      "name": "dead sea serpent",
+      "description": "Hay un dead sea serpent in a heap here.",
+      "initial_desc": ""
+    },
+    "riddle_door": {
+      "name": "stone door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "gnome": {
+      "name": "Volcano Gnome",
+      "description": "Hay un nervous Volcano Gnome here.",
+      "initial_desc": ""
+    },
+    "balloon": {
+      "name": "basket",
+      "description": "",
+      "initial_desc": ""
+    },
+    "balloon_label": {
+      "name": "blue label",
+      "description": "Hay un blue label here.",
+      "initial_desc": ""
+    },
+    "safe": {
+      "name": "box",
+      "description": "",
+      "initial_desc": ""
+    },
+    "braided_wire": {
+      "name": "braided wire",
+      "description": "",
+      "initial_desc": ""
+    },
+    "brick": {
+      "name": "brick",
+      "description": "Hay un square brick here which feels like clay.",
+      "initial_desc": ""
+    },
+    "explosion": {
+      "name": "debris from an explosion",
+      "description": "The Sala is cluttered with debris from an explosion. The walls seem ready to collapse.",
+      "initial_desc": ""
+    },
+    "dead_balloon": {
+      "name": "broken balloon",
+      "description": "Hay un balloon here, broken into pieces.",
+      "initial_desc": ""
+    },
+    "round_button": {
+      "name": "round button",
+      "description": "",
+      "initial_desc": ""
+    },
+    "square_button": {
+      "name": "square button",
+      "description": "",
+      "initial_desc": ""
+    },
+    "triangular_button": {
+      "name": "triangular button",
+      "description": "",
+      "initial_desc": ""
+    },
+    "card": {
+      "name": "card",
+      "description": "Hay un card with writing on it here.",
+      "initial_desc": ""
+    },
+    "cloth_bag": {
+      "name": "cloth bag",
+      "description": "",
+      "initial_desc": ""
+    },
+    "crown": {
+      "name": "gaudy crown",
+      "description": "Lord Dimwit's crown is here.",
+      "initial_desc": "The excessively gaudy crown of Lord Dimwit Flathead sits in the safe."
+    },
+    "violin": {
+      "name": "fancy violin",
+      "description": "Hay un Stradivarius here.",
+      "initial_desc": ""
+    },
+    "ice": {
+      "name": "glacier",
+      "description": "A mass of ice fills the Oesteern half of the Sala.",
+      "initial_desc": ""
+    },
+    "flask": {
+      "name": "stoppered glass flask filled with liquid",
+      "description": "A stoppered glass flask with a calavera-and-crossbones marking is here. The flask is filled with some clear liquid.",
+      "initial_desc": ""
+    },
+    "robot_label": {
+      "name": "green piece of paper",
+      "description": "Hay un green piece of paper here.",
+      "initial_desc": ""
+    },
+    "slot": {
+      "name": "hole",
+      "description": "",
+      "initial_desc": ""
+    },
+    "hook_2": {
+      "name": "hook",
+      "description": "Hay un small hook attached to the rock here.",
+      "initial_desc": ""
+    },
+    "hook_1": {
+      "name": "hook",
+      "description": "Hay un small hook attached to the rock here.",
+      "initial_desc": ""
+    },
+    "alice_table": {
+      "name": "large oblong table",
+      "description": "",
+      "initial_desc": ""
+    },
+    "mangled_cage": {
+      "name": "mangled cage",
+      "description": "Hay un mangled steel cage here.",
+      "initial_desc": ""
+    },
+    "pearl": {
+      "name": "pearl necklace",
+      "description": "Hay un pearl necklace here with hundreds of large pearls.",
+      "initial_desc": ""
+    },
+    "eat_me_cake": {
+      "name": "cake frosted with green letters",
+      "description": "",
+      "initial_desc": ""
+    },
+    "blue_icing": {
+      "name": "cake frosted with blue letters",
+      "description": "",
+      "initial_desc": ""
+    },
+    "orange_icing": {
+      "name": "cake frosted with orange letters",
+      "description": "",
+      "initial_desc": ""
+    },
+    "red_icing": {
+      "name": "cake frosted with red letters",
+      "description": "",
+      "initial_desc": ""
+    },
+    "pool": {
+      "name": "pool of tears",
+      "description": "The leak has submerged the depressed area in a pool of tears. Hay un hazy something at the deepest part of the pool.",
+      "initial_desc": ""
+    },
+    "coin": {
+      "name": "priceless zorkmid",
+      "description": "Hay unn engraved zorkmid here.",
+      "initial_desc": "On the floor is a priceless oro zorkmid (a valuable collector's item)."
+    },
+    "stamp": {
+      "name": "Flathead stamp",
+      "description": "Hay un Flathead stamp here.",
+      "initial_desc": ""
+    },
+    "green_book": {
+      "name": "green libro",
+      "description": "",
+      "initial_desc": "A handsome libro, bound in green leather, sits in the center of the Sala."
+    },
+    "blue_book": {
+      "name": "blue libro",
+      "description": "",
+      "initial_desc": "Worn and battered in one corner of the Sala is a blue libro."
+    },
+    "white_book": {
+      "name": "white libro",
+      "description": "",
+      "initial_desc": "Right beside the purple libro sits a white one."
+    },
+    "purple_book": {
+      "name": "purple libro",
+      "description": "Lying in the dust, and covered with mold, is a purple libro.",
+      "initial_desc": ""
+    },
+    "receptacle": {
+      "name": "receptacle",
+      "description": "",
+      "initial_desc": ""
+    },
+    "robot": {
+      "name": "robot",
+      "description": "Hay un robot here.",
+      "initial_desc": ""
+    },
+    "ruby": {
+      "name": "rubí",
+      "description": "Hay un moby rubí lying here.",
+      "initial_desc": "On the floor lies a moby rubí."
+    },
+    "iron_box": {
+      "name": "steel box",
+      "description": "Hay un dented steel box here.",
+      "initial_desc": ""
+    },
+    "cage": {
+      "name": "solid steel cage",
+      "description": "Hay un solid steel cage in the middle of the Sala.",
+      "initial_desc": ""
+    },
+    "candy": {
+      "name": "package of candy",
+      "description": "Hay un package of candied goodies here.",
+      "initial_desc": ""
+    },
+    "top_etchings": {
+      "name": "wall with etchings",
+      "description": "",
+      "initial_desc": ""
+    },
+    "bottom_etchings": {
+      "name": "wall with etchings",
+      "description": "",
+      "initial_desc": ""
+    },
+    "fuse": {
+      "name": "black string",
+      "description": "Hay un coil of black, braided string here.",
+      "initial_desc": ""
+    },
+    "bucket": {
+      "name": "wooden bucket",
+      "description": "Hay un wooden bucket here, 3 feet in diameter and 3 feet high.",
+      "initial_desc": ""
+    },
+    "posts": {
+      "name": "groArriba of wooden posts",
+      "description": "",
+      "initial_desc": ""
+    },
+    "bills": {
+      "name": "stack of zorkmid bills",
+      "description": "200 neatly stacked zorkmid bills are here.",
+      "initial_desc": "On the floor sit 200 neatly stacked zorkmid bills."
+    },
+    "portrait": {
+      "name": "portrait of J. Pierpont Flathead",
+      "description": "The portrait of J. Pierpont Flathead is here.",
+      "initial_desc": "A portrait of J. Pierpont Flathead hangs on the wall."
+    },
+    "bank_brochure": {
+      "name": "bank brochure",
+      "description": "",
+      "initial_desc": "On the ground is a small, worn piece of paper."
+    },
+    "cube": {
+      "name": "large stone cube",
+      "description": "",
+      "initial_desc": ""
+    },
+    "curtain": {
+      "name": "shimmering curtain of light",
+      "description": "",
+      "initial_desc": ""
+    },
+    "gnome_of_zurich": {
+      "name": "Gnome of Zurich",
+      "description": "Hay un Gnome of Zurich here.",
+      "initial_desc": ""
+    },
+    "deposit_box": {
+      "name": "safety deposit box",
+      "description": "",
+      "initial_desc": ""
+    },
+    "pdoor": {
+      "name": "door made of oak",
+      "description": "",
+      "initial_desc": ""
+    },
+    "pwindow": {
+      "name": "barred ventana",
+      "description": "",
+      "initial_desc": ""
+    },
+    "lid_1": {
+      "name": "metal lid",
+      "description": "",
+      "initial_desc": ""
+    },
+    "lid_2": {
+      "name": "metal lid",
+      "description": "",
+      "initial_desc": ""
+    },
+    "ptable": {
+      "name": "table",
+      "description": "",
+      "initial_desc": ""
+    },
+    "pcrack": {
+      "name": "narrow crack",
+      "description": "",
+      "initial_desc": ""
+    },
+    "keyhole_1": {
+      "name": "keyhole",
+      "description": "",
+      "initial_desc": ""
+    },
+    "keyhole_2": {
+      "name": "keyhole",
+      "description": "",
+      "initial_desc": ""
+    },
+    "letter_opener": {
+      "name": "letter opener",
+      "description": "",
+      "initial_desc": ""
+    },
+    "key": {
+      "name": "rusty iron key",
+      "description": "",
+      "initial_desc": ""
+    },
+    "palantir_2": {
+      "name": "blue crystal sphere",
+      "description": "",
+      "initial_desc": "In the center of the table sits a blue crystal sphere."
+    },
+    "gazebo": {
+      "name": "gazebo",
+      "description": "",
+      "initial_desc": ""
+    },
+    "gazebo_table": {
+      "name": "table",
+      "description": "",
+      "initial_desc": ""
+    },
+    "newspaper": {
+      "name": "newspaper",
+      "description": "",
+      "initial_desc": ""
+    },
+    "place_mat": {
+      "name": "place mat",
+      "description": "",
+      "initial_desc": ""
+    },
+    "teapot": {
+      "name": "china teapot",
+      "description": "",
+      "initial_desc": ""
+    },
+    "salty_water": {
+      "name": "quantity of salty agua",
+      "description": "There is some agua here.",
+      "initial_desc": ""
+    },
+    "gold_key": {
+      "name": "delicate oro key",
+      "description": "",
+      "initial_desc": ""
+    },
+    "ribbon": {
+      "name": "ribbon",
+      "description": "",
+      "initial_desc": ""
+    },
+    "rose": {
+      "name": "perfect rose",
+      "description": "",
+      "initial_desc": ""
+    },
+    "genie": {
+      "name": "demon",
+      "description": "Hay un demon floating in midair here.",
+      "initial_desc": ""
+    },
+    "wizard": {
+      "name": "Wizard of Frobozz",
+      "description": "The Wizard of Frobozz is here, eyeing you warily.",
+      "initial_desc": ""
+    },
+    "wand": {
+      "name": "Wizard's magic wand",
+      "description": "",
+      "initial_desc": ""
+    },
+    "repellent": {
+      "name": "Frobozz Magic Grue Repellent",
+      "description": "",
+      "initial_desc": ""
+    },
+    "global_palantir": {
+      "name": "sphere",
+      "description": "",
+      "initial_desc": ""
+    },
+    "footpad": {
+      "name": "footpad",
+      "description": "",
+      "initial_desc": ""
+    },
+    "compass": {
+      "name": "compass",
+      "description": "",
+      "initial_desc": ""
+    },
+    "rubble": {
+      "name": "rubble",
+      "description": "",
+      "initial_desc": ""
+    },
+    "debris": {
+      "name": "dust and debris",
+      "description": "",
+      "initial_desc": ""
+    },
+    "warning_note": {
+      "name": "warning note",
+      "description": "",
+      "initial_desc": "Lying on the ground is a small note of some kind."
+    },
+    "cp_slot": {
+      "name": "small slot",
+      "description": "",
+      "initial_desc": ""
+    },
+    "cpdoor": {
+      "name": "steel door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "lore_book": {
+      "name": "very ancient libro",
+      "description": "Hay unn old libro here.",
+      "initial_desc": "Nestled inside the niche is an old and dusty libro."
+    },
+    "intdir": {
+      "name": "direction",
+      "description": "",
+      "initial_desc": ""
+    },
+    "guardian": {
+      "name": "Guardians of Zork",
+      "description": "",
+      "initial_desc": ""
+    },
+    "master": {
+      "name": "dungeon master",
+      "description": "",
+      "initial_desc": ""
+    },
+    "dungeon_master": {
+      "name": "dungeon master",
+      "description": "The dungeon master is quietly leaning on his staff here.",
+      "initial_desc": ""
+    },
+    "mirror": {
+      "name": "mirror",
+      "description": "",
+      "initial_desc": ""
+    },
+    "panel": {
+      "name": "panel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "channel": {
+      "name": "stone channel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "wooden_wall": {
+      "name": "wooden wall",
+      "description": "",
+      "initial_desc": ""
+    },
+    "runes": {
+      "name": "runes",
+      "description": "",
+      "initial_desc": ""
+    },
+    "t_bar": {
+      "name": "T-bar",
+      "description": "",
+      "initial_desc": ""
+    },
+    "black_panel": {
+      "name": "black panel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "bronze_door": {
+      "name": "bronze door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "cell_door": {
+      "name": "cell door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "compass_arrow": {
+      "name": "compass arrow",
+      "description": "",
+      "initial_desc": ""
+    },
+    "dial_button": {
+      "name": "large button",
+      "description": "",
+      "initial_desc": ""
+    },
+    "good_locked_door": {
+      "name": "cell door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "locked_door": {
+      "name": "cell door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "long_pole": {
+      "name": "long pole",
+      "description": "",
+      "initial_desc": ""
+    },
+    "mahogany_panel": {
+      "name": "mahogany panel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "flaming_pit": {
+      "name": "flaming pit",
+      "description": "",
+      "initial_desc": ""
+    },
+    "parapet_obj": {
+      "name": "parapet",
+      "description": "",
+      "initial_desc": ""
+    },
+    "pine_panel": {
+      "name": "pine panel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "beam": {
+      "name": "red beam of light",
+      "description": "",
+      "initial_desc": ""
+    },
+    "red_panel": {
+      "name": "red panel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "short_pole": {
+      "name": "short pole",
+      "description": "",
+      "initial_desc": ""
+    },
+    "sundial": {
+      "name": "sundial",
+      "description": "",
+      "initial_desc": ""
+    },
+    "yellow_panel": {
+      "name": "yellow panel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "white_panel": {
+      "name": "white panel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "wooden_bar": {
+      "name": "wooden bar",
+      "description": "",
+      "initial_desc": ""
+    },
+    "dungeon_panel": {
+      "name": "panel",
+      "description": "",
+      "initial_desc": ""
+    },
+    "dungeon_door": {
+      "name": "wooden door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "secret_door": {
+      "name": "secret door",
+      "description": "",
+      "initial_desc": ""
+    },
+    "old_man": {
+      "name": "old man",
+      "description": "",
+      "initial_desc": ""
+    },
+    "cp_hole": {
+      "name": "hole",
+      "description": "",
+      "initial_desc": ""
+    }
+  },
+  "creatures": {
+    "troll": {
+      "name": "troll",
+      "description": "Un troll de aspecto desagradable bloquea el camino.",
+      "dead_desc": "El cuerpo muerto de un troll yace aquí.",
+      "attacks": "¡El troll balancea su hacha hacia ti!"
+    },
+    "thief": {
+      "name": "ladrón",
+      "description": "Un individuo de mala apariencia se esconde en las sombras.",
+      "steals": "¡El ladrón te roba {item}!"
+    },
+    "cyclops": {
+      "name": "cíclope",
+      "description": "¡Un enorme cíclope está aquí!",
+      "sleeping": "El cíclope está durmiendo."
+    }
+  }
+}

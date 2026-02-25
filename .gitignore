@@ -1,0 +1,4 @@
+/target/
+/data/extracted/
+*.pyc
+*.json.bak
