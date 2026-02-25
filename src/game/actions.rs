@@ -752,6 +752,39 @@ fn looks_untranslated_name(world: &World, object_id: &str, translated_name: &str
 mod tests {
     use super::*;
     use crate::i18n::Language;
+    use std::path::PathBuf;
+    use std::sync::{Mutex, OnceLock};
+
+    fn env_lock() -> &'static Mutex<()> {
+        static ENV_LOCK: OnceLock<Mutex<()>> = OnceLock::new();
+        ENV_LOCK.get_or_init(|| Mutex::new(()))
+    }
+
+    fn with_temp_home<T>(test_name: &str, f: impl FnOnce(PathBuf) -> T) -> T {
+        let _guard = env_lock().lock().expect("env lock should be available");
+        let original_home = std::env::var("HOME").ok();
+        let temp_home =
+            std::env::temp_dir().join(format!("zork-termux-{}-{}", test_name, std::process::id()));
+        let _ = std::fs::remove_dir_all(&temp_home);
+        std::fs::create_dir_all(&temp_home).expect("temp HOME should be created");
+        unsafe {
+            std::env::set_var("HOME", &temp_home);
+        }
+
+        let result = f(temp_home.clone());
+
+        match original_home {
+            Some(value) => unsafe {
+                std::env::set_var("HOME", value);
+            },
+            None => unsafe {
+                std::env::remove_var("HOME");
+            },
+        }
+
+        let _ = std::fs::remove_dir_all(temp_home);
+        result
+    }
 
     #[test]
     fn troll_blocks_passage_until_killed() {
@@ -801,5 +834,89 @@ mod tests {
             &i18n,
         );
         assert_eq!(state.current_room, "troll_room");
+    }
+
+    #[test]
+    fn save_restore_roundtrip_via_commands() {
+        with_temp_home("save-restore", |_| {
+            let i18n = I18n::load(Language::English).expect("translation should load");
+            let mut world = World::load_zork1();
+            let mut state = GameState::new(Language::English, "west_of_house");
+
+            execute(
+                &mut state,
+                &mut world,
+                Command {
+                    verb: Verb::Save,
+                    object: None,
+                },
+                &i18n,
+            );
+
+            assert!(GameState::save_exists(1));
+
+            state.current_room = "north_of_house".to_string();
+            state.score = 77;
+            state.add_to_inventory("sword".to_string());
+
+            execute(
+                &mut state,
+                &mut world,
+                Command {
+                    verb: Verb::Restore,
+                    object: None,
+                },
+                &i18n,
+            );
+
+            assert_eq!(state.current_room, "west_of_house");
+            assert_eq!(state.score, 0);
+            assert!(state.inventory.is_empty());
+            assert_eq!(state.moves, 1);
+        });
+    }
+
+    #[test]
+    fn put_moves_item_into_open_container() {
+        let i18n = I18n::load(Language::English).expect("translation should load");
+        let mut world = World::load_zork1();
+        let mut state = GameState::new(Language::English, "west_of_house");
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Open,
+                object: Some("mailbox".to_string()),
+            },
+            &i18n,
+        );
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Take,
+                object: Some("leaflet".to_string()),
+            },
+            &i18n,
+        );
+        assert!(state.inventory.contains(&"advertisement".to_string()));
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Put,
+                object: Some("leaflet in mailbox".to_string()),
+            },
+            &i18n,
+        );
+
+        assert!(!state.inventory.contains(&"advertisement".to_string()));
+        assert_eq!(world.object_location("advertisement"), Some("mailbox"));
+        let mailbox = world
+            .get_object("mailbox")
+            .expect("mailbox object should exist");
+        assert!(mailbox.contents.iter().any(|id| id == "advertisement"));
     }
 }

@@ -50,6 +50,12 @@ brew install zork-termux
 6) ripristina
 ```
 
+### Automatic Smoke (10s)
+
+```bash
+cargo test
+```
+
 ## Session Log (for fast bug reports)
 
 - Path: `~/.zork-termux/logs/session-<timestamp>.log`
