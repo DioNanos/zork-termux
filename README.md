@@ -11,6 +11,8 @@
 A terminal-first fantasy adventure inspired by the legendary **Zork I, II, III** experience.
 Play in the dark, map the unknown, collect strange objects, solve puzzles, and survive what waits in the underground empire.
 
+> **Project Status:** Active Development (DEV)
+
 ## The Adventure
 
 - 3 campaigns selectable at startup: **Zork I, Zork II, Zork III**
