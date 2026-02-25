@@ -1,20 +1,21 @@
 # ZORK-TERMUX
 
-**Multi-language recreation of Zork I, II, III in Rust** - Optimized for Termux on Android
+**Multi-language recreation of Zork I, II, III in Rust** — Optimized for Termux/Android, fully compatible with Linux & Mac
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange.svg)](https://www.rust-lang.org/)
 
 ## Features
 
+- **Termux-first** — Designed for Android, works everywhere
 - **189 rooms** from Zork trilogy (68 + 86 + 35)
 - **310 objects** fully extracted from ZIL sources
 - **EN/IT/ES** complete multi-language support
 - **Interactive menu** for language and game selection
 - **Auto language detection** from system `$LANG`
-- **785KB** optimized binary
-- **Cross-platform**: Linux / Mac / Termux
-- **MIT License** - Based on historical Zork MIT sources
+- **785KB** optimized binary — perfect for mobile
+- **Cross-platform**: Termux/Android, Linux, macOS
+- **MIT License** — Based on historical Zork MIT sources
 
 ## Screenshot
 
@@ -50,17 +51,18 @@ Ti trovi in un campo aperto a ovest di una casa bianca...
 ## Build
 
 ```bash
-# Linux / Mac
-git clone https://github.com/DioNanos/Zork-termux.git
-cd Zork-termux
-cargo build --release
-
-# Mac with Homebrew
-brew install rust
-cargo build --release
-
-# Termux on Android
+# Termux on Android (recommended)
 pkg install rust
+git clone https://github.com/DioNanos/zork-termux.git
+cd zork-termux
+cargo build --release
+
+# Linux
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo build --release
+
+# macOS with Homebrew
+brew install rust
 cargo build --release
 ```
 
@@ -153,7 +155,7 @@ Game data extracted from original ZIL source files (MIT license):
 - [x] EN/IT/ES translations
 - [x] Menu system
 - [x] Save/Load
-- [ ] Objects in containers fix
+- [x] Objects in containers
 - [ ] NPC interactions
 - [ ] Puzzle mechanics
 - [ ] Combat system

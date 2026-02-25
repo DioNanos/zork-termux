@@ -10,7 +10,7 @@ pub fn execute(state: &mut GameState, world: &mut World, cmd: Command, i18n: &I1
 
     match cmd.verb {
         Verb::Look => cmd_look(state, world, i18n),
-        Verb::Inventory => cmd_inventory(state, ui),
+        Verb::Inventory => cmd_inventory(state, world, ui),
         Verb::North | Verb::South | Verb::East | Verb::West | Verb::Up | Verb::Down => {
             cmd_move(state, world, &cmd.verb, i18n);
         }
@@ -54,16 +54,28 @@ fn cmd_look(state: &GameState, world: &World, i18n: &I18n) {
         if let Some(obj_trans) = i18n.object(&obj.id) {
             println!("{}", obj_trans.description);
         }
+        if obj.is_openable && obj.is_open && !obj.contents.is_empty() {
+            println!("  {}:", i18n.ui().contains);
+            for content_id in &obj.contents.clone() {
+                if let Some(content) = world.get_object(content_id) {
+                    println!("    - {}", content.name);
+                }
+            }
+        }
     }
 }
 
-fn cmd_inventory(state: &GameState, ui: &crate::i18n::UiStrings) {
+fn cmd_inventory(state: &GameState, world: &World, ui: &crate::i18n::UiStrings) {
     if state.inventory.is_empty() {
         println!("\n{}", ui.empty_handed);
     } else {
         println!("\n{}:", ui.carrying);
-        for item in &state.inventory {
-            println!("  - {}", item);
+        for item_id in &state.inventory {
+            if let Some(obj) = world.get_object(item_id) {
+                println!("  - {}", obj.name);
+            } else {
+                println!("  - {}", item_id);
+            }
         }
     }
 }
@@ -111,6 +123,7 @@ fn cmd_take(state: &mut GameState, world: &mut World, object: Option<&str>, i18n
                         return;
                     }
                 }
+                remove_from_container(world, &id);
                 world.move_object(&id, "inventory");
                 state.add_to_inventory(id.clone());
                 println!("\n{}", ui.taken);
@@ -119,6 +132,12 @@ fn cmd_take(state: &mut GameState, world: &mut World, object: Option<&str>, i18n
             }
         }
         None => println!("\n{}", ui.take_what),
+    }
+}
+
+fn remove_from_container(world: &mut World, object_id: &str) {
+    for (_, obj) in world.objects.iter_mut() {
+        obj.contents.retain(|id| id != object_id);
     }
 }
 
@@ -188,6 +207,14 @@ fn cmd_open(state: &GameState, world: &mut World, object: Option<&str>, i18n: &I
                     } else {
                         obj.is_open = true;
                         println!("\n{}", ui.opened);
+                        if !obj.contents.is_empty() {
+                            println!("\n{}", ui.contains);
+                            for content_id in &obj.contents.clone() {
+                                if let Some(content) = world.get_object(content_id) {
+                                    println!("  - {}", content.name);
+                                }
+                            }
+                        }
                     }
                 }
             } else {
@@ -290,10 +317,28 @@ fn cmd_attack(object: Option<&str>, i18n: &I18n) {
 }
 
 fn find_object_by_name(world: &World, room_id: &str, name: &str) -> Option<String> {
+    let name_lower = name.to_lowercase();
     let objects = world.objects_in_room(room_id);
     for obj in objects {
-        if obj.name.to_lowercase() == name.to_lowercase() {
+        let obj_name_lower = obj.name.to_lowercase();
+        if obj_name_lower == name_lower
+            || obj_name_lower.contains(&name_lower)
+            || name_lower.contains(&obj_name_lower)
+        {
             return Some(obj.id.clone());
+        }
+        if obj.is_openable && obj.is_open {
+            for content_id in &obj.contents.clone() {
+                if let Some(content) = world.get_object(content_id) {
+                    let content_name_lower = content.name.to_lowercase();
+                    if content_name_lower == name_lower
+                        || content_name_lower.contains(&name_lower)
+                        || name_lower.contains(&content_name_lower)
+                    {
+                        return Some(content_id.clone());
+                    }
+                }
+            }
         }
     }
     None
