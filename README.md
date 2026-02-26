@@ -50,7 +50,7 @@ Technical notes for maintainers are in:
 
 ## License
 
-MIT License (see `LICENSE`).
+MIT License (declared in `Cargo.toml`).
 
 Copyright (c) 2026 Davide A. Guglielmi
 
