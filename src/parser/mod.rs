@@ -62,6 +62,7 @@ impl Parser {
             "restore" | "load" => Verb::Restore,
             "help" | "?" => Verb::Help,
             "score" => Verb::Score,
+            "enter" | "in" | "go" => Verb::Enter,
             _ => Verb::Unknown(word.to_string()),
         }
     }
@@ -89,6 +90,7 @@ impl Parser {
             "ripristina" | "carica" | "restore" | "load" => Verb::Restore,
             "aiuto" | "?" | "help" => Verb::Help,
             "punti" | "score" => Verb::Score,
+            "entra" | "in" | "vai" => Verb::Enter,
             _ => Verb::Unknown(word.to_string()),
         }
     }
@@ -116,6 +118,7 @@ impl Parser {
             "restaurar" | "cargar" | "restore" | "load" => Verb::Restore,
             "ayuda" | "?" | "help" => Verb::Help,
             "puntos" | "score" => Verb::Score,
+            "entrar" | "entra" | "en" | "ir" => Verb::Enter,
             _ => Verb::Unknown(word.to_string()),
         }
     }
@@ -133,7 +136,10 @@ mod tests {
             parser.parse("restore").unwrap().verb,
             Verb::Restore
         ));
-        assert!(matches!(parser.parse("read note").unwrap().verb, Verb::Read));
+        assert!(matches!(
+            parser.parse("read note").unwrap().verb,
+            Verb::Read
+        ));
         assert!(matches!(parser.parse("use lamp").unwrap().verb, Verb::Use));
         assert!(matches!(
             parser.parse("attack troll").unwrap().verb,
@@ -157,7 +163,10 @@ mod tests {
             parser.parse("leggi volantino").unwrap().verb,
             Verb::Read
         ));
-        assert!(matches!(parser.parse("usa lanterna").unwrap().verb, Verb::Use));
+        assert!(matches!(
+            parser.parse("usa lanterna").unwrap().verb,
+            Verb::Use
+        ));
         assert!(matches!(
             parser.parse("attacca troll").unwrap().verb,
             Verb::Attack

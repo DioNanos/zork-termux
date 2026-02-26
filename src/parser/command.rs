@@ -27,5 +27,6 @@ pub enum Verb {
     Restore,
     Attack,
     Put,
+    Enter,
     Unknown(String),
 }

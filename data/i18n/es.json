@@ -255,12 +255,12 @@
       "description": ""
     },
     "strange_passage": {
-      "name": "Strange Passage",
-      "description": "This is a long passage. To the west is one entrance. On the\neast there is an old wooden door, with a large opening in it (about\ncyclops sized)."
+      "name": "Pasaje Extrano",
+      "description": "Este es un pasaje largo. Al oeste hay una entrada. Al este hay una vieja puerta de madera, con una gran abertura (del tamano aproximado de un ciclope)."
     },
     "treasure_room": {
       "name": "Sala del Tesoro",
-      "description": "This is a large room, whose east wall is solid granite. A number\nof discarded bags, which crumble at your touch, are scattered about\non the floor. There is an exit down a staircase."
+      "description": "Esta es una gran sala, cuya pared este es de granito macizo. Hay varias bolsas desechadas esparcidas por el suelo, que se desmenuzan al tocarlas. Hay una salida al bajar una escalera."
     },
     "reservoir_south": {
       "name": "Embalse Sur",
@@ -275,56 +275,56 @@
       "description": ""
     },
     "stream_view": {
-      "name": "Stream View",
-      "description": "You are standing on a path beside a gently flowing stream. The path\nfollows the stream, which flows from west to east."
+      "name": "Sendero junto al Arroyo",
+      "description": "Estas en un sendero junto a un arroyo de corriente suave. El sendero sigue el arroyo, que fluye de oeste a este."
     },
     "in_stream": {
-      "name": "Stream",
-      "description": "You are on the gently flowing stream. The upstream route is too narrow\nto navigate, and the downstream route is invisible due to twisting\nwalls. There is a narrow beach to land on."
+      "name": "En el Arroyo",
+      "description": "Estas en el arroyo de corriente suave. La ruta rio arriba es demasiado estrecha para navegar y la ruta rio abajo es invisible debido a las paredes retorcidas. Hay una playa estrecha donde desembarcar."
     },
     "mirror_room_1": {
-      "name": "Mirror Room",
+      "name": "Sala de los Espejos",
       "description": ""
     },
     "mirror_room_2": {
-      "name": "Mirror Room",
+      "name": "Sala de los Espejos",
       "description": ""
     },
     "small_cave": {
-      "name": "Cave",
-      "description": "This is a tiny cave with entrances west and north, and a staircase\nleading down."
+      "name": "Cueva Pequena",
+      "description": "Esta es una pequena cueva con entradas al oeste y al norte, y una escalera que desciende."
     },
     "tiny_cave": {
-      "name": "Cave",
-      "description": "This is a tiny cave with entrances west and north, and a dark,\nforbidding staircase leading down."
+      "name": "Cueva Minuscula",
+      "description": "Esta es una cueva minuscula con entradas al oeste y al norte, y una escalera oscura y amenazadora que desciende."
     },
     "cold_passage": {
-      "name": "Cold Passage",
-      "description": "This is a cold and damp corridor where a long east-west passageway\nturns into a southward path."
+      "name": "Pasaje Frio",
+      "description": "Este es un corredor frio y humedo donde un largo pasaje este-oeste gira hacia el sur."
     },
     "narrow_passage": {
       "name": "Pasaje Estrecho",
-      "description": "This is a long and narrow corridor where a long north-south passageway\nbriefly narrows even further."
+      "description": "Este es un corredor largo y estrecho donde un largo pasaje norte-sur se estrecha aun mas durante un breve tramo."
     },
     "winding_passage": {
-      "name": "Winding Passage",
-      "description": "This is a winding passage. It seems that there are only exits\non the east and north."
+      "name": "Pasaje Sinuoso",
+      "description": "Este es un pasaje sinuoso. Parece que solo hay salidas al este y al norte."
     },
     "twisting_passage": {
-      "name": "Twisting Passage",
-      "description": "This is a winding passage. It seems that there are only exits\non the east and north."
+      "name": "Pasaje Retorcido",
+      "description": "Este es un pasaje retorcido. Parece que solo hay salidas al este y al norte."
     },
     "atlantis_room": {
-      "name": "Atlantis Room",
-      "description": "This is an ancient room, long under agua. There is an exit to\nthe south and a staircase leading up."
+      "name": "Sala de Atlantis",
+      "description": "Esta es una sala antigua, sumergida durante mucho tiempo. Hay una salida al sur y una escalera que sube."
     },
     "ew_passage": {
       "name": "Pasaje Este-Oeste",
-      "description": "This is a narrow east-west passageway. There is a narrow stairway\nleading down at the north end of the room."
+      "description": "Este es un pasaje estrecho de este a oeste. Hay una escalera estrecha que desciende en el extremo norte de la sala."
     },
     "round_room": {
       "name": "Sala Redonda",
-      "description": "This is a circular stone room with passages in all directions. Several\nof them have unfortunately been blocked by cave-ins."
+      "description": "Esta es una sala circular de piedra con pasajes en todas direcciones. Varios de ellos han sido bloqueados por derrumbes."
     },
     "deep_canyon": {
       "name": "Cañón Profundo",
@@ -335,48 +335,48 @@
       "description": "Esta cueva tiene salidas al oeste y al este, y se estrecha hasta una grieta hacia\nel sur. La tierra esta especialmente humeda aqui."
     },
     "loud_room": {
-      "name": "Loud Room",
+      "name": "Sala Ruidosa",
       "description": ""
     },
     "ns_passage": {
       "name": "Pasaje Norte-Sur",
-      "description": "This is a high north-south passage, which forks to the northeast."
+      "description": "Este es un pasaje alto norte-sur, que se bifurca hacia el noreste."
     },
     "chasm_room": {
-      "name": "Chasm",
-      "description": "A chasm runs southwest to northeast and the path follows it. You are\non the south side of the chasm, where a crack opens into a passage."
+      "name": "Abismo",
+      "description": "Un abismo corre del suroeste al noreste y el sendero lo sigue. Estas en el lado sur del abismo, donde una grieta se abre a un pasaje."
     },
     "entrance_to_hades": {
       "name": "Entrada al Hades",
       "description": ""
     },
     "land_of_living_dead": {
-      "name": "Land of the Dead",
-      "description": "You have entered the Tierra de los Muertos Vivientes. Thousands of lost souls\ncan be heard weeping and moaning. In the corner are stacked the remains\nof dozens of previous adventurers less fortunate than yourself.\nA passage exits to the north."
+      "name": "Tierra de los Muertos",
+      "description": "Has entrado en la Tierra de los Muertos Vivientes. Se oyen miles de almas perdidas llorando y gimiendo. En una esquina estan apilados los restos de docenas de aventureros menos afortunados que tu. Un pasaje sale al norte."
     },
     "engravings_cave": {
-      "name": "Engravings Cave",
-      "description": "You have entered a low cave with passages leading northwest and east."
+      "name": "Cueva de Grabados",
+      "description": "Has entrado en una cueva baja con pasajes hacia el noroeste y el este."
     },
     "egypt_room": {
-      "name": "Egyptian Room",
-      "description": "This is a room which looks like an Egyptian tomb. There is an\nascending staircase to the west."
+      "name": "Tumba Egipcia",
+      "description": "Esta sala parece una tumba egipcia. Hay una escalera ascendente hacia el oeste."
     },
     "dome_room": {
-      "name": "Dome Room",
+      "name": "Sala de la Cupula",
       "description": ""
     },
     "torch_room": {
-      "name": "Torch Room",
+      "name": "Sala de las Antorchas",
       "description": ""
     },
     "north_temple": {
       "name": "Templo",
-      "description": "This is the north end of a large temple. On the east wall is an\nancient inscription, probably a prayer in a long-forgotten language.\nBelow the prayer is a staircase leading down. The west wall is solid\ngranite. The exit to the north end of the room is through huge\nmarble pillars."
+      "description": "Este es el extremo norte de un gran templo. En la pared este hay una antigua inscripcion, probablemente una plegaria en un idioma olvidado. Debajo de la plegaria hay una escalera que desciende. La pared oeste es de granito macizo. La salida hacia la parte norte de la sala pasa entre enormes columnas de marmol."
     },
     "south_temple": {
       "name": "Altar",
-      "description": "This is the south end of a large temple. In front of you is what\nappears to be an altar. In one corner is a small hole in the floor\nwhich leads into darkness. You probably could not get back up it."
+      "description": "Este es el extremo sur de un gran templo. Frente a ti hay lo que parece ser un altar. En una esquina hay un pequeno agujero en el suelo que conduce a la oscuridad. Probablemente no podrias volver a subir por ahi."
     },
     "dam_room": {
       "name": "Presa",
@@ -388,54 +388,54 @@
     },
     "maintenance_room": {
       "name": "Sala de Mantenimiento",
-      "description": "This is what appears to have been the maintenance room for Flood\nControl Presa #3. Apparently, this room has been ransacoed recently, for\nmost of the valuable equipment is gone. On the wall in front of you is a\ngroup of buttons colored blue, yellow, brown, and red. There are doorways to\nthe west and south."
+      "description": "Esta parece haber sido la sala de mantenimiento de la Presa de Control de Inundaciones n. 3. Al parecer, la sala ha sido saqueada recientemente, porque casi todo el equipo valioso ha desaparecido. En la pared frente a ti hay un grupo de botones azul, amarillo, marron y rojo. Hay salidas hacia el oeste y el sur."
     },
     "dam_base": {
       "name": "Presa Base",
-      "description": "You are at the base of Flood Control Presa #3, which looms above you\nand to the north. The river Frigid is flowing by here. Along the\nriver are the White Cliffs which seem to form giant walls stretching\nfrom north to south along the shores of the river as it winds its\nway downstream."
+      "description": "Estas en la base de la Presa de Control de Inundaciones n. 3, que se alza sobre ti hacia el norte. Aqui fluye el Rio Frigid. A lo largo del rio se elevan los Acantilados Blancos, que parecen formar enormes muros de norte a sur mientras el rio serpentea aguas abajo."
     },
     "river_1": {
-      "name": "Frigid River",
-      "description": "You are on the Frigid River in the vicinity of the Presa. The river\nflows quietly here. There is a landing on the west shore."
+      "name": "Rio Frigid",
+      "description": "Estas en el Rio Frigid en las cercanias de la presa. El rio fluye tranquilamente aqui. Hay un embarcadero en la orilla oeste."
     },
     "river_2": {
-      "name": "Frigid River",
-      "description": "The river turns a corner here making it impossible to see the\nPresa. The White Cliffs loom on the east bank and large rocks prevent\nlanding on the west."
+      "name": "Rio Frigid",
+      "description": "Aqui el rio gira una curva que hace imposible ver la presa. Los Acantilados Blancos se alzan en la orilla este y grandes rocas impiden desembarcar al oeste."
     },
     "river_3": {
-      "name": "Frigid River",
-      "description": "The river descends here into a valley. There is a narrow beach on the\nwest shore below the cliffs. In the distance a faint rumbling can be\nheard."
+      "name": "Rio Frigid",
+      "description": "Aqui el rio desciende hacia un valle. Hay una playa estrecha en la orilla oeste, bajo los acantilados. A lo lejos se oye un rumor sordo."
     },
     "white_cliffs_north": {
-      "name": "White Cliffs Beach",
-      "description": "You are on a narrow strip of beach which runs along the base of the\nWhite Cliffs. There is a narrow path heading south along the Cliffs\nand a tight passage leading west into the cliffs themselves."
+      "name": "Playa de los Acantilados Blancos",
+      "description": "Estas en una franja estrecha de playa que recorre la base de los Acantilados Blancos. Un sendero estrecho va hacia el sur junto a los acantilados y un pasaje angosto conduce al oeste, hacia el interior de los acantilados."
     },
     "white_cliffs_south": {
-      "name": "White Cliffs Beach",
-      "description": "You are on a rocky, narrow strip of beach beside the Cliffs. A\nnarrow path leads north along the shore."
+      "name": "Playa de los Acantilados Blancos",
+      "description": "Estas en una playa rocosa y estrecha junto a los acantilados. Un sendero estrecho conduce al norte a lo largo de la orilla."
     },
     "river_4": {
-      "name": "Frigid River",
-      "description": "The river is running faster here and the sound ahead appears to be\nthat of rushing agua. On the east shore is a sandy beach. A small\narea of beach can also be seen below the cliffs on the west shore."
+      "name": "Rio Frigid",
+      "description": "El rio corre mas rapido aqui y el sonido que tienes delante parece de agua impetuosa. En la orilla este hay una playa arenosa. Tambien puede verse una pequena zona de playa bajo los acantilados de la orilla oeste."
     },
     "river_5": {
-      "name": "Frigid River",
-      "description": "The sound of rushing agua is nearly unbearable here. On the east\nshore is a large landing area."
+      "name": "Rio Frigid",
+      "description": "El sonido del agua impetuosa es casi insoportable aqui. En la orilla este hay una gran zona de desembarco."
     },
     "shore": {
-      "name": "Shore",
-      "description": "You are on the east shore of the river. The agua here seems somewhat\ntreacherous. A path travels from north to south here, the south end\nquickly turning around a sharp corner."
+      "name": "Orilla",
+      "description": "Estas en la orilla este del rio. El agua aqui parece algo traicionera. Un sendero recorre de norte a sur esta zona y, en su extremo sur, gira rapidamente tras una curva cerrada."
     },
     "sandy_beach": {
-      "name": "Sandy Beach",
-      "description": "You are on a large sandy beach on the east shore of the river, which is\nflowing quickly by. A path runs beside the river to the south here, and\na passage is partially buried in sand to the northeast."
+      "name": "Playa Arenosa",
+      "description": "Estas en una gran playa arenosa en la orilla este del rio, que fluye con rapidez. Un sendero corre junto al rio hacia el sur, y un pasaje esta parcialmente enterrado en la arena al noreste."
     },
     "sandy_cave": {
-      "name": "Sandy Cave",
-      "description": "This is a sand-filled cave whose exit is to the southwest."
+      "name": "Cueva Arenosa",
+      "description": "Esta es una cueva llena de arena cuya salida esta al suroeste."
     },
     "aragain_falls": {
-      "name": "Aragain Falls",
+      "name": "Cataratas de Aragain",
       "description": ""
     },
     "on_rainbow": {
@@ -447,24 +447,24 @@
       "description": "You are on a small, rocky beach on the continuation of the Frigid\nRiver past the Falls. The beach is narrow due to the presence of the\nWhite Cliffs. The river canyon opens here and sunlight shines in\nfrom above. A rainbow crosses over the falls to the east and a narrow\npath continues to the southwest."
     },
     "canyon_bottom": {
-      "name": "Canyon Bottom",
-      "description": "You are beneath the walls of the river canyon which may be climbable\nhere. The lesser part of the runoff of Aragain Falls flows by below.\nTo the north is a narrow path."
+      "name": "Fondo del Canon",
+      "description": "Estas bajo las paredes del canon del rio, que aqui parecen escalables. Debajo fluye una parte menor de la caida de las Cataratas de Aragain. Al norte hay un sendero estrecho."
     },
     "cliff_middle": {
-      "name": "Rocky Ledge",
-      "description": "You are on a ledge about halfway up the wall of the river canyon.\nYou can see from here that the main flow from Aragain Falls twists\nalong a passage which it is impossible for you to enter. Below you is the\ncanyon bottom. Above you is more cliff, which appears\nclimbable."
+      "name": "Repisa del Acantilado",
+      "description": "Estas en una repisa a mitad de la pared del canon del rio. Desde aqui puedes ver que el flujo principal de las Cataratas de Aragain se retuerce por un pasaje al que te es imposible entrar. Debajo de ti esta el fondo del canon. Encima hay mas pared rocosa, que parece escalable."
     },
     "canyon_view": {
       "name": "Canyon View",
       "description": "You are at the top of the Great Canyon on its west wall. From here\nthere is a marvelous view of the canyon and parts of the Frigid River\nupstream. Across the canyon, the walls of the White Cliffs join the\nmighty ramparts of the Flathead Montañas to the east. Following the\nCanyon upstream to the north, Aragain Falls may be seen, complete with\nrainbow. The mighty Frigid River flows out from a great dark cavern. To\nthe west and south can be seen an immense forest, stretching for miles\naround. A path leads northwest. It is possible to climb down into\nthe canyon from here."
     },
     "mine_entrance": {
-      "name": "Mina Entrance",
-      "description": "You are standing at the entrance of what might have been a coal mine.\nThe shaft enters the west wall, and there is another exit on the south\nend of the room."
+      "name": "Entrada a la Mina",
+      "description": "Estas en la entrada de lo que pudo haber sido una mina de carbon. El pozo entra en la pared oeste y hay otra salida en el extremo sur de la sala."
     },
     "squeeky_room": {
-      "name": "Squeaky Room",
-      "description": "You are in a small room. Strange squeaky sounds may be heard coming\nfrom the passage at the north end. You may also escape to the east."
+      "name": "Sala Chirridos",
+      "description": "Estas en una pequena sala. Se oyen sonidos agudos y chirriantes desde el pasaje del extremo norte. Tambien puedes salir al este."
     },
     "bat_room": {
       "name": "Sala del Murciélago",
@@ -475,52 +475,52 @@
       "description": "This is a large room, in the middle of which is a small shaft\ndescending through the floor into darkness below. To the west and\nthe north are exits from this room. Constructed over the top of the\nshaft is a metal framework to which a heavy iron chain is attached."
     },
     "smelly_room": {
-      "name": "Smelly Room",
-      "description": "This is a small nondescript room. However, from the direction\nof a small descending staircase a foul odor can be detected. To the\nsouth is a narrow tunnel."
+      "name": "Sala Maloliente",
+      "description": "Esta es una pequena sala anodina. Sin embargo, desde la direccion de una pequena escalera descendente se percibe un olor nauseabundo. Al sur hay un tunel estrecho."
     },
     "gas_room": {
       "name": "Sala de Gas",
-      "description": "This is a small room which smells strongly of coal gas. There is a\nshort climb up some stairs and a narrow tunnel leading east."
+      "description": "Esta es una sala pequena que huele fuertemente a gas de carbon. Hay una breve subida por unos escalones y un tunel estrecho que conduce al este."
     },
     "ladder_top": {
-      "name": "Ladder Top",
-      "description": "This is a very small room. In the corner is a rickety wooden\nladder, leading downward. It might be safe to descend. There is\nalso a staircase leading upward."
+      "name": "Parte Alta de la Escalera",
+      "description": "Esta es una sala muy pequena. En una esquina hay una escalera de madera desvencijada que baja. Tal vez sea seguro descender. Tambien hay una escalera que sube."
     },
     "ladder_bottom": {
-      "name": "Ladder Bottom",
-      "description": "This is a rather wide room. On one side is the bottom of a\nnarrow wooden ladder. To the west and the south are passages\nleaving the room."
+      "name": "Base de la Escalera",
+      "description": "Esta es una sala bastante amplia. En un lado esta la base de una estrecha escalera de madera. Hay pasajes hacia el oeste y el sur."
     },
     "dead_end_5": {
       "name": "Callejón Sin Salida",
       "description": "Has llegado a un callejón sin salida en la mina."
     },
     "timber_room": {
-      "name": "Sala de Maderas",
-      "description": "This is a long and narrow passage, which is cluttered with broken\ntimbers. A wide passage comes from the east and turns at the\nwest end of the room into a very narrow passageway. From the west\ncomes a strong draft."
+      "name": "Sala de Vigas",
+      "description": "Este es un pasaje largo y estrecho, lleno de vigas rotas. Un pasaje ancho llega desde el este y en el extremo oeste gira hasta convertirse en un pasaje muy estrecho. Desde el oeste sopla una fuerte corriente de aire."
     },
     "lower_shaft": {
-      "name": "Drafty Room",
-      "description": "This is a small drafty room in which is the bottom of a long\nshaft. To the south is a passageway and to the east a very narrow\npassage. In the shaft can be seen a heavy iron chain."
+      "name": "Pozo Inferior",
+      "description": "Esta es una pequena sala con corriente de aire donde se encuentra el fondo de un largo pozo. Al sur hay un pasaje y al este un pasaje muy estrecho. En el pozo se ve una pesada cadena de hierro."
     },
     "machine_room": {
       "name": "Machine Room",
       "description": ""
     },
     "mine_1": {
-      "name": "Coal Mina",
-      "description": "This is a nondescript part of a coal mine."
+      "name": "Mina de Carbon",
+      "description": "Esta es una parte anodina de una mina de carbon."
     },
     "mine_2": {
-      "name": "Coal Mina",
-      "description": "This is a nondescript part of a coal mine."
+      "name": "Mina de Carbon",
+      "description": "Esta es una parte anodina de una mina de carbon."
     },
     "mine_3": {
-      "name": "Coal Mina",
-      "description": "This is a nondescript part of a coal mine."
+      "name": "Mina de Carbon",
+      "description": "Esta es una parte anodina de una mina de carbon."
     },
     "mine_4": {
-      "name": "Coal Mina",
-      "description": "This is a nondescript part of a coal mine."
+      "name": "Mina de Carbon",
+      "description": "Esta es una parte anodina de una mina de carbon."
     },
     "slide_room": {
       "name": "Tobogán",

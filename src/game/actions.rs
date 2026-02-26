@@ -43,6 +43,7 @@ pub fn execute(state: &mut GameState, world: &mut World, cmd: Command, i18n: &I1
         Verb::Restore => cmd_restore(state, world, i18n),
         Verb::Attack => cmd_attack(state, world, cmd.object.as_deref(), i18n),
         Verb::Put => cmd_put(state, world, cmd.object.as_deref(), i18n),
+        Verb::Enter => cmd_enter(state, world, cmd.object.as_deref(), i18n),
         Verb::Unknown(v) => {
             logging::warn(format!("command.unknown raw={}", v));
             println!("\n{}", i18n.format(&ui.unknown_command, &[("cmd", &v)]));
@@ -480,6 +481,47 @@ fn cmd_restore(state: &mut GameState, world: &World, i18n: &I18n) {
             logging::error(format!("restore.failed slot=1 error={}", e));
             println!("\n{}: {}", ui.restore_failed, e);
         }
+    }
+}
+
+fn cmd_enter(state: &mut GameState, world: &mut World, object: Option<&str>, i18n: &I18n) {
+    let ui = i18n.ui();
+    let room_id = state.current_room.clone();
+
+    let enterable_objects: Vec<_> = world
+        .objects_in_room(&room_id)
+        .into_iter()
+        .filter(|obj| obj.enter_destination.is_some())
+        .collect();
+
+    if enterable_objects.is_empty() {
+        println!("\n{}", ui.cant_go);
+        return;
+    }
+
+    let target = if let Some(name) = object {
+        enterable_objects
+            .iter()
+            .find(|obj| object_matches_input(world, i18n, &obj.id, name))
+            .cloned()
+    } else {
+        enterable_objects.first().cloned()
+    };
+
+    let Some(obj) = target else {
+        println!("\n{}", ui.dont_see);
+        return;
+    };
+
+    if obj.is_openable && !obj.is_open {
+        println!("\n{}", ui.locked);
+        return;
+    }
+
+    if let Some(destination) = obj.enter_destination.clone() {
+        state.move_to(&destination);
+        logging::info(format!("enter.ok from={} to={}", room_id, destination));
+        cmd_look(state, world, i18n);
     }
 }
 

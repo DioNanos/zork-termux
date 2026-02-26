@@ -94,6 +94,7 @@ pub struct Object {
     pub is_lit: bool,
     pub is_locked: bool,
     pub contents: Vec<String>,
+    pub enter_destination: Option<String>,
 }
 
 impl Object {
@@ -107,6 +108,7 @@ impl Object {
             is_lit: false,
             is_locked: false,
             contents: Vec::new(),
+            enter_destination: None,
         }
     }
 
@@ -137,6 +139,11 @@ impl Object {
 
     pub fn with_content(mut self, content_id: &str) -> Self {
         self.contents.push(content_id.to_string());
+        self
+    }
+
+    pub fn enter_to(mut self, destination: &str) -> Self {
+        self.enter_destination = Some(destination.to_string());
         self
     }
 }
@@ -670,6 +677,15 @@ impl World {
             "mountains",
         );
 
+        world.add_object(
+            Object::new("window", "small window")
+                .takeable(false)
+                .openable()
+                .open()
+                .enter_to("kitchen"),
+            "east_of_house",
+        );
+
         world.add_object(Object::new("water", "quantity of water"), "bottle");
 
         world.add_object(
@@ -702,7 +718,10 @@ impl World {
             "troll_room",
         );
         world.add_creature(Creature::new("thief", "thief", 2), "round_room");
-        world.add_creature(Creature::new("cyclops", "cyclops", 4).friendly(), "cyclops_room");
+        world.add_creature(
+            Creature::new("cyclops", "cyclops", 4).friendly(),
+            "cyclops_room",
+        );
 
         world.add_object(Object::new("axe", "bloody axe"), "troll");
 
