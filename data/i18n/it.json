@@ -167,7 +167,7 @@
       "description": "Questa e una galleria d'arte. La maggior parte dei quadri e stata\nrubata da vandali di gusto eccezionale. I vandali se ne sono andati\nattraverso l'uscita a nord o quella a ovest."
     },
     "studio": {
-      "name": "Studio",
+      "name": "Studio d'Arte",
       "description": "Questo sembra essere stato lo studio di un artista. Pareti e pavimento\nsono schizzati di vernice in 69 colori diversi. Stranamente, qui non e\nappeso nulla di valore. All'estremita sud della stanza c'e una porta\naperta (anch'essa coperta di vernice). Un camino stretto e buio sale da\nun focolare; anche se forse potresti salirci, sembra improbabile che\ntu riesca poi a ridiscendere."
     },
     "maze_1": {
@@ -396,7 +396,7 @@
     },
     "river_1": {
       "name": "Fiume Frigid",
-      "description": "Ti trovi sul Fiume Frigid nelle vicinanze della diga. Il fiume qui scorre tranquillo. C'e un approdo sulla riva ovest."
+      "description": "Ti trovi sul Fiume Frigid nelle vicinanze della diga. Il fiume qui scorre tranquillo. C'è un approdo sulla riva ovest."
     },
     "river_2": {
       "name": "Fiume Frigid",
@@ -439,12 +439,12 @@
       "description": ""
     },
     "on_rainbow": {
-      "name": "On the Rainbow",
-      "description": "You are on top of a rainbow (I bet you never thought you would walk\non a rainbow), with a magnificent view of the Falls. The rainbow\ntravels east-west here."
+      "name": "Sull'Arcobaleno",
+      "description": "Sei in cima a un arcobaleno (scommetto che non pensavi di camminare su un arcobaleno), con una magnifica vista delle Cascate. L'arcobaleno corre da est a ovest qui."
     },
     "end_of_rainbow": {
-      "name": "End of Rainbow",
-      "description": "You are on a small, rocky beach on the continuation of the Frigid\nRiver past the Falls. The beach is narrow due to the presence of the\nWhite Cliffs. The river canyon opens here and sunlight shines in\nfrom above. A rainbow crosses over the falls to the east and a narrow\npath continues to the southwest."
+      "name": "Fine dell'Arcobaleno",
+      "description": "Sei su una piccola spiaggia rocciosa sulla continuazione del Fiume Frigid oltre le Cascate. La spiaggia è stretta a causa delle Bianche Scogliere. Il canyon del fiume si apre qui e la luce del sole entra dall'alto. Un arcobaleno attraversa le cascate a est e un sentiero stretto continua a sudovest."
     },
     "canyon_bottom": {
       "name": "Fondo del Canyon",
@@ -455,8 +455,8 @@
       "description": "Ti trovi su una cengia a meta della parete del canyon del fiume. Da qui vedi il flusso principale delle Cascate di Aragain torcersi in un passaggio impossibile da percorrere. Sotto di te c'e il fondo del canyon. Sopra di te c'e altra parete rocciosa, che sembra scalabile."
     },
     "canyon_view": {
-      "name": "Canyon View",
-      "description": "You are at the top of the Great Canyon on its west wall. From here\nthere is a marvelous view of the canyon and parts of the Frigid River\nupstream. Across the canyon, the walls of the White Cliffs join the\nmighty ramparts of the Flathead Montagne to the east. Following the\nCanyon upstream to the north, Aragain Falls may be seen, complete with\nrainbow. The mighty Frigid River flows out from a great dark cavern. To\nthe west and south can be seen an immense forest, stretching for miles\naround. A path leads northwest. It is possible to climb down into\nthe canyon from here."
+      "name": "Vista Canyon",
+      "description": "Sei in cima al Grande Canyon sulla sua parete ovest. Da qui c'è una vista meravigliosa del canyon e di parti del Fiume Frigid a monte. Attraverso il canyon, le pareti delle Bianche Scogliere si uniscono ai possenti bastioni dei Monti Flathead a est. Seguendo il Canyon a monte verso nord, si possono vedere le Cascate di Aragain, complete di arcobaleno. Il possente Fiume Frigid esce da una grande caverna oscura. A ovest e sud si può vedere un'enorme foresta, che si estende per miglia tutt'intorno. Un sentiero porta a nordovest. È possibile scendere nel canyon da qui."
     },
     "mine_entrance": {
       "name": "Ingresso alla Miniera",
@@ -472,7 +472,7 @@
     },
     "shaft_room": {
       "name": "Stanza del Pozzo",
-      "description": "This is a large room, in the middle of which is a small shaft\ndescending through the floor into darkness below. To the west and\nthe north are exits from this room. Constructed over the top of the\nshaft is a metal framework to which a heavy iron chain is attached."
+      "description": "Questa è una grande stanza, al centro della quale c'è un piccolo pozzo che scende attraverso il pavimento nell'oscurità sottostante. A ovest e a nord ci sono uscite da questa stanza. Sopra il pozzo è costruita una struttura metallica a cui è attaccata una pesante catena di ferro."
     },
     "smelly_room": {
       "name": "Stanza Maleodorante",
@@ -503,7 +503,7 @@
       "description": "Questa e una piccola stanza ventilata dove si trova il fondo di un lungo pozzo. A sud c'e un passaggio e a est un passaggio molto stretto. Nel pozzo si vede una pesante catena di ferro."
     },
     "machine_room": {
-      "name": "Machine Room",
+      "name": "Stanza della Macchina",
       "description": ""
     },
     "mine_1": {
@@ -791,8 +791,8 @@
       "description": "Sei in cima al pozzo. Ben fatto. Ci sono incisioni sul lato del pozzo. C'e una piccola crepa nel pavimento, all'ingresso di una stanza a est, ma si puo attraversare facilmente."
     },
     "well_bottom": {
-      "name": "Circular Stanza",
-      "description": "Questa e una stanza circolare umida, con pareti di mattoni e malta. Il soffitto non e visibile, ma sulle pareti si notano alcune incisioni. C'e un passaggio verso ovest."
+      "name": "Stanza Circolare",
+      "description": "Questa è una stanza circolare umida, con pareti di mattoni e malta. Il soffitto non è visibile, ma sulle pareti si notano alcune incisioni. C'è un passaggio verso ovest."
     },
     "tea_room": {
       "name": "Tea Stanza",
@@ -1408,7 +1408,7 @@
       "description": "C'è una grande borsa qui."
     },
     "stiletto": {
-      "name": "stiletto",
+      "name": "stiletto affilato",
       "description": "C'è uno stiletto qui."
     },
     "machine_switch": {
@@ -1432,8 +1432,8 @@
       "description": "C'è un ladro qui."
     },
     "pedestal": {
-      "name": "pedestal",
-      "description": "C'è un pedestal qui."
+      "name": "piedistallo",
+      "description": "C'è un piedistallo qui."
     },
     "torch": {
       "name": "torcia",
@@ -1444,8 +1444,8 @@
       "description": "C'è una guida turistica qui."
     },
     "troll": {
-      "name": "troll",
-      "description": "C'è un troll qui."
+      "name": "ascia del troll",
+      "description": "C'è un'ascia insanguinata qui."
     },
     "trunk": {
       "name": "baule di gioielli",

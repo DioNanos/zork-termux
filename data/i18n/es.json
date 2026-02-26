@@ -439,12 +439,12 @@
       "description": ""
     },
     "on_rainbow": {
-      "name": "On the Rainbow",
-      "description": "You are on top of a rainbow (I bet you never thought you would walk\non a rainbow), with a magnificent view of the Falls. The rainbow\ntravels east-west here."
+      "name": "Sobre el Arcoíris",
+      "description": "Estás sobre un arcoíris (apuesto a que nunca pensaste que caminarías sobre un arcoíris), con una magnífica vista de las Cataratas. El arcoíris corre de este a oeste aquí."
     },
     "end_of_rainbow": {
-      "name": "End of Rainbow",
-      "description": "You are on a small, rocky beach on the continuation of the Frigid\nRiver past the Falls. The beach is narrow due to the presence of the\nWhite Cliffs. The river canyon opens here and sunlight shines in\nfrom above. A rainbow crosses over the falls to the east and a narrow\npath continues to the southwest."
+      "name": "Fin del Arcoíris",
+      "description": "Estás en una pequeña playa rocosa en la continuación del Río Frigid más allá de las Cataratas. La playa es estrecha debido a la presencia de los Acantilados Blancos. El cañón del río se abre aquí y la luz del sol entra desde arriba. Un arcoíris cruza sobre las cataratas al este y un sendero estrecho continúa hacia el suroeste."
     },
     "canyon_bottom": {
       "name": "Fondo del Canon",
@@ -455,8 +455,8 @@
       "description": "Estas en una repisa a mitad de la pared del canon del rio. Desde aqui puedes ver que el flujo principal de las Cataratas de Aragain se retuerce por un pasaje al que te es imposible entrar. Debajo de ti esta el fondo del canon. Encima hay mas pared rocosa, que parece escalable."
     },
     "canyon_view": {
-      "name": "Canyon View",
-      "description": "You are at the top of the Great Canyon on its west wall. From here\nthere is a marvelous view of the canyon and parts of the Frigid River\nupstream. Across the canyon, the walls of the White Cliffs join the\nmighty ramparts of the Flathead Montañas to the east. Following the\nCanyon upstream to the north, Aragain Falls may be seen, complete with\nrainbow. The mighty Frigid River flows out from a great dark cavern. To\nthe west and south can be seen an immense forest, stretching for miles\naround. A path leads northwest. It is possible to climb down into\nthe canyon from here."
+      "name": "Vista del Cañón",
+      "description": "Estás en la cima del Gran Cañón en su pared oeste. Desde aquí hay una vista maravillosa del cañón y partes del Río Frigid aguas arriba. A través del cañón, las paredes de los Acantilados Blancos se unen a las poderosas murallas de las Montañas Flathead al este. Siguiendo el Cañón aguas arriba hacia el norte, se pueden ver las Cataratas de Aragain, completas con arcoíris. El poderoso Río Frigid sale de una gran caverna oscura. Al oeste y sur se puede ver un bosque inmenso, extendiéndose por millas alrededor. Un sendero lleva al noroeste. Es posible bajar al cañón desde aquí."
     },
     "mine_entrance": {
       "name": "Entrada a la Mina",
@@ -472,7 +472,7 @@
     },
     "shaft_room": {
       "name": "Sala del Pozzo",
-      "description": "This is a large room, in the middle of which is a small shaft\ndescending through the floor into darkness below. To the west and\nthe north are exits from this room. Constructed over the top of the\nshaft is a metal framework to which a heavy iron chain is attached."
+      "description": "Esta es una sala grande, en medio de la cual hay un pequeño pozo que desciende a través del suelo hacia la oscuridad de abajo. Al oeste y al norte hay salidas de esta sala. Sobre el pozo hay una estructura de metal a la que está unida una pesada cadena de hierro."
     },
     "smelly_room": {
       "name": "Sala Maloliente",
@@ -503,7 +503,7 @@
       "description": "Esta es una pequena sala con corriente de aire donde se encuentra el fondo de un largo pozo. Al sur hay un pasaje y al este un pasaje muy estrecho. En el pozo se ve una pesada cadena de hierro."
     },
     "machine_room": {
-      "name": "Machine Room",
+      "name": "Sala de Máquinas",
       "description": ""
     },
     "mine_1": {
@@ -584,7 +584,7 @@
     },
     "ledge_tunnel": {
       "name": "Fin de la Cornisa",
-      "description": "Una cornisa que viene del este termina aqui, y un tunel conduce al norte dentro de la pared. Hay un olor a humo bastante extrano en el aire calido del tunel."
+      "description": "Una cornisa que viene del este termina aqui, y un tunel conduce al norte dentro de la pared. Se percibe un olor a humo bastante extraño en el aire cálido del túnel."
     },
     "dragon_room": {
       "name": "Sala del Dragon",
@@ -699,8 +699,8 @@
       "description": "This Sala is the Wizard's workSala. A Salón continues Este and Oeste, and a larger Sala lies to the Sur. There are many shelves and racks on the walls, but the Wizard's workbench dominates the Sala. It is made of dark, heavy wood bound with iron. The workbench is stained from many years of use, and is deeply gouged as though some huge clawed animal was imprisoned on it. There are burn marks and even notes written in a crabbed hand. Many arcane items are scattered about the bench; alembics, mortar and pestle, small knives of various sizes, odd scraps of vellum, wax candles, and much more. In the center of a relatively clear area of the bench are affixed three stands - rubí, sapphire, and diamante - which form a triangle."
     },
     "trophy_room": {
-      "name": "Trophy Sala",
-      "description": "This is the Wizard's trophy Sala, filled with memorabilia of various sorts. On one wall is the Wizard's D. T. (Doctor of Thaumaturgy) degree from GUE Tech. Several old magic wands are mounted on a wand rack. A collection of dull and nicked espadas testify to the fate of many foolhardy adventurers. Small botellas contain discarded homunculi (a few preserved in alcohol). Hay un stuffed owl on a perch."
+      "name": "Sala de Trofeos",
+      "description": "Esta es la sala de trofeos del Mago, llena de recuerdos de varios tipos. En una pared está el título de Doctor en Taumaturgia del Mago del GUE Tech. Varias varitas mágicas antiguas están montadas en un soporte. Una colección de espadas desafiladas y melladas dan testimonio del destino de muchos aventureros temerarios. Pequeños frascos contienen homúnculos descartados (algunos conservados en alcohol). Hay un búho disecado en una percha."
     },
     "pentagram_room": {
       "name": "Pentagram Sala",
@@ -791,8 +791,8 @@
       "description": "Estas en la parte superior del pozo. Bien hecho. Hay grabados en el lado del pozo. Hay una pequena grieta que cruza el suelo, en la entrada de una sala al este, pero se puede cruzar facilmente."
     },
     "well_bottom": {
-      "name": "Circular Sala",
-      "description": "Esta es una sala circular humeda, cuyas paredes son de ladrillo y mortero. El techo no es visible, pero parece haber algunos grabados en las paredes. Hay un pasaje hacia el oeste."
+      "name": "Sala Circular",
+      "description": "Esta es una sala circular húmeda, cuyas paredes son de ladrillo y mortero. El techo no es visible, pero parece haber algunos grabados en las paredes. Existe un pasaje hacia el oeste."
     },
     "tea_room": {
       "name": "Tea Sala",
@@ -1147,7 +1147,7 @@
       "description": "Hay una burbuja verde aquí."
     },
     "altar": {
-      "name": "altar",
+      "name": "altar de piedra",
       "description": "Hay un altar aquí."
     },
     "book": {
@@ -1432,7 +1432,7 @@
       "description": "Hay un ladrón aquí."
     },
     "pedestal": {
-      "name": "pedestal",
+      "name": "pedestal de piedra",
       "description": "Hay un pedestal aquí."
     },
     "torch": {
@@ -1444,8 +1444,8 @@
       "description": "Hay una guía turística aquí."
     },
     "troll": {
-      "name": "troll",
-      "description": "Hay un troll aquí."
+      "name": "hacha del troll",
+      "description": "Hay un hacha ensangrentada aquí."
     },
     "trunk": {
       "name": "baúl de joyas",
