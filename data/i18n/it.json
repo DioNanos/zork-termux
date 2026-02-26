@@ -2408,11 +2408,14 @@
     "thief": {
       "name": "ladro",
       "description": "Un individuo losco si nasconde nelle ombre.",
-      "steals": "Il ladro ti ruba {item}!"
+      "dead_desc": "Il corpo del ladro giace qui.",
+      "attacks": "Il ladro schiva e cerca di pugnalarti!"
     },
     "cyclops": {
       "name": "ciclope",
       "description": "Un enorme ciclope è qui!",
+      "dead_desc": "Il corpo massiccio del ciclope blocca il passaggio.",
+      "attacks": "Il ciclope ruggisce e cerca di afferrarti!",
       "sleeping": "Il ciclope sta dormendo."
     }
   }

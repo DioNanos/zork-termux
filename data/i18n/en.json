@@ -1038,11 +1038,14 @@
     "thief": {
       "name": "thief",
       "description": "A seedy-looking individual is lurking in the shadows.",
-      "steals": "The thief steals your {item}!"
+      "dead_desc": "The body of the thief lies here.",
+      "attacks": "The thief dodges and tries to stab you!"
     },
     "cyclops": {
       "name": "cyclops",
       "description": "A huge cyclops is standing here!",
+      "dead_desc": "The massive body of the cyclops blocks the way.",
+      "attacks": "The cyclops roars and reaches for you!",
       "sleeping": "The cyclops is sleeping."
     }
   }

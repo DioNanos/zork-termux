@@ -961,4 +961,54 @@ mod tests {
             .expect("mailbox object should exist");
         assert!(mailbox.contents.iter().any(|id| id == "advertisement"));
     }
+
+    #[test]
+    fn thief_can_be_killed_with_weapon() {
+        let i18n = I18n::load(Language::English).expect("translation should load");
+        let mut world = World::load_zork1();
+        let mut state = GameState::new(Language::English, "round_room");
+        state.add_to_inventory("sword".to_string());
+        world.move_object("sword", "inventory");
+
+        let thief = world.get_creature("thief").expect("thief should exist");
+        assert!(thief.is_alive());
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Attack,
+                object: Some("thief".to_string()),
+            },
+            &i18n,
+        );
+
+        let thief = world.get_creature("thief").expect("thief should exist");
+        assert_eq!(thief.state, CreatureState::Dead);
+    }
+
+    #[test]
+    fn cyclops_can_be_attacked() {
+        let i18n = I18n::load(Language::English).expect("translation should load");
+        let mut world = World::load_zork1();
+        let mut state = GameState::new(Language::English, "cyclops_room");
+        state.add_to_inventory("sword".to_string());
+        world.move_object("sword", "inventory");
+
+        let cyclops = world.get_creature("cyclops").expect("cyclops should exist");
+        assert!(cyclops.is_alive());
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Attack,
+                object: Some("cyclops".to_string()),
+            },
+            &i18n,
+        );
+
+        let cyclops = world.get_creature("cyclops").expect("cyclops should exist");
+        assert!(cyclops.hp < 4);
+    }
 }
