@@ -527,12 +527,12 @@
       "description": ""
     },
     "inside_barrow": {
-      "name": "Inside the Túmulo",
-      "description": "Estás enside an ancient Túmulo hidden deep within a dark Bosque. The Túmulo opens into a narrow Túnel at its Surern end. You can see a faint glow at the far end."
+      "name": "Dentro del Tumulo",
+      "description": "Estas dentro de un antiguo tumulo oculto en lo profundo de un bosque oscuro. El tumulo se abre a un tunel estrecho en su extremo sur. Se ve un tenue resplandor al fondo."
     },
     "narrow_tunnel": {
-      "name": "Narrow Túnel",
-      "description": "Estás de pie at the Surern end of a narrow Túnel where it opens into a wide Cuevarn. The Cuevarn is dimly illuminated by phosphorescent mosses clinging to its high ceiling. A deep ravine winds through the Cuevarn, with a small stream at the bottom. The walls of the ravine are steep and crumbly. A foot bridge crosses the ravine to the Sur."
+      "name": "Tunel Estrecho",
+      "description": "Estas en el extremo sur de un tunel estrecho donde se abre a una caverna amplia. La caverna esta tenuemente iluminada por musgos fosforescentes adheridos a su alto techo. Un profundo barranco serpentea por la caverna, con un pequeno arroyo en el fondo. Las paredes del barranco son empinadas y friables. Un puente peatonal cruza el barranco hacia el sur."
     },
     "foot_bridge": {
       "name": "Foot Bridge",
@@ -580,31 +580,31 @@
     },
     "ravine_ledge": {
       "name": "Ledge in Ravine",
-      "description": "You are on a narrow ledge near the bottom of a deep ravine. The ledge continues to the Oeste. A precarious climb Arriba to another tiny ledge is possible. A short scramble Abajo the rock face leads to a stream."
+      "description": "Estas en una repisa estrecha cerca del fondo de un profundo barranco. La repisa continua hacia el oeste. Es posible una subida precaria hacia otra repisa mas pequena. Un breve descenso por la pared rocosa lleva a un arroyo."
     },
     "ledge_tunnel": {
-      "name": "End of Ledge",
-      "description": "A ledge from the Este ends here, and a Túnel leads Norte into the wall. Hay un rather odd smokey odor in the warm air of the Túnel."
+      "name": "Fin de la Cornisa",
+      "description": "Una cornisa que viene del este termina aqui, y un tunel conduce al norte dentro de la pared. Hay un olor a humo bastante extrano en el aire calido del tunel."
     },
     "dragon_room": {
-      "name": "Dragon Sala",
-      "description": "The Sala is a large Cuevarn full of broken stone. The walls are scorched and there are deep scratches on the floor. A sooty dry smell is very strong here. A paved Sendero winds from a large Pasaje to the Oeste, through the Sala, and across a huge stone bridge to the Sur. To the Este a small crack is visible. A dark and smokey Túnel leads Norte."
+      "name": "Sala del Dragon",
+      "description": "La sala es una gran caverna llena de piedra rota. Las paredes estan chamuscadas y hay profundas marcas en el suelo. Un olor seco a hollin es muy fuerte aqui. Un sendero pavimentado serpentea desde un gran pasaje al oeste, cruza la sala y atraviesa un enorme puente de piedra hacia el sur. Al este se ve una pequena grieta. Un tunel oscuro y lleno de humo conduce al norte."
     },
     "dragon_lair": {
       "name": "Dragon's Lair",
-      "description": "Estás en the dragon's lair, where the rock walls are scarred by flame. A blackened doorway leads to the Sur."
+      "description": "Estas en la guarida del dragon, donde las paredes de roca estan marcadas por las llamas. Una puerta ennegrecida conduce al sur."
     },
     "fresco_room": {
-      "name": "Fresco Sala",
-      "description": "A sendero lleva Este-Oeste through a Sala decorated with beautiful frescoes of someone battling dragons and rescuing fair maidens. It is hard to tell who is doing this as those parts of the frescoes have been blackened and cracked by intense heat."
+      "name": "Sala de los Frescos",
+      "description": "Un sendero va de este a oeste atravesando una sala decorada con hermosos frescos de alguien luchando contra dragones y rescatando nobles doncellas. Es dificil saber quien realiza estas hazanas, porque esas partes de los frescos han sido ennegrecidas y agrietadas por un calor intenso."
     },
     "stone_bridge": {
       "name": "Stone Bridge",
-      "description": "This is the middle of a ruined but still impressive stone bridge spanning a deep chasm. agua flows far beneath. A paved sendero lleva Norte into a large open space. To the Sur, the sendero lleva into a misty Túnel."
+      "description": "Esta es la parte central de un puente de piedra en ruinas, aunque todavia impresionante, que cruza un profundo abismo. El agua fluye muy por debajo. Un sendero pavimentado conduce al norte hacia un gran espacio abierto. Al sur, el sendero entra en un tunel brumoso."
     },
     "cool_room": {
-      "name": "Cool Sala",
-      "description": "The Sala is cool and Presap. The air is misty. A twisty Sendero from the SurEste splits here toward a wide Norteerly stone bridge, and a narrow Oesteerly Túnel. It is from the latter that the mist and chill seem to originate."
+      "name": "Sala Fresca",
+      "description": "La sala es fresca y humeda. El aire esta brumoso. Un sendero retorcido que viene del sureste se divide aqui hacia un ancho puente de piedra al norte y hacia un tunel estrecho al oeste. De este ultimo parecen provenir la neblina y el frio."
     },
     "glacier_room": {
       "name": "Ice Sala",
@@ -612,11 +612,11 @@
     },
     "lava_tube": {
       "name": "Lava Tube",
-      "description": "Estás en a tight chimney of solidified lava. It extends Arriba at lEste another hundred feet and Abajo to a large Sala far below. A large crack opens to the Sur, probably the result of a shift in the rock strata."
+      "description": "Estas en una estrecha chimenea de lava solidificada. Se extiende muchos metros hacia arriba y desciende hasta una gran sala muy por debajo. Una gran grieta se abre al sur, probablemente como resultado de un desplazamiento en los estratos rocosos."
     },
     "cobwebby_corridor": {
       "name": "Cobwebby Corridor",
-      "description": "A winding corridor is filled with cobwebs. Some are broken and the dust on the floor is disturbed. The trend of the twists and turns is NorteEste to SurOeste. On the Norte side of one twist, high Arriba, is a narrow crack."
+      "description": "Un corredor sinuoso esta lleno de telaranas. Algunas estan rotas y el polvo del suelo aparece removido. El trazado de curvas y giros va de noreste a suroeste. En el lado norte de una de las curvas, en alto, hay una estrecha grieta."
     },
     "room_8": {
       "name": "Sala 8",

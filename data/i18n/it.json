@@ -527,12 +527,12 @@
       "description": ""
     },
     "inside_barrow": {
-      "name": "Inside the Tumulo",
-      "description": "Sei inside an ancient Tumulo hidden deep within a dark forestaa. The Tumulo opens into a narrow Tunnel at its Sudern end. You can see a faint glow at the far end."
+      "name": "Dentro il Tumulo",
+      "description": "Sei all'interno di un antico tumulo nascosto nel profondo di una foresta oscura. Il tumulo si apre in uno stretto tunnel sul lato sud. In fondo si vede un debole chiarore."
     },
     "narrow_tunnel": {
-      "name": "Narrow Tunnel",
-      "description": "Ti trovi at the Sudern end of a narrow Tunnel where it opens into a wide Grottarn. The Grottarn is dimly illuminated by phosphorescent mosses clinging to its high ceiling. A deep ravine winds through the Grottarn, with a small stream at the bottom. The walls of the ravine are steep and crumbly. A foot bridge crosses the ravine to the Sud."
+      "name": "Tunnel Stretto",
+      "description": "Ti trovi all'estremita sud di uno stretto tunnel dove si apre in una vasta caverna. La caverna e debolmente illuminata da muschi fosforescenti che aderiscono all'alto soffitto. Un profondo burrone serpeggia nella caverna, con un piccolo torrente sul fondo. Le pareti del burrone sono ripide e friabili. Un ponticello attraversa il burrone a sud."
     },
     "foot_bridge": {
       "name": "Foot Bridge",
@@ -576,35 +576,35 @@
     },
     "deep_ford": {
       "name": "Deep Ford",
-      "description": "You are fording the stream at a deep but not impossible spot. The acqua is very cold. The walls of the ravine rise to Est and Ovest. C'è un small ledge along the Nord wall of the ravine. To the Sud is the entrance to a well-constructed but somewhat ruined Sala."
+      "description": "Stai guadando il torrente in un punto profondo ma non impossibile. L'acqua e molto fredda. Le pareti del burrone si alzano a est e a ovest. C'e una piccola sporgenza lungo la parete nord del burrone. A sud c'e l'ingresso a una sala ben costruita ma in parte in rovina."
     },
     "ravine_ledge": {
       "name": "Ledge in Ravine",
-      "description": "You are on a narrow ledge near the bottom of a deep ravine. The ledge continues to the Ovest. A precarious climb Su to another tiny ledge is possible. A short scramble Giù the rock face leads to a stream."
+      "description": "Ti trovi su una stretta cengia vicino al fondo di un profondo burrone. La cengia prosegue verso ovest. E possibile una salita precaria verso un'altra piccola cengia. Una breve discesa lungo la parete rocciosa conduce a un torrente."
     },
     "ledge_tunnel": {
-      "name": "End of Ledge",
-      "description": "A ledge from the Est ends here, and a Tunnel leads Nord into the wall. C'è un rather odd smokey odor in the warm air of the Tunnel."
+      "name": "Fine della Cengia",
+      "description": "Una cengia proveniente da est termina qui, e un tunnel conduce a nord dentro la parete. Nell'aria calda del tunnel si sente un odore di fumo piuttosto insolito."
     },
     "dragon_room": {
-      "name": "Dragon Stanza",
-      "description": "The Stanza is a large Grottarn full of broken stone. The walls are scorched and there are deep scratches on the floor. A sooty dry smell is very strong here. A paved Sentiero winds from a large Passaggio to the Ovest, through the Stanza, and across a huge stone bridge to the Sud. To the Est a small crack is visible. A dark and smokey Tunnel leads Nord."
+      "name": "Sala del Drago",
+      "description": "La stanza e una grande caverna piena di pietre spezzate. Le pareti sono annerite e sul pavimento ci sono graffi profondi. Qui l'odore secco di fuliggine e molto forte. Un sentiero lastricato serpeggia da un grande passaggio a ovest, attraversa la stanza e passa su un enorme ponte di pietra verso sud. A est e visibile una piccola fessura. Un tunnel scuro e fumoso conduce a nord."
     },
     "dragon_lair": {
       "name": "Dragon's Lair",
-      "description": "Sei in the dragon's lair, where the rock walls are scarred by flame. A blackened doorway leads to the Sud."
+      "description": "Sei nella tana del drago, dove le pareti di roccia sono segnate dal fuoco. Una porta annerita conduce a sud."
     },
     "fresco_room": {
-      "name": "Fresco Stanza",
-      "description": "A sentiero porta Est-Ovest through a Stanza decorated with beautiful frescoes of someone battling dragons and rescuing fair maidens. It is hard to tell who is doing this as those parts of the frescoes have been blackened and cracked by intense heat."
+      "name": "Sala degli Affreschi",
+      "description": "Un sentiero corre da est a ovest attraverso una stanza decorata con bellissimi affreschi che raffigurano qualcuno intento a combattere draghi e salvare nobili fanciulle. E difficile capire chi sia il protagonista, poiche quelle parti degli affreschi sono state annerite e crepate da un calore intenso."
     },
     "stone_bridge": {
       "name": "Stone Bridge",
-      "description": "This is the middle of a ruined but still impressive stone bridge spanning a deep chasm. acqua flows far beneath. A paved sentiero porta Nord into a large open space. To the Sud, the sentiero porta into a misty Tunnel."
+      "description": "Questa e la parte centrale di un ponte di pietra in rovina ma ancora impressionante che scavalca un profondo baratro. L'acqua scorre molto in basso. Un sentiero lastricato conduce a nord in un ampio spazio aperto. A sud, il sentiero entra in un tunnel nebbioso."
     },
     "cool_room": {
-      "name": "Cool Stanza",
-      "description": "The Stanza is cool and Digap. The air is misty. A twisty Sentiero from the SudEst splits here toward a wide Norderly stone bridge, and a narrow Ovesterly Tunnel. It is from the latter that the mist and chill seem to originate."
+      "name": "Sala Fresca",
+      "description": "La stanza e fresca e umida. L'aria e nebbiosa. Un sentiero tortuoso proveniente da sud-est si biforca qui verso un ampio ponte di pietra a nord e verso uno stretto tunnel a ovest. E da quest'ultimo che sembrano provenire la nebbia e il freddo."
     },
     "glacier_room": {
       "name": "Ice Stanza",
@@ -612,11 +612,11 @@
     },
     "lava_tube": {
       "name": "Lava Tube",
-      "description": "Sei in a tight chimney of solidified lava. It extends Su at lEst another hundred feet and Giù to a large Stanza far below. A large crack opens to the Sud, probably the result of a shift in the rock strata."
+      "description": "Sei in uno stretto camino di lava solidificata. Si estende ancora per molte decine di metri verso l'alto e scende verso una grande stanza molto piu in basso. Una grande fenditura si apre a sud, probabilmente a causa di uno spostamento degli strati rocciosi."
     },
     "cobwebby_corridor": {
       "name": "Cobwebby Corridor",
-      "description": "A winding corridor is filled with cobwebs. Some are broken and the dust on the floor is disturbed. The trend of the twists and turns is NordEst to SudOvest. On the Nord side of one twist, high Su, is a narrow crack."
+      "description": "Un corridoio tortuoso e pieno di ragnatele. Alcune sono spezzate e la polvere sul pavimento e smossa. Le curve del corridoio procedono da nord-est a sud-ovest. Sul lato nord di una delle curve, in alto, c'e una stretta fessura."
     },
     "room_8": {
       "name": "Stanza 8",
