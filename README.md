@@ -52,7 +52,7 @@ Technical notes for maintainers are in:
 
 MIT License (see `LICENSE`).
 
-Copyright (c) 2026 Davide A. Gugliemmi
+Copyright (c) 2026 Davide A. Guglielmi
 
 Made in Italy 🇮🇹
 
