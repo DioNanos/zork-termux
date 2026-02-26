@@ -60,6 +60,7 @@ pub struct Room {
     pub name: String,
     pub exits: HashMap<String, String>,
     pub is_dark: bool,
+    pub blocked_exits: HashMap<String, String>,
 }
 
 impl Room {
@@ -69,6 +70,7 @@ impl Room {
             name: name.to_string(),
             exits: HashMap::new(),
             is_dark: false,
+            blocked_exits: HashMap::new(),
         }
     }
 
@@ -80,6 +82,12 @@ impl Room {
 
     pub fn dark(mut self) -> Self {
         self.is_dark = true;
+        self
+    }
+
+    pub fn with_blocked_exit(mut self, direction: &str, object_id: &str) -> Self {
+        self.blocked_exits
+            .insert(direction.to_string(), object_id.to_string());
         self
     }
 }
@@ -354,12 +362,18 @@ impl World {
 
         world.add_room(Room::new("attic", "Attic").with_exit("down", "kitchen"));
 
-        world.add_room(Room::new("living_room", "Living Room").with_exit("east", "kitchen"));
+        world.add_room(
+            Room::new("living_room", "Living Room")
+                .with_exit("east", "kitchen")
+                .with_exit("down", "cellar")
+                .with_blocked_exit("down", "trap_door"),
+        );
 
         world.add_room(
             Room::new("cellar", "Cellar")
                 .with_exit("north", "troll_room")
-                .with_exit("south", "east_of_chasm"),
+                .with_exit("south", "east_of_chasm")
+                .dark(),
         );
 
         world.add_room(Room::new("troll_room", "The Troll Room").with_exit("south", "cellar"));

@@ -53,12 +53,17 @@ pub fn execute(state: &mut GameState, world: &mut World, cmd: Command, i18n: &I1
 
 fn cmd_look(state: &GameState, world: &World, i18n: &I18n) {
     let room_id = &state.current_room;
+    let room = world.get_room(room_id);
+
+    if room.is_dark && !has_light(state, world) {
+        println!("\n{}", i18n.ui().darkness);
+        return;
+    }
 
     if let Some(room_trans) = i18n.room(room_id) {
         println!("\n{}\n", room_trans.name);
         println!("{}\n", room_trans.description);
     } else {
-        let room = world.get_room(room_id);
         println!("\n{}\n", room.name);
     }
 
@@ -127,15 +132,37 @@ fn cmd_move(state: &mut GameState, world: &mut World, verb: &Verb, i18n: &I18n) 
             return;
         }
 
+        if let Some(blocking_obj_id) = room.blocked_exits.get(direction) {
+            if let Some(obj) = world.get_object(blocking_obj_id) {
+                if obj.is_openable && !obj.is_open {
+                    logging::warn(format!(
+                        "move.blocked_by_object from={} to={} by={}",
+                        current_room, new_room, blocking_obj_id
+                    ));
+                    println!("\n{}", i18n.ui().locked);
+                    return;
+                }
+            }
+        }
+
+        let new_room_obj = world.get_room(new_room);
+        let is_dark_move = new_room_obj.is_dark && !has_light(state, world);
+
         state.move_to(new_room);
+
+        if is_dark_move {
+            println!("\n{}", i18n.ui().darkness);
+            logging::info(format!("move.dark from={} to={}", current_room, new_room));
+            return;
+        }
 
         let room_id = &state.current_room;
         if let Some(room_trans) = i18n.room(room_id) {
             println!("\n{}\n", room_trans.name);
             println!("{}\n", room_trans.description);
         } else {
-            let new_room_obj = world.get_room(room_id);
-            println!("\n{}\n", new_room_obj.name);
+            let display_room = world.get_room(room_id);
+            println!("\n{}\n", display_room.name);
         }
         logging::info(format!("move.ok from={} to={}", current_room, new_room));
     } else {
@@ -145,6 +172,20 @@ fn cmd_move(state: &mut GameState, world: &mut World, verb: &Verb, i18n: &I18n) 
         ));
         println!("\n{}", i18n.ui().cant_go);
     }
+}
+
+fn has_light(state: &GameState, world: &World) -> bool {
+    if state.lamp_lit {
+        return true;
+    }
+    for item_id in &state.inventory {
+        if let Some(obj) = world.get_object(item_id) {
+            if obj.is_lit {
+                return true;
+            }
+        }
+    }
+    false
 }
 
 fn cmd_take(state: &mut GameState, world: &mut World, object: Option<&str>, i18n: &I18n) {
@@ -1010,5 +1051,119 @@ mod tests {
 
         let cyclops = world.get_creature("cyclops").expect("cyclops should exist");
         assert!(cyclops.hp < 4);
+    }
+
+    #[test]
+    fn trap_door_blocks_cellar_exit_until_opened() {
+        let i18n = I18n::load(Language::English).expect("translation should load");
+        let mut world = World::load_zork1();
+        let mut state = GameState::new(Language::English, "living_room");
+
+        assert_eq!(state.current_room, "living_room");
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Down,
+                object: None,
+            },
+            &i18n,
+        );
+
+        assert_eq!(state.current_room, "living_room");
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Open,
+                object: Some("trap door".to_string()),
+            },
+            &i18n,
+        );
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Down,
+                object: None,
+            },
+            &i18n,
+        );
+
+        assert_eq!(state.current_room, "cellar");
+    }
+
+    #[test]
+    fn dark_room_shows_darkness_without_light() {
+        let i18n = I18n::load(Language::English).expect("translation should load");
+        let mut world = World::load_zork1();
+        let mut state = GameState::new(Language::English, "living_room");
+
+        let trap_door = world
+            .get_object_mut("trap_door")
+            .expect("trap_door should exist");
+        trap_door.is_open = true;
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Down,
+                object: None,
+            },
+            &i18n,
+        );
+
+        assert_eq!(state.current_room, "cellar");
+
+        state.lamp_lit = false;
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Look,
+                object: None,
+            },
+            &i18n,
+        );
+    }
+
+    #[test]
+    fn dark_room_visible_with_lamp_lit() {
+        let i18n = I18n::load(Language::English).expect("translation should load");
+        let mut world = World::load_zork1();
+        let mut state = GameState::new(Language::English, "living_room");
+
+        let trap_door = world
+            .get_object_mut("trap_door")
+            .expect("trap_door should exist");
+        trap_door.is_open = true;
+        state.lamp_lit = true;
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Down,
+                object: None,
+            },
+            &i18n,
+        );
+
+        assert_eq!(state.current_room, "cellar");
+
+        execute(
+            &mut state,
+            &mut world,
+            Command {
+                verb: Verb::Look,
+                object: None,
+            },
+            &i18n,
+        );
     }
 }
