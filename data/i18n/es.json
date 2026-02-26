@@ -331,8 +331,8 @@
       "description": ""
     },
     "damp_cave": {
-      "name": "Presap Cave",
-      "description": "This cave has exits to the west and east, and narrows to a crack toward\nthe south. The earth is particularly damp here."
+      "name": "Cueva Humeda",
+      "description": "Esta cueva tiene salidas al oeste y al este, y se estrecha hasta una grieta hacia\nel sur. La tierra esta especialmente humeda aqui."
     },
     "loud_room": {
       "name": "Loud Room",
@@ -740,7 +740,7 @@
     },
     "vair_2": {
       "name": "Volcano Near Small Ledge",
-      "description": "You are about two hundred feet above the volcano floor. Looming above is the rim of the volcano. Hay un small ledge on the Oeste side."
+      "description": "Estas a unos doscientos pies por encima del fondo del volcan. Sobre ti se alza el borde del volcan. Hay una pequena repisa en el lado oeste."
     },
     "vair_3": {
       "name": "Volcano by Viewing Ledge",
@@ -788,19 +788,19 @@
     },
     "well_top": {
       "name": "Top of Well",
-      "description": "You are at the top of the well. Well done. There are etchings on the side of the well. Hay un small crack across the floor at the entrance to a Sala on the Este, but it can be crossed easily."
+      "description": "Estas en la parte superior del pozo. Bien hecho. Hay grabados en el lado del pozo. Hay una pequena grieta que cruza el suelo, en la entrada de una sala al este, pero se puede cruzar facilmente."
     },
     "well_bottom": {
       "name": "Circular Sala",
-      "description": "This is a Presap circular Sala, whose walls are made of brick and mortar. The roof of this Sala is not visible, but there appear to be some etchings on the walls. Hay un Pasajeway to the Oeste."
+      "description": "Esta es una sala circular humeda, cuyas paredes son de ladrillo y mortero. El techo no es visible, pero parece haber algunos grabados en las paredes. Hay un pasaje hacia el oeste."
     },
     "tea_room": {
       "name": "Tea Sala",
-      "description": "This is a small Sala containing a large oblong table, no doubt set for afternoon tea. It is clear from the objects on the table that the users were indeed mad. In the Esteern corner of the Sala is a small hole (no more than four inches high). There are Pasajeways leading away to the Oeste and the NorteOeste."
+      "description": "Esta es una pequena sala que contiene una gran mesa oblonga, sin duda preparada para el te de la tarde. Por los objetos sobre la mesa, esta claro que sus usuarios estaban realmente locos. En la esquina este de la sala hay un pequeno agujero (de no mas de cuatro pulgadas de alto). Hay pasajes hacia el oeste y el noroeste."
     },
     "posts_room": {
       "name": "Posts Sala",
-      "description": "This is an enormous Sala, in the center of which are four wooden posts delineating a rectangular area, above which is what appears to be a wooden roof. In fact, all objects in this Sala appear to be abnormally large. To the Este is a Pasajeway. There are large gaping chasms to the Oeste and NorteOeste."
+      "description": "Esta es una sala enorme, en cuyo centro hay cuatro postes de madera que delimitan un area rectangular, sobre la cual parece haber un techo de madera. De hecho, todos los objetos de esta sala parecen anormalmente grandes. Al este hay un pasaje. Hay grandes simas abiertas al oeste y al noroeste."
     },
     "pool_room": {
       "name": "Pool Sala",
@@ -944,7 +944,7 @@
     },
     "mr_ante": {
       "name": "Button Sala",
-      "description": "You are at the Surern end of a long Salón. To the Sur, stairs ascend into darkness. To the Norte the corridor is illuminated by antorchaes set high in the walls, out of reach. On one wall is a red button."
+      "description": "Estas en el extremo sur de un largo salon. Al sur, unas escaleras ascienden hacia la oscuridad. Al norte, el corredor esta iluminado por antorchas colocadas en alto sobre las paredes, fuera de alcance. En una pared hay un boton rojo."
     },
     "mreye": {
       "name": "Beam Sala",
@@ -959,16 +959,16 @@
       "description": "You have come to the end of two adjoining Pasajes to the Oeste and the NorteOeste."
     },
     "damp_passage": {
-      "name": "Presap Pasaje",
-      "description": "This is a particularly Presap spot even by dungeon standards. You can see the junction to the Oeste, and two similar Pasajes to the Este and NorteEste. A wide stone channel steeply descends into the Sala from the Sur. It is covered with slippery moss and lichen. The channel crosses the Sala, but the opening where it once continued Norte is now blocked by rubble."
+      "name": "Pasaje Humedo",
+      "description": "Este es un lugar particularmente humedo incluso para los estandares del dungeon. Puedes ver la interseccion al oeste, y dos pasajes similares al este y noreste. Un ancho canal de piedra desciende con pendiente hacia la sala desde el sur. Esta cubierto de musgo y liquenes resbaladizos. El canal cruza la sala, pero la abertura por donde antes continuaba al norte ahora esta bloqueada por escombros."
     },
     "east_corridor": {
       "name": "Este Corridor",
-      "description": "This is a Salón with polished marble walls. It widens slightly as it turns Oeste at its Norteern and Surern ends."
+      "description": "Este es un salon con paredes de marmol pulido. Se ensancha ligeramente donde gira hacia el oeste en sus extremos norte y sur."
     },
     "west_corridor": {
       "name": "Oeste Corridor",
-      "description": "This is a Salón with polished marble walls. It widens slightly as it turns Este at its Norteern and Surern ends."
+      "description": "Este es un salon con paredes de marmol pulido. Se ensancha ligeramente donde gira hacia el este en sus extremos norte y sur."
     },
     "south_corridor": {
       "name": "Sur Corridor",
@@ -1774,7 +1774,7 @@
     },
     "aquarium": {
       "name": "aquarium",
-      "description": "Filling the Norteern half of the Sala is a huge aquarium.",
+      "description": "Un enorme acuario ocupa la mitad norte de la sala.",
       "initial_desc": ""
     },
     "palantir_3": {
@@ -1894,12 +1894,12 @@
     },
     "hook_2": {
       "name": "hook",
-      "description": "Hay un small hook attached to the rock here.",
+      "description": "Hay un pequeno gancho sujeto a la roca aqui.",
       "initial_desc": ""
     },
     "hook_1": {
       "name": "hook",
-      "description": "Hay un small hook attached to the rock here.",
+      "description": "Hay un pequeno gancho sujeto a la roca aqui.",
       "initial_desc": ""
     },
     "alice_table": {

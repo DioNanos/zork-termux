@@ -331,8 +331,8 @@
       "description": ""
     },
     "damp_cave": {
-      "name": "Digap Cave",
-      "description": "This cave has exits to the west and east, and narrows to a crack toward\nthe south. The earth is particularly damp here."
+      "name": "Grotta Umida",
+      "description": "Questa grotta ha uscite a ovest e a est, e si restringe in una fessura verso\nsud. Qui il terreno e particolarmente umido."
     },
     "loud_room": {
       "name": "Loud Room",
@@ -788,11 +788,11 @@
     },
     "well_top": {
       "name": "Top of Well",
-      "description": "You are at the top of the well. Well done. There are etchings on the side of the well. C'è un small crack across the floor at the entrance to a Stanza on the Est, but it can be crossed easily."
+      "description": "Sei in cima al pozzo. Ben fatto. Ci sono incisioni sul lato del pozzo. C'e una piccola crepa nel pavimento, all'ingresso di una stanza a est, ma si puo attraversare facilmente."
     },
     "well_bottom": {
       "name": "Circular Stanza",
-      "description": "This is a Digap circular Stanza, whose walls are made of brick and mortar. The roof of this Stanza is not visible, but there appear to be some etchings on the walls. C'è un Passaggioway to the Ovest."
+      "description": "Questa e una stanza circolare umida, con pareti di mattoni e malta. Il soffitto non e visibile, ma sulle pareti si notano alcune incisioni. C'e un passaggio verso ovest."
     },
     "tea_room": {
       "name": "Tea Stanza",
@@ -944,7 +944,7 @@
     },
     "mr_ante": {
       "name": "Button Stanza",
-      "description": "You are at the Sudern end of a long Sala. To the Sud, stairs ascend into darkness. To the Nord the corridor is illuminated by torciaes set high in the walls, out of reach. On one wall is a red button."
+      "description": "Sei all'estremita sud di una lunga sala. A sud, delle scale salgono nell'oscurita. A nord, il corridoio e illuminato da torce fissate in alto sulle pareti, fuori portata. Su una parete c'e un pulsante rosso."
     },
     "mreye": {
       "name": "Beam Stanza",
@@ -959,16 +959,16 @@
       "description": "You have come to the end of two adjoining Passaggios to the Ovest and the NordOvest."
     },
     "damp_passage": {
-      "name": "Digap Passaggio",
-      "description": "This is a particularly Digap spot even by dungeon standards. You can see the junction to the Ovest, and two similar Passaggios to the Est and NordEst. A wide stone channel steeply descends into the Stanza from the Sud. It is covered with slippery moss and lichen. The channel crosses the Stanza, but the opening where it once continued Nord is now blocked by rubble."
+      "name": "Passaggio Umido",
+      "description": "Questo e un punto particolarmente umido anche per gli standard del dungeon. Vedi l'incrocio a ovest e due passaggi simili a est e nord-est. Un ampio canale di pietra scende ripidamente nella stanza da sud. E coperto di muschio e licheni scivolosi. Il canale attraversa la stanza, ma l'apertura dove un tempo proseguiva a nord e ora ostruita dalle macerie."
     },
     "east_corridor": {
       "name": "Est Corridor",
-      "description": "This is a Sala with polished marble walls. It widens slightly as it turns Ovest at its Nordern and Sudern ends."
+      "description": "Questa e una sala con pareti di marmo levigato. Si allarga leggermente dove curva verso ovest alle sue estremita nord e sud."
     },
     "west_corridor": {
       "name": "Ovest Corridor",
-      "description": "This is a Sala with polished marble walls. It widens slightly as it turns Est at its Nordern and Sudern ends."
+      "description": "Questa e una sala con pareti di marmo levigato. Si allarga leggermente dove curva verso est alle sue estremita nord e sud."
     },
     "south_corridor": {
       "name": "Sud Corridor",
@@ -1774,7 +1774,7 @@
     },
     "aquarium": {
       "name": "aquarium",
-      "description": "Filling the Nordern half of the Stanza is a huge aquarium.",
+      "description": "Un enorme acquario occupa la meta nord della stanza.",
       "initial_desc": ""
     },
     "palantir_3": {
