@@ -740,7 +740,7 @@
     },
     "vair_2": {
       "name": "Volcano Near Small Ledge",
-      "description": "You are about two hundred feet above the volcano floor. Looming above is the rim of the volcano. C'è un small ledge on the Ovest side."
+      "description": "Ti trovi a circa duecento piedi sopra il fondo del vulcano. Sopra di te incombe il bordo del vulcano. Sul lato ovest c'e una piccola sporgenza."
     },
     "vair_3": {
       "name": "Volcano by Viewing Ledge",
@@ -748,11 +748,11 @@
     },
     "vair_4": {
       "name": "Volcano Near Wide Ledge",
-      "description": "You are near the rim of the volcano. Above you it is open to the sky. To the Ovest, C'è un place to land on a wide ledge."
+      "description": "Sei vicino al bordo del vulcano. Sopra di te si apre il cielo. A ovest c'e un punto dove atterrare su un'ampia sporgenza."
     },
     "ledge_1": {
       "name": "Narrow Ledge",
-      "description": "You are on a narrow ledge within an old dormant volcano. This ledge is about halfway between the floor below and the rim above. C'è unn exit to the Sud."
+      "description": "Ti trovi su una stretta sporgenza all'interno di un antico vulcano spento. Questa sporgenza e circa a meta strada tra il fondo sotto di te e il bordo in alto. C'e un'uscita a sud."
     },
     "library": {
       "name": "Library",
@@ -760,7 +760,7 @@
     },
     "volcano_view": {
       "name": "Volcano View",
-      "description": "You are on a ledge in the middle of a large volcano. Below you the volcano bottom can be seen and above is the rim of the volcano. A coSule of ledges can be seen on the other side of the volcano; it appears that this ledge is intermediate in elevation between those on the other side. The exit from this Stanza is to the Est."
+      "description": "Ti trovi su una sporgenza nel mezzo di un grande vulcano. Sotto di te si vede il fondo del vulcano e sopra il suo bordo. Sul lato opposto si distinguono diverse sporgenze; questa sembra trovarsi a un'altitudine intermedia rispetto a quelle. L'uscita da questa stanza e a est."
     },
     "ledge_2": {
       "name": "Wide Ledge",
@@ -796,11 +796,11 @@
     },
     "tea_room": {
       "name": "Tea Stanza",
-      "description": "This is a small Stanza containing a large oblong table, no doubt set for afternoon tea. It is clear from the objects on the table that the users were indeed mad. In the Estern corner of the Stanza is a small hole (no more than four inches high). There are Passaggioways leading away to the Ovest and the NordOvest."
+      "description": "Questa e una piccola stanza con una grande tavola oblunga, senza dubbio preparata per il te del pomeriggio. Dagli oggetti sul tavolo e chiaro che i suoi utilizzatori erano davvero folli. Nell'angolo est della stanza c'e un piccolo foro (alto non piu di quattro pollici). Ci sono passaggi verso ovest e nord-ovest."
     },
     "posts_room": {
       "name": "Posts Stanza",
-      "description": "This is an enormous Stanza, in the center of which are four wooden posts delineating a rectangular area, above which is what appears to be a wooden roof. In fact, all objects in this Stanza appear to be abnormally large. To the Est is a Passaggioway. There are large gaping chasms to the Ovest and NordOvest."
+      "description": "Questa e un'enorme stanza, al centro della quale quattro pali di legno delimitano un'area rettangolare sopra cui sembra esserci un tetto di legno. In effetti, tutti gli oggetti qui appaiono insolitamente grandi. A est c'e un passaggio. A ovest e nord-ovest si aprono grandi voragini."
     },
     "pool_room": {
       "name": "Pool Stanza",
@@ -1874,7 +1874,7 @@
     },
     "ice": {
       "name": "glacier",
-      "description": "A mass of ice fills the Ovestern half of the Stanza.",
+      "description": "Una massa di ghiaccio occupa la meta ovest della stanza.",
       "initial_desc": ""
     },
     "flask": {
@@ -1894,12 +1894,12 @@
     },
     "hook_2": {
       "name": "hook",
-      "description": "C'è un small hook attached to the rock here.",
+      "description": "C'e un piccolo gancio fissato alla roccia qui.",
       "initial_desc": ""
     },
     "hook_1": {
       "name": "hook",
-      "description": "C'è un small hook attached to the rock here.",
+      "description": "C'e un piccolo gancio fissato alla roccia qui.",
       "initial_desc": ""
     },
     "alice_table": {
@@ -1939,12 +1939,12 @@
     },
     "pool": {
       "name": "pool of tears",
-      "description": "The leak has submerged the depressed area in a pool of tears. C'è un hazy something at the deepest part of the pool.",
+      "description": "La perdita ha sommerso la zona ribassata in una pozza di lacrime. C'e qualcosa di indistinto nella parte piu profonda della pozza.",
       "initial_desc": ""
     },
     "coin": {
       "name": "priceless zorkmid",
-      "description": "C'è unn engraved zorkmid here.",
+      "description": "C'e uno zorkmid inciso qui.",
       "initial_desc": "On the floor is a priceless oro zorkmid (a valuable collector's item)."
     },
     "stamp": {
@@ -2224,7 +2224,7 @@
     },
     "lore_book": {
       "name": "very ancient libro",
-      "description": "C'è unn old libro here.",
+      "description": "C'e un libro molto antico qui.",
       "initial_desc": "Nestled inside the niche is an old and dusty libro."
     },
     "intdir": {

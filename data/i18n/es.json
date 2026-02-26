@@ -748,11 +748,11 @@
     },
     "vair_4": {
       "name": "Volcano Near Wide Ledge",
-      "description": "You are near the rim of the volcano. Above you it is open to the sky. To the Oeste, Hay un place to land on a wide ledge."
+      "description": "Estas cerca del borde del volcan. Sobre ti se abre el cielo. Al oeste hay un lugar donde aterrizar sobre una repisa ancha."
     },
     "ledge_1": {
       "name": "Narrow Ledge",
-      "description": "You are on a narrow ledge within an old dormant volcano. This ledge is about halfway between the floor below and the rim above. Hay unn exit to the Sur."
+      "description": "Estas en una repisa estrecha dentro de un antiguo volcan dormido. Esta repisa esta aproximadamente a mitad de camino entre el fondo y el borde superior. Hay una salida al sur."
     },
     "library": {
       "name": "Library",
@@ -760,7 +760,7 @@
     },
     "volcano_view": {
       "name": "Volcano View",
-      "description": "You are on a ledge in the middle of a large volcano. Below you the volcano bottom can be seen and above is the rim of the volcano. A coArribale of ledges can be seen on the other side of the volcano; it appears that this ledge is intermediate in elevation between those on the other side. The exit from this Sala is to the Este."
+      "description": "Estas en una repisa en medio de un gran volcan. Debajo de ti se ve el fondo del volcan y arriba esta su borde. Al otro lado del volcan se distinguen varias repisas; esta parece estar a una altura intermedia respecto a aquellas. La salida de esta sala esta al este."
     },
     "ledge_2": {
       "name": "Wide Ledge",
@@ -1874,7 +1874,7 @@
     },
     "ice": {
       "name": "glacier",
-      "description": "A mass of ice fills the Oesteern half of the Sala.",
+      "description": "Una masa de hielo ocupa la mitad oeste de la sala.",
       "initial_desc": ""
     },
     "flask": {
@@ -1944,7 +1944,7 @@
     },
     "coin": {
       "name": "priceless zorkmid",
-      "description": "Hay unn engraved zorkmid here.",
+      "description": "Hay un zorkmid grabado aqui.",
       "initial_desc": "On the floor is a priceless oro zorkmid (a valuable collector's item)."
     },
     "stamp": {
@@ -2224,7 +2224,7 @@
     },
     "lore_book": {
       "name": "very ancient libro",
-      "description": "Hay unn old libro here.",
+      "description": "Hay un libro muy antiguo aqui.",
       "initial_desc": "Nestled inside the niche is an old and dusty libro."
     },
     "intdir": {
