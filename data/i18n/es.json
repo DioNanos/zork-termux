@@ -375,7 +375,7 @@
       "description": "Este es el extremo norte de un gran templo. En la pared este hay una antigua inscripcion, probablemente una plegaria en un idioma olvidado. Debajo de la plegaria hay una escalera que desciende. La pared oeste es de granito macizo. La salida hacia la parte norte de la sala pasa entre enormes columnas de marmol."
     },
     "south_temple": {
-      "name": "Altar",
+      "name": "Templo Sur",
       "description": "Este es el extremo sur de un gran templo. Frente a ti hay lo que parece ser un altar. En una esquina hay un pequeno agujero en el suelo que conduce a la oscuridad. Probablemente no podrias volver a subir por ahi."
     },
     "dam_room": {
@@ -396,7 +396,7 @@
     },
     "river_1": {
       "name": "Rio Frigid",
-      "description": "Estas en el Rio Frigid en las cercanias de la presa. El rio fluye tranquilamente aqui. Hay un embarcadero en la orilla oeste."
+      "description": "Estas en el Rio Frigid en las cercanias de la presa. El rio fluye tranquilamente aqui. Existe un embarcadero en la orilla oeste."
     },
     "river_2": {
       "name": "Rio Frigid",
@@ -700,7 +700,7 @@
     },
     "trophy_room": {
       "name": "Sala de Trofeos",
-      "description": "Esta es la sala de trofeos del Mago, llena de recuerdos de varios tipos. En una pared está el título de Doctor en Taumaturgia del Mago del GUE Tech. Varias varitas mágicas antiguas están montadas en un soporte. Una colección de espadas desafiladas y melladas dan testimonio del destino de muchos aventureros temerarios. Pequeños frascos contienen homúnculos descartados (algunos conservados en alcohol). Hay un búho disecado en una percha."
+      "description": "Esta es la sala de trofeos del Mago, llena de recuerdos de varios tipos. En una pared está el título de Doctor en Taumaturgia del Mago del GUE Tech. Varias varitas mágicas antiguas están montadas en un soporte. Una colección de espadas desafiladas y melladas dan testimonio del destino de muchos aventureros temerarios. Pequeños frascos contienen homúnculos descartados (algunos conservados en alcohol). Se encuentra un búho disecado en una percha."
     },
     "pentagram_room": {
       "name": "Pentagram Sala",
