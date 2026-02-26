@@ -536,47 +536,47 @@
     },
     "foot_bridge": {
       "name": "Foot Bridge",
-      "description": "Estás de pie on a crude but sturdy wooden foot bridge crossing a deep ravine. The Sendero runs Norte and Sur from here."
+      "description": "Estas sobre un puente peatonal de madera, tosco pero resistente, que cruza un profundo barranco. El sendero continua hacia el norte y el sur desde aqui."
     },
     "great_cavern": {
-      "name": "Great Cuevarn",
-      "description": "This is the center of the great Cuevarn, carved out of the limestone. Stalactites and stalagmites of many sizes are everywhere. The Sala glows with dim light provided by phosphorescent moss, and weird shadows move alrededor you. A narrow Sendero winds SurOeste among the stalagmites, and another leads NorteEste."
+      "name": "Gran Caverna",
+      "description": "Este es el centro de la gran caverna, excavada en la piedra caliza. Hay estalactitas y estalagmitas de muchos tamanos por todas partes. La sala brilla con una tenue luz producida por musgos fosforescentes, y sombras extranas se mueven a tu alrededor. Un sendero estrecho serpentea hacia el suroeste entre las estalagmitas, y otro conduce al noreste."
     },
     "shallow_ford": {
-      "name": "SSalónow Ford",
-      "description": "You are at the Surern edge of a great Cuevarn. To the Sur across a sSalónow ford is a dark Túnel which looks like it was once enlarged and smoothed. To the Norte a narrow Sendero winds among stalagmites. Dim light illuminates the Cuevarn."
+      "name": "Vado Poco Profundo",
+      "description": "Estas en el borde sur de una gran caverna. Al sur, cruzando un vado poco profundo, hay un tunel oscuro que parece haber sido ampliado y alisado tiempo atras. Al norte, un sendero estrecho serpentea entre las estalagmitas. Una luz tenue ilumina la caverna."
     },
     "dark_tunnel": {
-      "name": "Dark Túnel",
-      "description": "This is a dark Túnel with dim light to the NorteEste. The Túnel is smooth but dusty and filled with twigs and leaves, debris which becomes deeper as the Túnel branches into a wide corridor leading SurOeste and a narrower one leading SurEste."
+      "name": "Tunel Oscuro",
+      "description": "Este es un tunel oscuro con una luz tenue hacia el noreste. El tunel es liso pero polvoriento y esta lleno de ramas y hojas, residuos que se hacen mas profundos donde el tunel se divide en un corredor ancho hacia el suroeste y otro mas estrecho hacia el sureste."
     },
     "garden_north": {
-      "name": "Norte End of Garden",
-      "description": "This is the Norteern end of a formal garden. Hedges hide the Cuevarn walls, and if you don't look Arriba, the illusion is of a cloudy day outside. The light comes from a large growth of glowing mosses on the roof of the Cueva. A break in the hedge is almost overgrown to the Norte. A carefully manicured sendero lleva Sur. In the center of a rosebed is a small open structure, painted white. It appears to be a gazebo."
+      "name": "Extremo Norte del Jardin",
+      "description": "Este es el extremo norte de un jardin formal. Los setos ocultan las paredes de la caverna y, si no miras hacia arriba, la ilusion es la de un dia nublado en el exterior. La luz proviene de una gran masa de musgos luminosos en el techo de la cueva. Una abertura en el seto, al norte, esta casi cubierta por la vegetacion. Un sendero cuidadosamente arreglado conduce al sur. En el centro de un rosal hay una pequena estructura abierta, pintada de blanco. Parece un gazebo."
     },
     "gazebo_room": {
       "name": "Gazebo",
       "description": "This is a gazebo in the midst of a formal garden. It is cool and restful here. A tea table adorns the center of the gazebo."
     },
     "formal_garden": {
-      "name": "Formal Garden",
-      "description": "This is the middle part of a formal garden. Hedges hide the Cuevarn walls and a dim illumination comes from mosses far above. The Sendero is of small crushed white stones. It winds among bushes and flower beds from Sur to Norte. To the Norte a small structure can be seen. To the Sur are peculiarly shaped bushes. Hay un small gap in the hedges to the Oeste."
+      "name": "Jardin Formal",
+      "description": "Esta es la parte central de un jardin formal. Los setos ocultan las paredes de la caverna y una tenue iluminacion proviene de musgos muy por encima. El sendero es de pequenas piedras blancas trituradas. Serpentea entre arbustos y parterres desde el sur hasta el norte. Al norte se ve una pequena estructura. Al sur hay arbustos de formas peculiares. Hay una pequena abertura en los setos hacia el oeste."
     },
     "topiary_room": {
-      "name": "Topiary",
-      "description": "This is the Surern end of a formal garden. Hedges hide the Cuevarn walls and mosses provide dim illumination. Fantastically shaped hedges and bushes are arrayed with geometric precision. They have not recently been clipped, but you can discern creatures in the shapes of the bushes: Hay un dragon, a unicorn, a great serpent, a huge misshapen dog, and several human figures. On the Oeste side of the garden the sendero lleva through a rose arbor into a Túnel."
+      "name": "Topiaria",
+      "description": "Este es el extremo sur de un jardin formal. Los setos ocultan las paredes de la caverna y los musgos proporcionan una iluminacion tenue. Setos y arbustos de formas fantasticas estan dispuestos con precision geometrica. No han sido recortados recientemente, pero puedes distinguir criaturas en sus formas: un dragon, un unicornio, una gran serpiente, un enorme perro deforme y varias figuras humanas. En el lado oeste del jardin, el sendero pasa por una rosaleda en arco y entra en un tunel."
     },
     "stream_path": {
-      "name": "Sendero Near Stream",
-      "description": "The Sendero follows the Sur edge of a deep ravine and heads NorteEste. A Túnel heads SurOeste, narrowing to a rather tight crawl. A faint whirring sound can be heard in that direction. On the Este is a ruined archway choked with vegetation."
+      "name": "Sendero junto al Arroyo",
+      "description": "El sendero sigue el borde sur de un profundo barranco y se dirige al noreste. Un tunel va hacia el suroeste, estrechandose hasta convertirse en un paso bastante angosto. Se oye un leve zumbido desde esa direccion. Al este hay un arco en ruinas cubierto por la vegetacion."
     },
     "marble_hall": {
-      "name": "Marble Salón",
-      "description": "This is an arched Salón of fine marble. The Salón stops abrArribatly to the Norte at a ford across a stream, where the marble is cracked and broken. Perhaps a flood or collapse of the Cueva was responsible. To the Sur the Salón opens into a large Sala. There is rather annoying whirring sound coming from that Sala."
+      "name": "Salon de Marmol",
+      "description": "Este es un salon arqueado de fino marmol. El salon termina bruscamente al norte en un vado que cruza un arroyo, donde el marmol esta agrietado y roto. Tal vez una inundacion o un derrumbe de la cueva fue la causa. Al sur, el salon se abre a una gran sala. De esa sala proviene un zumbido bastante molesto."
     },
     "deep_ford": {
       "name": "Deep Ford",
-      "description": "You are fording the stream at a deep but not impossible spot. The agua is very cold. The walls of the ravine rise to Este and Oeste. Hay un small ledge along the Norte wall of the ravine. To the Sur is the entrance to a well-constructed but somewhat ruined Salón."
+      "description": "Estas cruzando el arroyo por un punto profundo, pero no imposible. El agua esta muy fria. Las paredes del barranco se elevan al este y al oeste. Hay una pequena repisa a lo largo de la pared norte del barranco. Al sur esta la entrada a un salon bien construido, aunque algo arruinado."
     },
     "ravine_ledge": {
       "name": "Ledge in Ravine",
@@ -1004,7 +1004,7 @@
     },
     "nirvana": {
       "name": "Treasury of Zork",
-      "description": "This is a large Sala, richly appointed in a style that bespeaks exquisite taste. To judge from its contents, it is the ultimate storeCasa of the wealth of the Great Underground Empire.| | There are chests containing precious joyas, mountains of zorkmids, rare pinturas, ancient statuary, and beguiling curios.| | On one wall is an annotated map of the Empire, showing the locations of various troves of treasure, and of many sArribaerior scenic views.| | On a desk at the far end of the Sala are stock certificates representing a controlling interest in FrobozzCo International, the multinational conglomerate and parent company of the Frobozz Magic Boat Co., etc.|"
+      "description": "Esta es una gran sala, ricamente decorada con un gusto exquisito. A juzgar por su contenido, es el deposito supremo de las riquezas del Gran Imperio Subterraneo.| | Hay cofres con joyas preciosas, montanas de zorkmids, pinturas raras, estatuas antiguas y curiosidades fascinantes.| | En una pared hay un mapa anotado del Imperio que muestra la ubicacion de varios tesoros y de muchos miradores impresionantes.| | Sobre un escritorio al fondo de la sala hay certificados de acciones que representan una participacion de control en FrobozzCo International, el conglomerado multinacional y empresa matriz de Frobozz Magic Boat Co., etc.|"
     }
   },
   "objects": {
