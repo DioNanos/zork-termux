@@ -70,6 +70,9 @@ run_test "CP19" "EN Use lamp (in living room)" "1" "north\neast\nin\nwest\ntake 
 run_test "CP27" "EN Inventory" "1" "open mailbox\ntake leaflet\ninventory" "carrying"
 run_test "CP28" "EN Drop item" "1" "open mailbox\ntake leaflet\ndrop leaflet" "Dropped"
 run_test "CP30" "EN Save game" "1" "save" "saved"
+run_test "CP20" "EN Trap door blocks" "1" "north\neast\nenter\nwest\ndown" "locked"
+run_test "CP21" "EN Cellar darkness" "1" "north\neast\nenter\nwest\nopen trap door\ndown" "pitch dark"
+run_test "CP31" "EN Save/restore" "1" "save\nrestore" "restored"
 
 echo ""
 echo "Testing Italian scenarios..."
