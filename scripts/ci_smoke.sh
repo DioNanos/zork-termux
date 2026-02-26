@@ -7,6 +7,19 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 LOG_DIR="${PROJECT_DIR}/smoke-logs"
 TIMEOUT=60
 
+run_with_timeout() {
+    local seconds="$1"
+    shift
+
+    if command -v timeout >/dev/null 2>&1; then
+        timeout "$seconds" "$@"
+    elif command -v gtimeout >/dev/null 2>&1; then
+        gtimeout "$seconds" "$@"
+    else
+        "$@"
+    fi
+}
+
 mkdir -p "$LOG_DIR"
 
 run_smoke_with_log() {
@@ -31,19 +44,21 @@ quit
 EOF
 )
     
+    local cmd_exit=0
     {
         echo "=== $lang_name smoke test ==="
         echo "Date: $(date -Iseconds)"
         echo "Input: $input"
         echo "---"
-        echo "$input" | timeout $TIMEOUT ./target/release/zork-termux 2>&1
+        echo "$input" | run_with_timeout "$TIMEOUT" ./target/release/zork-termux 2>&1
+        cmd_exit=$?
         echo "---"
-        echo "Exit code: $?"
+        echo "Exit code: $cmd_exit"
     } > "$log_file"
     
     cat "$log_file" >> "$LOG_DIR/smoke-output.txt"
     
-    if [ $? -eq 0 ]; then
+    if [ $cmd_exit -eq 0 ]; then
         echo "PASS: $lang_name" | tee -a "$LOG_DIR/smoke-output.txt"
         return 0
     else

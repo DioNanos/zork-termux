@@ -10,6 +10,19 @@ TIMEOUT=60
 FAILED=0
 PASSED=0
 
+run_with_timeout() {
+    local seconds="$1"
+    shift
+
+    if command -v timeout >/dev/null 2>&1; then
+        timeout "$seconds" "$@"
+    elif command -v gtimeout >/dev/null 2>&1; then
+        gtimeout "$seconds" "$@"
+    else
+        "$@"
+    fi
+}
+
 run_smoke() {
     local lang="$1"
     local lang_name="$2"
@@ -38,7 +51,7 @@ EOF
     
     # Run with timeout, capture output
     local output
-    if output=$(echo "$input" | timeout $TIMEOUT ./target/release/zork-termux 2>&1); then
+    if output=$(echo "$input" | run_with_timeout "$TIMEOUT" ./target/release/zork-termux 2>&1); then
         :
     else
         local exit_code=$?
@@ -47,6 +60,9 @@ EOF
             ((FAILED++))
             return 1
         fi
+        echo "FAIL: $lang_name - process exited with code $exit_code"
+        ((FAILED++))
+        return 1
     fi
     
     # Check expected strings

@@ -50,7 +50,7 @@ fn print_banner(width: usize) {
     println!();
     print_box(
         width,
-        "ZORK-TERMUX v0.5",
+        "ZORK-TERMUX v0.4.2",
         &[
             "Terminal Adventure Engine".to_string(),
             "Mobile-first UI · Linux/macOS ready".to_string(),

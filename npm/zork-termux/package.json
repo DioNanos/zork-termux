@@ -1,6 +1,6 @@
 {
   "name": "@mmmbuto/zork-termux",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "ZORK I, II, III for Termux terminal with prebuilt binary",
   "main": "check-update.js",
   "files": [
