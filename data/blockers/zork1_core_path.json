@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "game": "zork1",
+    "version": "1.0.0",
+    "description": "Core path blockers for Zork I speedrun path"
+  },
+  "blockers": [
+    {
+      "id": "window_entry",
+      "location": "east_of_house",
+      "object": "window",
+      "type": "door",
+      "blocks_access_to": ["kitchen"],
+      "required_action": "open window",
+      "notes": "First blocker - entry to house"
+    },
+    {
+      "id": "trap_door",
+      "location": "living_room",
+      "object": "trap_door",
+      "type": "door",
+      "blocks_access_to": ["cellar"],
+      "required_action": "open trap door",
+      "prerequisite": "move rug",
+      "notes": "Must move rug first to reveal trap door"
+    },
+    {
+      "id": "troll",
+      "location": "troll_room",
+      "object": "troll",
+      "type": "creature",
+      "blocks_access_to": ["maze_1", "ew_passage"],
+      "required_action": "kill troll with sword",
+      "required_item": "sword",
+      "notes": "Must have sword from living room"
+    },
+    {
+      "id": "darkness",
+      "location": "cellar",
+      "object": "lamp",
+      "type": "light",
+      "blocks_access_to": ["troll_room", "maze"],
+      "required_item": "lamp",
+      "required_action": "turn on lamp",
+      "notes": "Dark rooms require lit lamp"
+    },
+    {
+      "id": "cyclops",
+      "location": "cyclops_room",
+      "object": "cyclops",
+      "type": "creature",
+      "blocks_access_to": ["strange_passage", "treasure_room"],
+      "solutions": [
+        {
+          "method": "fight",
+          "required_item": "sword",
+          "difficulty": "hard"
+        },
+        {
+          "method": "trick",
+          "required_item": "garlic",
+          "difficulty": "medium"
+        }
+      ],
+      "notes": "Can be fought or tricked with garlic"
+    },
+    {
+      "id": "grating",
+      "location": "grating_clearing",
+      "object": "grate",
+      "type": "door",
+      "blocks_access_to": ["grating_room"],
+      "required_item": "keys",
+      "required_action": "unlock grate with keys",
+      "notes": "Skeleton key needed"
+    },
+    {
+      "id": "boat_crossing",
+      "location": "dam_base",
+      "object": "inflatable_boat",
+      "type": "vehicle",
+      "blocks_access_to": ["river_1", "river_2", "shore"],
+      "required_item": "pump",
+      "required_action": "inflate boat with pump",
+      "notes": "Need pump from reservoir north"
+    }
+  ],
+  "critical_path": [
+    "west_of_house",
+    "north_of_house", 
+    "east_of_house",
+    "kitchen",
+    "living_room",
+    "cellar",
+    "troll_room",
+    "maze_1"
+  ],
+  "required_items_for_speedrun": [
+    "lamp",
+    "sword",
+    "rope"
+  ],
+  "treasure_locations": [
+    {"id": "egg", "location": "up_a_tree", "value": 5},
+    {"id": "painting", "location": "gallery", "value": 4},
+    {"id": "trident", "location": "atlantis_room", "value": 4},
+    {"id": "chalice", "location": "treasure_room", "value": 10},
+    {"id": "bar", "location": "loud_room", "value": 10}
+  ]
+}

@@ -1,6 +1,6 @@
 [package]
 name = "zork-termux"
-version = "0.4.1"
+version = "0.5.0"
 edition = "2024"
 authors = ["DioNanos <noreply@github.com>"]
 license = "MIT"

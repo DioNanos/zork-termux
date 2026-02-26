@@ -172,83 +172,83 @@
     },
     "maze_1": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_2": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_3": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_4": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "dead_end_1": {
       "name": "Vicolo Cieco",
-      "description": "You have come to a dead end in the maze."
+      "description": "Sei arrivato a un vicolo cieco nel labirinto."
     },
     "maze_5": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike.\nA skeleton, probably the remains of a luckless adventurer, lies here."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali.\nUno scheletro, probabilmente i resti di un avventuriero sfortunato, giace qui."
     },
     "dead_end_2": {
       "name": "Vicolo Cieco",
-      "description": "You have come to a dead end in the maze."
+      "description": "Sei arrivato a un vicolo cieco nel labirinto."
     },
     "maze_6": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_7": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_8": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "dead_end_3": {
       "name": "Vicolo Cieco",
-      "description": "You have come to a dead end in the maze."
+      "description": "Sei arrivato a un vicolo cieco nel labirinto."
     },
     "maze_9": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_10": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_11": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "grating_room": {
-      "name": "Grating Room",
-      "description": ""
+      "name": "Stanza della Grata",
+      "description": "Sei in una piccola stanza con una grata di ferro nel soffitto."
     },
     "maze_12": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "dead_end_4": {
       "name": "Vicolo Cieco",
-      "description": "You have come to a dead end in the maze."
+      "description": "Sei arrivato a un vicolo cieco nel labirinto."
     },
     "maze_13": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_14": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "maze_15": {
       "name": "Labirinto",
-      "description": "This is part of a maze of twisty little passages, all alike."
+      "description": "Questa è parte di un labirinto di piccoli passaggi tortuosi, tutti uguali."
     },
     "cyclops_room": {
       "name": "Stanza del Ciclope",
@@ -492,7 +492,7 @@
     },
     "dead_end_5": {
       "name": "Vicolo Cieco",
-      "description": "You have come to a dead end in the mine."
+      "description": "Sei arrivato a un vicolo cieco nella miniera."
     },
     "timber_room": {
       "name": "Stanza delle Travi",
@@ -1051,236 +1051,236 @@
       "description": "Una botola è aperta."
     },
     "board": {
-      "name": "board",
-      "description": "There is a board here."
+      "name": "asse",
+      "description": "C'è un'asse qui."
     },
     "teeth": {
-      "name": "set of teeth",
-      "description": "There is a set of teeth here."
+      "name": "insieme di denti",
+      "description": "C'è un insieme di denti qui."
     },
     "wall": {
-      "name": "surrounding wall",
-      "description": "There is a surrounding wall here."
+      "name": "muro circostante",
+      "description": "C'è un muro circostante qui."
     },
     "granite_wall": {
-      "name": "granite wall",
-      "description": "There is a granite wall here."
+      "name": "muro di granito",
+      "description": "C'è un muro di granito qui."
     },
     "songbird": {
-      "name": "songbird",
-      "description": "There is a songbird here."
+      "name": "uccello canoro",
+      "description": "C'è un uccello canoro qui."
     },
     "white_house": {
-      "name": "white house",
-      "description": "There is a white house here."
+      "name": "casa bianca",
+      "description": "C'è una casa bianca qui."
     },
     "forest": {
-      "name": "forest",
-      "description": "There is a forest here."
+      "name": "foresta",
+      "description": "C'è una foresta qui."
     },
     "tree": {
-      "name": "tree",
-      "description": "There is a tree here."
+      "name": "albero",
+      "description": "C'è un albero qui."
     },
     "mountain_range": {
-      "name": "mountain range",
-      "description": "There is a mountain range here."
+      "name": "catena montuosa",
+      "description": "C'è una catena montuosa qui."
     },
     "global_water": {
       "name": "acqua",
-      "description": "There is a water here."
+      "description": "C'è dell'acqua qui."
     },
     "water": {
-      "name": "quantity of acqua",
-      "description": "There is a quantity of water here."
+      "name": "quantità d'acqua",
+      "description": "C'è una quantità d'acqua qui."
     },
     "kitchen_window": {
-      "name": "kitchen window",
-      "description": "There is a kitchen window here."
+      "name": "finestra della cucina",
+      "description": "C'è una finestra della cucina qui."
     },
     "chimney": {
-      "name": "chimney",
-      "description": "There is a chimney here."
+      "name": "camino",
+      "description": "C'è un camino qui."
     },
     "ghosts": {
-      "name": "number of ghosts",
-      "description": "There is a number of ghosts here."
+      "name": "numero di fantasmi",
+      "description": "Ci sono dei fantasmi qui."
     },
     "skull": {
-      "name": "crystal teschio",
-      "description": "There is a crystal skull here."
+      "name": "teschio di cristallo",
+      "description": "C'è un teschio di cristallo qui."
     },
     "lowered_basket": {
-      "name": "basket",
-      "description": "There is a basket here."
+      "name": "cesto",
+      "description": "C'è un cesto qui."
     },
     "raised_basket": {
-      "name": "basket",
-      "description": "There is a basket here."
+      "name": "cesto",
+      "description": "C'è un cesto qui."
     },
     "lunch": {
       "name": "pranzo",
-      "description": "There is a lunch here."
+      "description": "C'è un pranzo qui."
     },
     "bat": {
-      "name": "bat",
-      "description": "There is a bat here."
+      "name": "pipistrello",
+      "description": "C'è un pipistrello qui."
     },
     "bell": {
-      "name": "brass campana",
-      "description": "There is a brass bell here."
+      "name": "campana di ottone",
+      "description": "C'è una campana di ottone qui."
     },
     "hot_bell": {
-      "name": "red hot brass campana",
-      "description": "There is a red hot brass bell here."
+      "name": "campana di ottone rovente",
+      "description": "C'è una campana di ottone rovente qui."
     },
     "axe": {
-      "name": "bloody axe",
-      "description": "There is a bloody axe here."
+      "name": "ascia insanguinata",
+      "description": "C'è un'ascia insanguinata qui."
     },
     "bolt": {
-      "name": "bolt",
-      "description": "There is a bolt here."
+      "name": "bullone",
+      "description": "C'è un bullone qui."
     },
     "bubble": {
-      "name": "green bubble",
-      "description": "There is a green bubble here."
+      "name": "bolla verde",
+      "description": "C'è una bolla verde qui."
     },
     "altar": {
-      "name": "altar",
-      "description": "There is a altar here."
+      "name": "altare",
+      "description": "C'è un altare qui."
     },
     "book": {
-      "name": "black libro",
-      "description": "There is a black book here."
+      "name": "libro nero",
+      "description": "C'è un libro nero qui."
     },
     "broken_lamp": {
-      "name": "broken lanterna",
-      "description": "There is a broken lantern here."
+      "name": "lanterna rotta",
+      "description": "C'è una lanterna rotta qui."
     },
     "sceptre": {
-      "name": "sceptre",
-      "description": "There is a sceptre here."
+      "name": "scettro",
+      "description": "C'è uno scettro qui."
     },
     "timbers": {
-      "name": "broken timber",
-      "description": "There is a broken timber here."
+      "name": "trave rotta",
+      "description": "C'è una trave rotta qui."
     },
     "slide": {
-      "name": "chute",
-      "description": "There is a chute here."
+      "name": "scivolo",
+      "description": "C'è uno scivolo qui."
     },
     "kitchen_table": {
-      "name": "kitchen table",
-      "description": "There is a kitchen table here."
+      "name": "tavolo della cucina",
+      "description": "C'è un tavolo della cucina qui."
     },
     "attic_table": {
-      "name": "table",
-      "description": "There is a table here."
+      "name": "tavolo",
+      "description": "C'è un tavolo qui."
     },
     "sandwich_bag": {
-      "name": "brown sacco",
-      "description": "There is a brown sack here."
+      "name": "sacco marrone",
+      "description": "C'è un sacco marrone qui."
     },
     "tool_chest": {
-      "name": "group of tool chests",
-      "description": "There is a group of tool chests here."
+      "name": "gruppo di cassette di attrezzi",
+      "description": "C'è un gruppo di cassette di attrezzi qui."
     },
     "yellow_button": {
-      "name": "yellow button",
-      "description": "There is a yellow button here."
+      "name": "pulsante giallo",
+      "description": "C'è un pulsante giallo qui."
     },
     "brown_button": {
-      "name": "brown button",
-      "description": "There is a brown button here."
+      "name": "pulsante marrone",
+      "description": "C'è un pulsante marrone qui."
     },
     "red_button": {
-      "name": "red button",
-      "description": "There is a red button here."
+      "name": "pulsante rosso",
+      "description": "C'è un pulsante rosso qui."
     },
     "blue_button": {
-      "name": "blue button",
-      "description": "There is a blue button here."
+      "name": "pulsante blu",
+      "description": "C'è un pulsante blu qui."
     },
     "chalice": {
-      "name": "chalice",
-      "description": "There is a chalice here."
+      "name": "calice",
+      "description": "C'è un calice qui."
     },
     "garlic": {
-      "name": "clove of aglio",
-      "description": "There is a clove of garlic here."
+      "name": "spicchio d'aglio",
+      "description": "C'è uno spicchio d'aglio qui."
     },
     "trident": {
-      "name": "crystal trident",
-      "description": "There is a crystal trident here."
+      "name": "tridente di cristallo",
+      "description": "C'è un tridente di cristallo qui."
     },
     "cyclops": {
-      "name": "cyclops",
-      "description": "There is a cyclops here."
+      "name": "ciclope",
+      "description": "C'è un ciclope qui."
     },
     "dam": {
-      "name": "dam",
-      "description": "There is a dam here."
+      "name": "diga",
+      "description": "C'è una diga qui."
     },
     "boarded_window": {
-      "name": "boarded window",
-      "description": "There is a boarded window here."
+      "name": "finestra sbarrata",
+      "description": "C'è una finestra sbarrata qui."
     },
     "front_door": {
-      "name": "door",
-      "description": "There is a door here."
+      "name": "porta",
+      "description": "C'è una porta qui."
     },
     "barrow_door": {
-      "name": "stone door",
-      "description": "There is a stone door here."
+      "name": "porta di pietra",
+      "description": "C'è una porta di pietra qui."
     },
     "barrow": {
-      "name": "stone barrow",
-      "description": "There is a stone barrow here."
+      "name": "tumulo di pietra",
+      "description": "C'è un tumulo di pietra qui."
     },
     "bottle": {
-      "name": "glass bottiglia",
-      "description": "There is a glass bottle here."
+      "name": "bottiglia di vetro",
+      "description": "C'è una bottiglia di vetro qui."
     },
     "crack": {
-      "name": "crack",
-      "description": "There is a crack here."
+      "name": "crepa",
+      "description": "C'è una crepa qui."
     },
     "coffin": {
-      "name": "gold coffin",
-      "description": "There is a gold coffin here."
+      "name": "bara d'oro",
+      "description": "C'è una bara d'oro qui."
     },
     "grate": {
-      "name": "grating",
-      "description": "There is a grating here."
+      "name": "grata",
+      "description": "C'è una grata qui."
     },
     "pump": {
-      "name": "hand-held air pump",
-      "description": "There is a hand-held air pump here."
+      "name": "pompa d'aria portatile",
+      "description": "C'è una pompa d'aria portatile qui."
     },
     "diamond": {
-      "name": "huge diamond",
-      "description": "There is a huge diamond here."
+      "name": "enorme diamante",
+      "description": "C'è un enorme diamante qui."
     },
     "jade": {
-      "name": "jade figurine",
-      "description": "There is a jade figurine here."
+      "name": "figurina di giada",
+      "description": "C'è una figurina di giada qui."
     },
     "bones": {
-      "name": "skeleton",
-      "description": "There is a skeleton here."
+      "name": "scheletro",
+      "description": "C'è uno scheletro qui."
     },
     "burned_out_lantern": {
-      "name": "burned-out lanterna",
-      "description": "There is a burned-out lantern here."
+      "name": "lanterna esaurita",
+      "description": "C'è una lanterna esaurita qui."
     },
     "bag_of_coins": {
-      "name": "leather bag of coins",
-      "description": "There is a leather bag of coins here."
+      "name": "borsa di pelle con monete",
+      "description": "C'è una borsa di pelle con monete qui."
     },
     "emerald": {
-      "name": "large emerald",
-      "description": "There is a large emerald here."
+      "name": "grande smeraldo",
+      "description": "C'è un grande smeraldo qui."
     },
     "advertisement": {
       "name": "volantino",
@@ -1288,224 +1288,224 @@
       "read": "\"BENVENUTO IN ZORK!\n\nZORK è un gioco di avventura, pericolo e astuzia. Esplorerai alcuni dei territori più incredibili mai visti dai mortali. Nessun computer dovrebbe farne a meno!\""
     },
     "leak": {
-      "name": "leak",
-      "description": "There is a leak here."
+      "name": "perdita",
+      "description": "C'è una perdita qui."
     },
     "machine": {
-      "name": "machine",
-      "description": "There is a machine here."
+      "name": "macchina",
+      "description": "C'è una macchina qui."
     },
     "inflated_boat": {
-      "name": "magic boat",
-      "description": "There is a magic boat here."
+      "name": "barca magica",
+      "description": "C'è una barca magica qui."
     },
     "match": {
-      "name": "matchlibro",
-      "description": "There is a matchbook here."
+      "name": "libretto di fiammiferi",
+      "description": "C'è un libretto di fiammiferi qui."
     },
     "mirror_2": {
-      "name": "mirror",
-      "description": "There is a mirror here."
+      "name": "specchio",
+      "description": "C'è uno specchio qui."
     },
     "mirror_1": {
-      "name": "mirror",
-      "description": "There is a mirror here."
+      "name": "specchio",
+      "description": "C'è uno specchio qui."
     },
     "painting": {
-      "name": "painting",
-      "description": "There is a painting here."
+      "name": "dipinto",
+      "description": "C'è un dipinto qui."
     },
     "candles": {
-      "name": "pair of candles",
-      "description": "There is a pair of candles here."
+      "name": "paio di candele",
+      "description": "C'è un paio di candele qui."
     },
     "gunk": {
-      "name": "small piece of vitreous slag",
-      "description": "There is a small piece of vitreous slag here."
+      "name": "piccolo pezzo di scoria vetrosa",
+      "description": "C'è un piccolo pezzo di scoria vetrosa qui."
     },
     "bodies": {
-      "name": "pile of bodies",
-      "description": "There is a pile of bodies here."
+      "name": "mucchio di corpi",
+      "description": "C'è un mucchio di corpi qui."
     },
     "leaves": {
-      "name": "pile of leaves",
-      "description": "There is a pile of leaves here."
+      "name": "mucchio di foglie",
+      "description": "C'è un mucchio di foglie qui."
     },
     "punctured_boat": {
-      "name": "punctured boat",
-      "description": "There is a punctured boat here."
+      "name": "barca bucata",
+      "description": "C'è una barca bucata qui."
     },
     "inflatable_boat": {
-      "name": "pile of plastic",
-      "description": "There is a pile of plastic here."
+      "name": "mucchio di plastica",
+      "description": "C'è un mucchio di plastica qui."
     },
     "bar": {
-      "name": "platinum bar",
-      "description": "There is a platinum bar here."
+      "name": "barra di platino",
+      "description": "C'è una barra di platino qui."
     },
     "pot_of_gold": {
-      "name": "pot of gold",
-      "description": "There is a pot of gold here."
+      "name": "pentola d'oro",
+      "description": "C'è una pentola d'oro qui."
     },
     "prayer": {
-      "name": "prayer",
-      "description": "There is a prayer here."
+      "name": "preghiera",
+      "description": "C'è una preghiera qui."
     },
     "railing": {
-      "name": "wooden railing",
-      "description": "There is a wooden railing here."
+      "name": "ringhiera di legno",
+      "description": "C'è una ringhiera di legno qui."
     },
     "rainbow": {
-      "name": "rainbow",
-      "description": "There is a rainbow here."
+      "name": "arcobaleno",
+      "description": "C'è un arcobaleno qui."
     },
     "river": {
-      "name": "river",
-      "description": "There is a river here."
+      "name": "fiume",
+      "description": "C'è un fiume qui."
     },
     "buoy": {
-      "name": "red buoy",
-      "description": "There is a red buoy here."
+      "name": "boa rossa",
+      "description": "C'è una boa rossa qui."
     },
     "rusty_knife": {
-      "name": "rusty coltello",
-      "description": "There is a rusty knife here."
+      "name": "coltello arrugginito",
+      "description": "C'è un coltello arrugginito qui."
     },
     "sand": {
-      "name": "sand",
-      "description": "There is a sand here."
+      "name": "sabbia",
+      "description": "C'è della sabbia qui."
     },
     "bracelet": {
-      "name": "sapphire-encrusted bracelet",
-      "description": "There is a sapphire-encrusted bracelet here."
+      "name": "bracciale incrostato di zaffiri",
+      "description": "C'è un bracciale incrostato di zaffiri qui."
     },
     "screwdriver": {
-      "name": "screwdriver",
-      "description": "There is a screwdriver here."
+      "name": "cacciavite",
+      "description": "C'è un cacciavite qui."
     },
     "keys": {
-      "name": "skeleton key",
-      "description": "There is a skeleton key here."
+      "name": "chiave scheletro",
+      "description": "C'è una chiave scheletro qui."
     },
     "shovel": {
-      "name": "shovel",
-      "description": "There is a shovel here."
+      "name": "pala",
+      "description": "C'è una pala qui."
     },
     "coal": {
-      "name": "small pile of coal",
-      "description": "There is a small pile of coal here."
+      "name": "piccolo mucchio di carbone",
+      "description": "C'è un piccolo mucchio di carbone qui."
     },
     "ladder": {
-      "name": "wooden ladder",
-      "description": "There is a wooden ladder here."
+      "name": "scala di legno",
+      "description": "C'è una scala di legno qui."
     },
     "scarab": {
-      "name": "beautiful jeweled scarab",
-      "description": "There is a beautiful jeweled scarab here."
+      "name": "bellissimo scarabeo ingioiellato",
+      "description": "C'è un bellissimo scarabeo ingioiellato qui."
     },
     "large_bag": {
-      "name": "large bag",
-      "description": "There is a large bag here."
+      "name": "grande borsa",
+      "description": "C'è una grande borsa qui."
     },
     "stiletto": {
       "name": "stiletto",
-      "description": "There is a stiletto here."
+      "description": "C'è uno stiletto qui."
     },
     "machine_switch": {
-      "name": "switch",
-      "description": "There is a switch here."
+      "name": "interruttore",
+      "description": "C'è un interruttore qui."
     },
     "wooden_door": {
-      "name": "wooden door",
-      "description": "There is a wooden door here."
+      "name": "porta di legno",
+      "description": "C'è una porta di legno qui."
     },
     "map": {
-      "name": "ancient map",
-      "description": "There is a ancient map here."
+      "name": "mappa antica",
+      "description": "C'è una mappa antica qui."
     },
     "boat_label": {
-      "name": "tan label",
-      "description": "There is a tan label here."
+      "name": "etichetta marrone",
+      "description": "C'è un'etichetta marrone qui."
     },
     "thief": {
-      "name": "thief",
-      "description": "There is a thief here."
+      "name": "ladro",
+      "description": "C'è un ladro qui."
     },
     "pedestal": {
       "name": "pedestal",
-      "description": "There is a pedestal here."
+      "description": "C'è un pedestal qui."
     },
     "torch": {
       "name": "torcia",
-      "description": "There is a torch here."
+      "description": "C'è una torcia qui."
     },
     "guide": {
-      "name": "tour guidelibro",
-      "description": "There is a tour guidebook here."
+      "name": "guida turistica",
+      "description": "C'è una guida turistica qui."
     },
     "troll": {
       "name": "troll",
-      "description": "There is a troll here."
+      "description": "C'è un troll qui."
     },
     "trunk": {
-      "name": "trunk of jewels",
-      "description": "There is a trunk of jewels here."
+      "name": "baule di gioielli",
+      "description": "C'è un baule di gioielli qui."
     },
     "tube": {
-      "name": "tube",
-      "description": "There is a tube here."
+      "name": "tubo",
+      "description": "C'è un tubo qui."
     },
     "putty": {
-      "name": "viscous material",
-      "description": "There is a viscous material here."
+      "name": "materiale viscoso",
+      "description": "C'è un materiale viscoso qui."
     },
     "engravings": {
-      "name": "wall with engravings",
-      "description": "There is a wall with engravings here."
+      "name": "muro con incisioni",
+      "description": "C'è un muro con incisioni qui."
     },
     "owners_manual": {
-      "name": "ZORK owner's manual",
-      "description": "There is a ZORK owner's manual here."
+      "name": "manuale ZORK",
+      "description": "C'è un manuale ZORK qui."
     },
     "climbable_cliff": {
-      "name": "cliff",
-      "description": "There is a cliff here."
+      "name": "scogliera",
+      "description": "C'è una scogliera qui."
     },
     "white_cliff": {
-      "name": "white cliffs",
-      "description": "There is a white cliffs here."
+      "name": "scogliere bianche",
+      "description": "Ci sono scogliere bianche qui."
     },
     "wrench": {
-      "name": "wrench",
-      "description": "There is a wrench here."
+      "name": "chiave inglese",
+      "description": "C'è una chiave inglese qui."
     },
     "control_panel": {
-      "name": "control panel",
-      "description": "There is a control panel here."
+      "name": "pannello di controllo",
+      "description": "C'è un pannello di controllo qui."
     },
     "nest": {
-      "name": "bird's nest",
-      "description": "There is a bird's nest here."
+      "name": "nido d'uccello",
+      "description": "C'è un nido d'uccello qui."
     },
     "egg": {
-      "name": "jewel-encrusted egg",
-      "description": "There is a jewel-encrusted egg here."
+      "name": "uovo incastonato di gioielli",
+      "description": "C'è un uovo incastonato di gioielli qui."
     },
     "broken_egg": {
-      "name": "broken jewel-encrusted egg",
-      "description": "There is a broken jewel-encrusted egg here."
+      "name": "uovo incastonato di gioielli rotto",
+      "description": "C'è un uovo incastonato di gioielli rotto qui."
     },
     "bauble": {
-      "name": "beautiful brass bauble",
-      "description": "There is a beautiful brass bauble here."
+      "name": "bellissimo ninnolo di ottone",
+      "description": "C'è un bellissimo ninnolo di ottone qui."
     },
     "canary": {
-      "name": "golden clockwork canary",
-      "description": "There is a golden clockwork canary here."
+      "name": "canarino a carica dorato",
+      "description": "C'è un canarino a carica dorato qui."
     },
     "broken_canary": {
-      "name": "broken clockwork canary",
-      "description": "There is a broken clockwork canary here."
+      "name": "canarino a carica rotto",
+      "description": "C'è un canarino a carica rotto qui."
     },
     "stream": {
       "name": "stream",

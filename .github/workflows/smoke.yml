@@ -1,0 +1,68 @@
+name: smoke
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  smoke-test:
+    name: smoke-test-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build release
+        run: cargo build --release
+
+      - name: Run cargo test
+        run: cargo test
+
+      - name: Run smoke tests
+        id: smoke
+        run: |
+          mkdir -p smoke-logs
+          bash scripts/smoke_all_languages.sh 2>&1 | tee smoke-logs/smoke-output.txt
+        continue-on-error: true
+
+      - name: Check smoke result
+        run: |
+          if [ "${{ steps.smoke.outcome }}" == "failure" ]; then
+            echo "::error::Smoke tests failed"
+            exit 1
+          fi
+
+      - name: Upload smoke logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-logs-${{ matrix.os }}
+          path: smoke-logs/
+          retention-days: 7
+
+  i18n-validate:
+    name: validate-i18n-json
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate JSON syntax
+        run: |
+          for f in data/i18n/*.json; do
+            echo "Validating $f..."
+            python3 -c "import json; json.load(open('$f'))" || exit 1
+          done
+          echo "All i18n JSON files valid"
