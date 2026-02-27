@@ -68,22 +68,22 @@
   },
   "help": {
     "title": "COMANDOS",
-    "movement": "Movimiento: n/norte, s/sur, e/este, o/oeste, u/arriba, d/abajo",
-    "look": "mirar/l - Mirar alrededor",
-    "inventory": "inventario/i - Revisar inventario",
-    "take": "tomar/coger X - Tomar objeto",
-    "drop": "soltar X - Soltar objeto",
-    "examine": "examinar/x X - Examinar objeto",
-    "open": "abrir X - Abrir objeto",
-    "close": "cerrar X - Cerrar objeto",
-    "put": "poner X en Y - Poner objeto en contenedor",
-    "read": "leer X - Leer objeto",
-    "use_": "usar X - Usar objeto",
-    "attack": "atacar/matar X - Atacar objetivo",
-    "score": "puntos - Tu puntuación",
-    "save": "guardar - Guardar juego",
-    "restore": "restaurar - Restaurar juego",
-    "quit": "salir/q - Terminar juego"
+    "movement": "Ir: n,s,e,o,u,d / palabras",
+    "look": "mirar/m - Mirar",
+    "inventory": "inventario/i - Inventario",
+    "take": "tomar X - Tomar",
+    "drop": "soltar X - Soltar",
+    "examine": "examinar X - Examinar",
+    "open": "abrir X - Abrir",
+    "close": "cerrar X - Cerrar",
+    "put": "poner X en Y - Poner",
+    "read": "leer X - Leer",
+    "use_": "usar X - Usar",
+    "attack": "atacar X - Atacar",
+    "score": "puntos - Puntos",
+    "save": "guardar - Guardar",
+    "restore": "cargar - Cargar",
+    "quit": "salir/q - Salir"
   },
   "rooms": {
     "west_of_house": {
@@ -556,7 +556,7 @@
     },
     "gazebo_room": {
       "name": "Gazebo",
-      "description": "This is a gazebo in the midst of a formal garden. It is cool and restful here. A tea table adorns the center of the gazebo."
+      "description": "Este es un gazebo en medio de un jardín formal. Es fresco y descansado. Una mesa de té adorna el centro del gazebo."
     },
     "formal_garden": {
       "name": "Jardin Formal",
@@ -628,51 +628,51 @@
     },
     "kennel": {
       "name": "Kennel",
-      "description": "This Sala looks like it was once a kennel for a very large dog (some of the bones would fit a dinosaur). It apparently hasn't been used for a long time, as the dust is fairly thick all over. The only exit is NorteEste."
+      "description": "Esta sala parece haber sido una perrera para perros muy grandes. Una gran puerta de hierro está abierta hacia el oeste. Pequeños huesos están esparcidos por el suelo."
     },
     "stairway_top": {
       "name": "Stairway",
-      "description": "A marble stairway leads Abajo into the gloom and a Pasaje leads Norte."
+      "description": "Una escalera de mármol desciende a la oscuridad y un pasaje conduce al sur."
     },
     "diamond_1": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "diamond_2": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "diamond_3": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "diamond_4": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "diamond_5": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "diamond_6": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "diamond_7": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "diamond_8": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "diamond_9": {
       "name": "Oddly-angled Sala",
-      "description": "A small Sala with oddly angled walls and Pasajes en todas direcciones."
+      "description": "Una pequeña sala con paredes en ángulos extraños y pasajes en todas direcciones."
     },
     "cerberus_room": {
       "name": "Cerberus Sala",
-      "description": "This is the entrance to a huge crypt or tomb. A marble stairway leads Arriba from a gateway arch."
+      "description": "Esta es la entrada a una enorme cripta o tumba. Una escalera de mármol desciende al norte."
     },
     "crypt_anteroom": {
       "name": "Crypt AnteSala",
@@ -692,11 +692,11 @@
     },
     "wizards_workshop": {
       "name": "Wizard's Workshop",
-      "description": "This is the workshop of the Wizard of Frobozz."
+      "description": "Este es el taller del Mago de Frobozz."
     },
     "workbench_room": {
       "name": "Wizard's WorkSala",
-      "description": "This Sala is the Wizard's workSala. A Salón continues Este and Oeste, and a larger Sala lies to the Sur. There are many shelves and racks on the walls, but the Wizard's workbench dominates the Sala. It is made of dark, heavy wood bound with iron. The workbench is stained from many years of use, and is deeply gouged as though some huge clawed animal was imprisoned on it. There are burn marks and even notes written in a crabbed hand. Many arcane items are scattered about the bench; alembics, mortar and pestle, small knives of various sizes, odd scraps of vellum, wax candles, and much more. In the center of a relatively clear area of the bench are affixed three stands - rubí, sapphire, and diamante - which form a triangle."
+      "description": "Esta sala es la sala de trabajo del Mago. Un salón continúa al este y una escalera de caracol desciende."
     },
     "trophy_room": {
       "name": "Sala de Trofeos",
@@ -704,7 +704,7 @@
     },
     "pentagram_room": {
       "name": "Pentagram Sala",
-      "description": "In this Sala, inscribed on the floor, is a great pentagram drawn with black chalk. In its center is a black circle."
+      "description": "En esta sala, inscrito en el suelo, hay un gran pentagrama dibujado con tiza negra."
     },
     "aquarium_room": {
       "name": "Aquarium Sala",
@@ -712,7 +712,7 @@
     },
     "in_aquarium": {
       "name": "Murky Sala",
-      "description": "The floor here seems to be made of sand, but it is hard to see anything else."
+      "description": "El suelo aquí parece hecho de arena, pero es difícil ver algo más. El agua está turbia."
     },
     "wizards_quarters": {
       "name": "Wizard's Quarters",
@@ -728,15 +728,15 @@
     },
     "pearl_room": {
       "name": "Pearl Sala",
-      "description": "This is a former bSala closet. The exits are to the Este and Oeste."
+      "description": "Este era un armario. Las salidas están al este y oeste."
     },
     "volcano_bottom": {
       "name": "Volcano Bottom",
-      "description": "You are at the bottom of a large dormant volcano. High above you light enters from the cone of the volcano. The only exit is to the Norte."
+      "description": "Estás en el fondo de un gran volcán inactivo. Muy arriba la luz entra desde la boca del cráter."
     },
     "vair_1": {
       "name": "Volcano Core",
-      "description": "You are about one hundred feet above the bottom of the volcano. The top of the volcano is clearly visible here."
+      "description": "Estás unos cien pies sobre el fondo del volcán. La cima del volcán sigue muy lejos."
     },
     "vair_2": {
       "name": "Volcano Near Small Ledge",
@@ -744,7 +744,7 @@
     },
     "vair_3": {
       "name": "Volcano by Viewing Ledge",
-      "description": "You are high above the floor of the volcano. The rim of the volcano looks very narrow and you are very near it. To the Este is what appears to be a viewing ledge, too thin to land on."
+      "description": "Estás muy alto sobre el suelo del volcán. El borde del volcán parece muy cerca ahora."
     },
     "vair_4": {
       "name": "Volcano Near Wide Ledge",
@@ -756,7 +756,7 @@
     },
     "library": {
       "name": "Library",
-      "description": "This must have been a large library, probably for the royal family. All of the shelves have been gnawed to pieces by unfriendly gnomes. To the Norte is an exit."
+      "description": "Esta debió ser una gran biblioteca, probablemente para la familia real. Todos los estantes están vacíos."
     },
     "volcano_view": {
       "name": "Volcano View",
@@ -772,7 +772,7 @@
     },
     "lava_room": {
       "name": "Lava Sala",
-      "description": "This is a small Sala, whose walls are formed by an old lava flow. There are exits here to the Este and the Sur."
+      "description": "Esta es una pequeña sala, cuyas paredes están formadas por un antiguo flujo de lava. Hay salidas al este y oeste."
     },
     "magnet_room": {
       "name": "Low Sala",
@@ -780,11 +780,11 @@
     },
     "cage_room": {
       "name": "Dingy Closet",
-      "description": "This is a dingy closet adjacent to a larger Sala to the Norte. Chiselled into a wall are these words:| |      Protected by|        FROBOZZ|  Magic Alarm Company|   (Hello, footpad!)|| There doesn't seem to be any footpad here, however."
+      "description": "Este es un armario lúgubre adyacente a una sala más grande al norte. Tallado en una roca hay un mensaje."
     },
     "in_cage": {
       "name": "Cage",
-      "description": "You are trapped inside a solid steel cage."
+      "description": "Estás atrapado dentro de una jaula de acero sólido."
     },
     "well_top": {
       "name": "Top of Well",
@@ -804,7 +804,7 @@
     },
     "pool_room": {
       "name": "Pool Sala",
-      "description": "This is a large Sala, one half of which is depressed. Salty agua flows from a large leak in the ceiling. The only exit is to the Oeste."
+      "description": "Esta es una gran sala, la mitad de la cual está hundida. Agua salada fluye de una amplia abertura en la pared."
     },
     "bank_entrance": {
       "name": "Bank Entrance",
@@ -828,11 +828,11 @@
     },
     "small_room": {
       "name": "Small Sala",
-      "description": "This is a small, bare Sala with no distinguishing features. There are no exits from this Sala."
+      "description": "Esta es una pequeña sala desnuda sin características distintivas. No hay salidas."
     },
     "vault": {
       "name": "Vault",
-      "description": "This is the Vault of the Bank of Zork, in which there are no doors."
+      "description": "Esta es la Cámara Acorazada del Banco de Zork, en la que no hay puertas."
     },
     "depository": {
       "name": "Safety Depository",
@@ -840,7 +840,7 @@
     },
     "office": {
       "name": "Chairman's Office",
-      "description": "This Sala was the office of the Chairman of the Bank of Zork. Like the other Salas here, it has been extensively vandalized. The lone exit is to the Norte."
+      "description": "Esta sala fue la oficina del Presidente del Banco de Zork. Como las otras salas aquí, está llena de polvo."
     },
     "dreary_room": {
       "name": "Dreary Sala",
@@ -956,7 +956,7 @@
     },
     "dead_end": {
       "name": "Dead End",
-      "description": "You have come to the end of two adjoining Pasajes to the Oeste and the NorteOeste."
+      "description": "Has llegado al final de dos pasajes adyacentes al oeste y noroeste."
     },
     "damp_passage": {
       "name": "Pasaje Humedo",
@@ -1605,7 +1605,7 @@
     "chest": {
       "name": "rotten wooden chest",
       "description": "",
-      "initial_desc": "A rotten old wooden chest is in one corner among the debris."
+      "initial_desc": "Un viejo cofre de madera podrida está en una esquina entre los escombros."
     },
     "statuette": {
       "name": "oroen dragon statuette",
@@ -1614,12 +1614,12 @@
     },
     "dragon": {
       "name": "huge red dragon",
-      "description": "A huge red dragon is lying on the rocks here, watching.",
-      "initial_desc": "A huge red dragon is lying here, blocking the entrance to a Túnel hacia el norte. Smoke curls from his nostrils and out between his teeth."
+      "description": "Un enorme dragón rojo está acostado en las rocas aquí, observando.",
+      "initial_desc": "Un enorme dragón rojo está acostado aquí, bloqueando la entrada a un túnel al norte. Humo sale de sus fosas nasales."
     },
     "dead_dragon": {
       "name": "huge dead dragon",
-      "description": "A huge dead dragon is lying half blocking the stream.",
+      "description": "Un enorme dragón muerto está acostado bloqueando parcialmente el arroyo.",
       "initial_desc": ""
     },
     "global_princess": {
@@ -1629,7 +1629,7 @@
     },
     "princess": {
       "name": "beautiful princess",
-      "description": "A beautiful young woman, wearing a dirty and bedraggled gown, sits on a rock in the corner. Her hair is unkempt and she is oblivious to your presence, almost in a trance.",
+      "description": "Una hermosa joven, vestida con un vestido sucio y desgarrado, se sienta en una roca en el arroyo.",
       "initial_desc": ""
     },
     "wiz_door": {
@@ -1650,7 +1650,7 @@
     "collar": {
       "name": "gigantic dog collar",
       "description": "",
-      "initial_desc": "A gigantic dog collar, large enough for three rhinoceros-sized dogs, is lying amidst the debris."
+      "initial_desc": "Un collar para perros gigantesco, lo suficientemente grande para tres perros del tamaño de rinocerontes, yace entre los escombros."
     },
     "dwindow": {
       "name": "diamante shaped ventana",
@@ -1749,7 +1749,7 @@
     },
     "warning_label": {
       "name": "warning label",
-      "description": "A hand-lettered label is affixed to the wall.",
+      "description": "Una etiqueta escrita a mano está pegada en la pared.",
       "initial_desc": ""
     },
     "global_wizard_case": {
@@ -1829,7 +1829,7 @@
     },
     "explosion": {
       "name": "debris from an explosion",
-      "description": "The Sala is cluttered with debris from an explosion. The walls seem ready to collapse.",
+      "description": "La sala está llena de escombros de una explosión. Las paredes parecen listas para colapsar.",
       "initial_desc": ""
     },
     "dead_balloon": {
@@ -1865,7 +1865,7 @@
     "crown": {
       "name": "gaudy crown",
       "description": "Lord Dimwit's crown is here.",
-      "initial_desc": "The excessively gaudy crown of Lord Dimwit Flathead sits in the safe."
+      "initial_desc": "La corona excesivamente ostentosa de Lord Dimwit Flathead está en la caja fuerte."
     },
     "violin": {
       "name": "fancy violin",
@@ -1879,7 +1879,7 @@
     },
     "flask": {
       "name": "stoppered glass flask filled with liquid",
-      "description": "A stoppered glass flask with a calavera-and-crossbones marking is here. The flask is filled with some clear liquid.",
+      "description": "Un frasco de vidrio tapado con una calavera y huesos cruzados está aquí. El frasco parece frágil.",
       "initial_desc": ""
     },
     "robot_label": {
@@ -1939,13 +1939,13 @@
     },
     "pool": {
       "name": "pool of tears",
-      "description": "The leak has submerged the depressed area in a pool of tears. Hay un hazy something at the deepest part of the pool.",
+      "description": "La fuga ha sumergido el área deprimida en un charco de lágrimas. Hay algo borroso en el fondo.",
       "initial_desc": ""
     },
     "coin": {
       "name": "priceless zorkmid",
       "description": "Hay un zorkmid grabado aqui.",
-      "initial_desc": "On the floor is a priceless oro zorkmid (a valuable collector's item)."
+      "initial_desc": "En el suelo hay un zorkmid de oro sin precio (un valioso objeto de colección)."
     },
     "stamp": {
       "name": "Flathead stamp",
@@ -1955,7 +1955,7 @@
     "green_book": {
       "name": "green libro",
       "description": "",
-      "initial_desc": "A handsome libro, bound in green leather, sits in the center of the Sala."
+      "initial_desc": "Un elegante libro, encuadernado en cuero verde, está en el centro de la sala."
     },
     "blue_book": {
       "name": "blue libro",
@@ -1985,7 +1985,7 @@
     "ruby": {
       "name": "rubí",
       "description": "Hay un moby rubí lying here.",
-      "initial_desc": "On the floor lies a moby rubí."
+      "initial_desc": "En el suelo yace un rubí enorme."
     },
     "iron_box": {
       "name": "steel box",
@@ -2030,17 +2030,17 @@
     "bills": {
       "name": "stack of zorkmid bills",
       "description": "200 neatly stacked zorkmid bills are here.",
-      "initial_desc": "On the floor sit 200 neatly stacked zorkmid bills."
+      "initial_desc": "En el suelo hay 200 billetes zorkmid ordenadamente apilados."
     },
     "portrait": {
       "name": "portrait of J. Pierpont Flathead",
-      "description": "The portrait of J. Pierpont Flathead is here.",
-      "initial_desc": "A portrait of J. Pierpont Flathead hangs on the wall."
+      "description": "El retrato de J. Pierpont Flathead está aquí.",
+      "initial_desc": "Un retrato de J. Pierpont Flathead cuelga de la pared."
     },
     "bank_brochure": {
       "name": "bank brochure",
       "description": "",
-      "initial_desc": "On the ground is a small, worn piece of paper."
+      "initial_desc": "En el suelo hay un pequeño trozo de papel gastado."
     },
     "cube": {
       "name": "large stone cube",
@@ -2115,7 +2115,7 @@
     "palantir_2": {
       "name": "blue crystal sphere",
       "description": "",
-      "initial_desc": "In the center of the table sits a blue crystal sphere."
+      "initial_desc": "En el centro de la mesa hay una esfera de cristal azul."
     },
     "gazebo": {
       "name": "gazebo",
@@ -2144,7 +2144,7 @@
     },
     "salty_water": {
       "name": "quantity of salty agua",
-      "description": "There is some agua here.",
+      "description": "Hay algo de agua aquí.",
       "initial_desc": ""
     },
     "gold_key": {
@@ -2169,7 +2169,7 @@
     },
     "wizard": {
       "name": "Wizard of Frobozz",
-      "description": "The Wizard of Frobozz is here, eyeing you warily.",
+      "description": "El Mago de Frobozz está aquí, mirándote con cautela.",
       "initial_desc": ""
     },
     "wand": {
@@ -2244,7 +2244,7 @@
     },
     "dungeon_master": {
       "name": "dungeon master",
-      "description": "The dungeon master is quietly leaning on his staff here.",
+      "description": "El dungeon master está aquí, apoyado tranquilamente en su bastón.",
       "initial_desc": ""
     },
     "mirror": {

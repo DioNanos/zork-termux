@@ -2,6 +2,7 @@
 # Core-path smoke test runner for zork-termux
 # Tests core gameplay scenarios from CORE_PATH_GAMEPLAY_MATRIX
 # Exit code !=0 on failure
+set -u
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
@@ -11,6 +12,13 @@ LOGS_DIR="$PROJECT_DIR/logs/corepath"
 FAILED=0
 PASSED=0
 RESULTS=()
+
+TIMEOUT_CMD=""
+if command -v timeout >/dev/null 2>&1; then
+    TIMEOUT_CMD="timeout"
+elif command -v gtimeout >/dev/null 2>&1; then
+    TIMEOUT_CMD="gtimeout"
+fi
 
 run_test() {
     local id="$1"
@@ -25,7 +33,15 @@ ${input}
 quit"
     
     local output
-    if ! output=$(echo -e "$full_input" | timeout $TIMEOUT ./target/release/zork-termux 2>&1); then
+    if [ -n "$TIMEOUT_CMD" ]; then
+        output=$(echo -e "$full_input" | "$TIMEOUT_CMD" "$TIMEOUT" ./target/release/zork-termux 2>&1)
+        rc=$?
+    else
+        output=$(echo -e "$full_input" | ./target/release/zork-termux 2>&1)
+        rc=$?
+    fi
+
+    if [ $rc -ne 0 ]; then
         echo "    [$id] $name: FAIL (timeout/error)"
         ((FAILED++))
         RESULTS+=("FAIL: $id - $name")
@@ -51,10 +67,8 @@ echo ""
 
 cd "$PROJECT_DIR"
 
-if [ ! -f target/release/zork-termux ]; then
-    echo "Building release..."
-    cargo build --release 2>/dev/null || exit 1
-fi
+echo "Building release..."
+cargo build --release >/dev/null 2>&1 || exit 1
 
 mkdir -p "$LOGS_DIR"
 

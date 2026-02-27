@@ -68,22 +68,22 @@
   },
   "help": {
     "title": "COMANDI",
-    "movement": "Movimento: n/nord, s/sud, e/est, o/ovest, u/su, d/giù",
-    "look": "guarda/l - Guarda intorno",
-    "inventory": "inventario/i - Controlla inventario",
-    "take": "prendi/raccogli X - Prendi oggetto",
-    "drop": "posa X - Poso oggetto",
-    "examine": "esamina/x X - Esamina oggetto",
-    "open": "apri X - Apri oggetto",
-    "close": "chiudi X - Chiudi oggetto",
-    "put": "metti X in Y - Metti oggetto in contenitore",
-    "read": "leggi X - Leggi oggetto",
-    "use_": "usa X - Usa oggetto",
-    "attack": "attacca/uccidi X - Attacca bersaglio",
-    "score": "punti - I tuoi punti",
-    "save": "salva - Salva partita",
-    "restore": "ripristina - Ripristina partita",
-    "quit": "esci/q - Termina gioco"
+    "movement": "Vai: n,s,e,o,u,g / parole",
+    "look": "guarda/g - Guardati",
+    "inventory": "inventario/i - Inventario",
+    "take": "prendi X - Prendi",
+    "drop": "lascia X - Lascia",
+    "examine": "esamina X - Esamina",
+    "open": "apri X - Apri",
+    "close": "chiudi X - Chiudi",
+    "put": "metti X in Y - Metti",
+    "read": "leggi X - Leggi",
+    "use_": "usa X - Usa",
+    "attack": "attacca X - Attacca",
+    "score": "punti - Punteggio",
+    "save": "salva - Salva",
+    "restore": "carica - Carica",
+    "quit": "esci/q - Esci"
   },
   "rooms": {
     "west_of_house": {
@@ -556,7 +556,7 @@
     },
     "gazebo_room": {
       "name": "Gazebo",
-      "description": "This is a gazebo in the midst of a formal garden. It is cool and restful here. A tea table adorns the center of the gazebo."
+      "description": "Questo è un gazebo al centro di un giardino formale. È fresco e riposante. Un tavolo da tè adorna il centro del gazebo."
     },
     "formal_garden": {
       "name": "Giardino Formale",
@@ -628,51 +628,51 @@
     },
     "kennel": {
       "name": "Kennel",
-      "description": "This Stanza looks like it was once a kennel for a very large dog (some of the bones would fit a dinosaur). It apparently hasn't been used for a long time, as the dust is fairly thick all over. The only exit is NordEst."
+      "description": "Questa stanza sembra essere stata una cuccia per cani molto grandi. Un grande cancello di ferro è aperto verso ovest. Piccoli ossi sono sparsi sul pavimento."
     },
     "stairway_top": {
       "name": "Stairway",
-      "description": "A marble stairway leads Giù into the gloom and a Passaggio leads Nord."
+      "description": "Una scalinata di marmo scende nell'oscurità e un corridoio conduce a sud."
     },
     "diamond_1": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "diamond_2": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "diamond_3": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "diamond_4": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "diamond_5": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "diamond_6": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "diamond_7": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "diamond_8": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "diamond_9": {
       "name": "Oddly-angled Stanza",
-      "description": "A small Stanza with oddly angled walls and Passaggios in tutte le direzioni."
+      "description": "Una piccola stanza con pareti ad angoli strani e corridoi in tutte le direzioni."
     },
     "cerberus_room": {
       "name": "Cerberus Stanza",
-      "description": "This is the entrance to a huge crypt or tomb. A marble stairway leads Su from a gateway arch."
+      "description": "Questa è l'entrata di un'enorme cripta o tomba. Una scalinata di marmo scende a nord."
     },
     "crypt_anteroom": {
       "name": "Crypt AnteStanza",
@@ -692,19 +692,19 @@
     },
     "wizards_workshop": {
       "name": "Wizard's Workshop",
-      "description": "This is the workshop of the Wizard of Frobozz."
+      "description": "Questa è la bottega del Mago di Frobozz."
     },
     "workbench_room": {
       "name": "Wizard's WorkStanza",
-      "description": "This Stanza is the Wizard's workStanza. A Sala continues Est and Ovest, and a larger Stanza lies to the Sud. There are many shelves and racks on the walls, but the Wizard's workbench dominates the Stanza. It is made of dark, heavy wood bound with iron. The workbench is stained from many years of use, and is deeply gouged as though some huge clawed animal was imprisoned on it. There are burn marks and even notes written in a crabbed hand. Many arcane items are scattered about the bench; alembics, mortar and pestle, small knives of various sizes, odd scraps of vellum, wax candles, and much more. In the center of a relatively clear area of the bench are affixed three stands - rubino, sapphire, and diamante - which form a triangle."
+      "description": "Questa stanza è la sala di lavoro del Mago. Un salone continua a est e una scala a chiocciola scende."
     },
     "trophy_room": {
       "name": "Trophy Stanza",
-      "description": "This is the Wizard's trophy Stanza, filled with memorabilia of various sorts. On one wall is the Wizard's D. T. (Doctor of Thaumaturgy) degree from GUE Tech. Several old magic wands are mounted on a wand rack. A collection of dull and nicked spadas testify to the fate of many foolhardy adventurers. Small bottiglias contain discarded homunculi (a few preserved in alcohol). C'è un stuffed owl on a perch."
+      "description": "Questa è la stanza dei trofei del Mago, piena di souvenir di vario tipo. Un'uscita conduce a ovest."
     },
     "pentagram_room": {
       "name": "Pentagram Stanza",
-      "description": "In this Stanza, inscribed on the floor, is a great pentagram drawn with black chalk. In its center is a black circle."
+      "description": "In questa stanza, inciso sul pavimento, c'è un grande pentagramma disegnato con gesso nero."
     },
     "aquarium_room": {
       "name": "Aquarium Stanza",
@@ -712,7 +712,7 @@
     },
     "in_aquarium": {
       "name": "Murky Stanza",
-      "description": "The floor here seems to be made of sand, but it is hard to see anything else."
+      "description": "Il pavimento qui sembra fatto di sabbia, ma è difficile vedere altro. L'acqua è torbida."
     },
     "wizards_quarters": {
       "name": "Wizard's Quarters",
@@ -728,15 +728,15 @@
     },
     "pearl_room": {
       "name": "Pearl Stanza",
-      "description": "This is a former bStanza closet. The exits are to the Est and Ovest."
+      "description": "Questo era un ripostiglio. Le uscite sono a est e ovest."
     },
     "volcano_bottom": {
       "name": "Volcano Bottom",
-      "description": "You are at the bottom of a large dormant volcano. High above you light enters from the cone of the volcano. The only exit is to the Nord."
+      "description": "Sei alla base di un grande vulcano dormiente. Molto in alto la luce entra dall'imboccatura del cratere."
     },
     "vair_1": {
       "name": "Volcano Core",
-      "description": "You are about one hundred feet above the bottom of the volcano. The top of the volcano is clearly visible here."
+      "description": "Sei circa cento piedi sopra il fondo del vulcano. La cima del vulcano è ancora molto distante."
     },
     "vair_2": {
       "name": "Volcano Near Small Ledge",
@@ -744,7 +744,7 @@
     },
     "vair_3": {
       "name": "Volcano by Viewing Ledge",
-      "description": "You are high above the floor of the volcano. The rim of the volcano looks very narrow and you are very near it. To the Est is what appears to be a viewing ledge, too thin to land on."
+      "description": "Sei molto in alto rispetto al fondo del vulcano. Il bordo del vulcano sembra molto vicino ora."
     },
     "vair_4": {
       "name": "Volcano Near Wide Ledge",
@@ -756,7 +756,7 @@
     },
     "library": {
       "name": "Library",
-      "description": "This must have been a large library, probably for the royal family. All of the shelves have been gnawed to pieces by unfriendly gnomes. To the Nord is an exit."
+      "description": "Questa doveva essere una grande biblioteca, probabilmente per la famiglia reale. Tutti gli scaffali sono vuoti."
     },
     "volcano_view": {
       "name": "Volcano View",
@@ -772,7 +772,7 @@
     },
     "lava_room": {
       "name": "Lava Stanza",
-      "description": "This is a small Stanza, whose walls are formed by an old lava flow. There are exits here to the Est and the Sud."
+      "description": "Questa è una piccola stanza, le cui pareti sono formate da un'antica colata di lava. Ci sono uscite a est e ovest."
     },
     "magnet_room": {
       "name": "Low Stanza",
@@ -780,11 +780,11 @@
     },
     "cage_room": {
       "name": "Dingy Closet",
-      "description": "This is a dingy closet adjacent to a larger Stanza to the Nord. Chiselled into a wall are these words:| |      Protected by|        FROBOZZ|  Magic Alarm Company|   (Hello, footpad!)|| There doesn't seem to be any footpad here, however."
+      "description": "Questo è un ripostiglio squallido adiacente a una stanza più grande a nord. Intagliato su una roccia c'è un messaggio."
     },
     "in_cage": {
       "name": "Cage",
-      "description": "You are trapped inside a solid steel cage."
+      "description": "Sei intrappolato dentro una gabbia d'acciaio solida."
     },
     "well_top": {
       "name": "Top of Well",
@@ -804,7 +804,7 @@
     },
     "pool_room": {
       "name": "Pool Stanza",
-      "description": "This is a large Stanza, one half of which is depressed. Salty acqua flows from a large leak in the ceiling. The only exit is to the Ovest."
+      "description": "Questa è una grande stanza, metà della quale è depressa. Acqua salata scorre da una larga apertura nella parete."
     },
     "bank_entrance": {
       "name": "Bank Entrance",
@@ -828,11 +828,11 @@
     },
     "small_room": {
       "name": "Small Stanza",
-      "description": "This is a small, bare Stanza with no distinguishing features. There are no exits from this Stanza."
+      "description": "Questa è una piccola stanza spoglia senza caratteristiche distintive. Non ci sono uscite."
     },
     "vault": {
       "name": "Vault",
-      "description": "This is the Vault of the Bank of Zork, in which there are no doors."
+      "description": "Questa è la Camera Blindata della Banca di Zork, in cui non ci sono porte."
     },
     "depository": {
       "name": "Safety Depository",
@@ -840,7 +840,7 @@
     },
     "office": {
       "name": "Chairman's Office",
-      "description": "This Stanza was the office of the Chairman of the Bank of Zork. Like the other Stanzas here, it has been extensively vandalized. The lone exit is to the Nord."
+      "description": "Questa stanza era l'ufficio del Presidente della Banca di Zork. Come le altre stanze qui, è piena di polvere."
     },
     "dreary_room": {
       "name": "Dreary Stanza",
@@ -956,7 +956,7 @@
     },
     "dead_end": {
       "name": "Dead End",
-      "description": "You have come to the end of two adjoining Passaggios to the Ovest and the NordOvest."
+      "description": "Sei arrivato alla fine di due corridoi adiacenti a ovest e nordovest."
     },
     "damp_passage": {
       "name": "Passaggio Umido",
@@ -1605,7 +1605,7 @@
     "chest": {
       "name": "rotten wooden chest",
       "description": "",
-      "initial_desc": "A rotten old wooden chest is in one corner among the debris."
+      "initial_desc": "Un vecchio baule di legno marcio è in un angolo tra i detriti."
     },
     "statuette": {
       "name": "oroen dragon statuette",
@@ -1614,12 +1614,12 @@
     },
     "dragon": {
       "name": "huge red dragon",
-      "description": "A huge red dragon is lying on the rocks here, watching.",
-      "initial_desc": "A huge red dragon is lying here, blocking the entrance to a Tunnel che porta a nord. Smoke curls from his nostrils and out between his teeth."
+      "description": "Un enorme drago rosso è sdraiato sulle rocce qui, osservando.",
+      "initial_desc": "Un enorme drago rosso è sdraiato qui, bloccando l'ingresso a un tunnel a nord. Fumo esce dalle sue narici."
     },
     "dead_dragon": {
       "name": "huge dead dragon",
-      "description": "A huge dead dragon is lying half blocking the stream.",
+      "description": "Un enorme drago morto è sdraiato bloccando parzialmente il ruscello.",
       "initial_desc": ""
     },
     "global_princess": {
@@ -1629,7 +1629,7 @@
     },
     "princess": {
       "name": "beautiful princess",
-      "description": "A beautiful young woman, wearing a dirty and bedraggled gown, sits on a rock in the corner. Her hair is unkempt and she is oblivious to your presence, almost in a trance.",
+      "description": "Una bella giovane donna, vestita con un abito sporco e lacero, siede su una roccia nel ruscello.",
       "initial_desc": ""
     },
     "wiz_door": {
@@ -1650,7 +1650,7 @@
     "collar": {
       "name": "gigantic dog collar",
       "description": "",
-      "initial_desc": "A gigantic dog collar, large enough for three rhinoceros-sized dogs, is lying amidst the debris."
+      "initial_desc": "Un collare per cani gigantesco, abbastanza grande per tre cani delle dimensioni di rinoceronti, giace tra i detriti."
     },
     "dwindow": {
       "name": "diamante shaped finestra",
@@ -1749,7 +1749,7 @@
     },
     "warning_label": {
       "name": "warning label",
-      "description": "A hand-lettered label is affixed to the wall.",
+      "description": "Un'etichetta scritta a mano è attaccata al muro.",
       "initial_desc": ""
     },
     "global_wizard_case": {
@@ -1829,7 +1829,7 @@
     },
     "explosion": {
       "name": "debris from an explosion",
-      "description": "The Stanza is cluttered with debris from an explosion. The walls seem ready to collapse.",
+      "description": "La stanza è ingombra di detriti da un'esplosione. Le pareti sembrano pronte a crollare.",
       "initial_desc": ""
     },
     "dead_balloon": {
@@ -1865,7 +1865,7 @@
     "crown": {
       "name": "gaudy crown",
       "description": "Lord Dimwit's crown is here.",
-      "initial_desc": "The excessively gaudy crown of Lord Dimwit Flathead sits in the safe."
+      "initial_desc": "La corona eccessivamente sfarzosa di Lord Dimwit Flathead è nella cassaforte."
     },
     "violin": {
       "name": "fancy violin",
@@ -1879,7 +1879,7 @@
     },
     "flask": {
       "name": "stoppered glass flask filled with liquid",
-      "description": "A stoppered glass flask with a teschio-and-crossbones marking is here. The flask is filled with some clear liquid.",
+      "description": "Una fiasca di vetro tappata con un teschio e ossa incrociate è qui. La fiasca sembra fragile.",
       "initial_desc": ""
     },
     "robot_label": {
@@ -1945,7 +1945,7 @@
     "coin": {
       "name": "priceless zorkmid",
       "description": "C'e uno zorkmid inciso qui.",
-      "initial_desc": "On the floor is a priceless oro zorkmid (a valuable collector's item)."
+      "initial_desc": "Sul pavimento c'è uno zorkmid d'oro senza prezzo (un prezioso oggetto da collezione)."
     },
     "stamp": {
       "name": "Flathead stamp",
@@ -1955,7 +1955,7 @@
     "green_book": {
       "name": "green libro",
       "description": "",
-      "initial_desc": "A handsome libro, bound in green leather, sits in the center of the Stanza."
+      "initial_desc": "Un elegante libro, rilegato in pelle verde, è al centro della stanza."
     },
     "blue_book": {
       "name": "blue libro",
@@ -1985,7 +1985,7 @@
     "ruby": {
       "name": "rubino",
       "description": "C'è un moby rubino lying here.",
-      "initial_desc": "On the floor lies a moby rubino."
+      "initial_desc": "Sul pavimento giace un rubino enorme."
     },
     "iron_box": {
       "name": "steel box",
@@ -2030,17 +2030,17 @@
     "bills": {
       "name": "stack of zorkmid bills",
       "description": "200 neatly stacked zorkmid bills are here.",
-      "initial_desc": "On the floor sit 200 neatly stacked zorkmid bills."
+      "initial_desc": "Sul pavimento ci sono 200 banconote zorkmid ordinatamente impilate."
     },
     "portrait": {
       "name": "portrait of J. Pierpont Flathead",
-      "description": "The portrait of J. Pierpont Flathead is here.",
-      "initial_desc": "A portrait of J. Pierpont Flathead hangs on the wall."
+      "description": "Il ritratto di J. Pierpont Flathead è qui.",
+      "initial_desc": "Un ritratto di J. Pierpont Flathead pende dalla parete."
     },
     "bank_brochure": {
       "name": "bank brochure",
       "description": "",
-      "initial_desc": "On the ground is a small, worn piece of paper."
+      "initial_desc": "A terra c'è un piccolo foglio di carta consumato."
     },
     "cube": {
       "name": "large stone cube",
@@ -2115,7 +2115,7 @@
     "palantir_2": {
       "name": "blue crystal sphere",
       "description": "",
-      "initial_desc": "In the center of the table sits a blue crystal sphere."
+      "initial_desc": "Al centro del tavolo c'è una sfera di cristallo blu."
     },
     "gazebo": {
       "name": "gazebo",
@@ -2144,7 +2144,7 @@
     },
     "salty_water": {
       "name": "quantity of salty acqua",
-      "description": "There is some acqua here.",
+      "description": "C'è dell'acqua qui.",
       "initial_desc": ""
     },
     "gold_key": {
@@ -2169,7 +2169,7 @@
     },
     "wizard": {
       "name": "Wizard of Frobozz",
-      "description": "The Wizard of Frobozz is here, eyeing you warily.",
+      "description": "Il Mago di Frobozz è qui, guardandoti con cautela.",
       "initial_desc": ""
     },
     "wand": {
@@ -2244,7 +2244,7 @@
     },
     "dungeon_master": {
       "name": "dungeon master",
-      "description": "The dungeon master is quietly leaning on his staff here.",
+      "description": "Il dungeon master è qui, appoggiato tranquillamente al suo bastone.",
       "initial_desc": ""
     },
     "mirror": {

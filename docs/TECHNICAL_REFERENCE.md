@@ -19,6 +19,24 @@ This document collects maintainer-facing material moved out of the public README
 cargo test
 ```
 
+## Release Preflight
+
+Run all checks before a release:
+
+```bash
+bash scripts/release_preflight.sh
+```
+
+Checks performed:
+1. `cargo test` - Unit tests
+2. `smoke_all_languages.sh` - EN/IT/ES smoke tests
+3. `corepath_smoke.sh` - Core gameplay scenarios
+4. JSON validation - `jq empty` on i18n files
+5. `data_alignment_gate.py` - i18n alignment (errors only)
+6. Git working tree status (warning, not failure)
+
+Exit code 0 = ready for release, 1 = issues to fix.
+
 ## Session Logs
 
 - Path: `~/.zork-termux/logs/session-<timestamp>.log`
